@@ -1,3 +1,18 @@
+# JFD MODS
+# JFD MODS
+# JFD MODS
+*.swap
+*.backup
+*.BACKUP
+.DS_Store
+.env
+application_default_credentials.json
+webapp/myenvs/try1/
+
+
+
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
