@@ -1,0 +1,36 @@
+datetime
+pathlib
+numpy
+matplotlib
+seaborn
+tensorflow
+
+scikit-learn
+
+# dataframe
+pandas
+# yahoo finance
+yfinance
+# open ai
+openai
+# plat
+plotly
+# ???
+nbformat
+# old gcp ai api?
+google-cloud-aiplatform
+
+# square api
+squareup
+#square-python-sdk via git
+#git+https://github.com/square/square-python-sdk.git
+
+# for secure random uuids
+uuid
+
+# langchain api
+langchain
+# allows .env file in current dir
+python-dotenv
+# ?
+shapely<2.0.0
