@@ -1,5 +1,6 @@
 datetime
-pathlib
+# pathlib is builtin to later versions of python
+#pathlib
 numpy
 matplotlib
 seaborn
