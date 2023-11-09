@@ -39,4 +39,4 @@ R9 Before               R9 After
 
 PROMPT
 
-Provide an explanation of the AR instruction in HLASM.
+Provide an explanation of the AR instruction in BAS.

@@ -21,4 +21,4 @@ FIELDA DC   X'123456'
 
 PROMPT
 
-Provided an explanation of the MVI instruction.
+Provide an explanation of the MVI instruction in BAS.

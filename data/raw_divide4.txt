@@ -67,4 +67,4 @@ FFFFFFF8
 
 PROMPT
 
-Provide an explanation of the Divide instruction using negative numbers in HLASM.
+Provide an explanation of the Divide instruction using negative numbers in BAS.

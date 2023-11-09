@@ -23,4 +23,4 @@ FIELDA DC   X'123456'
 
 PROMPT
 
-Provide an explanation of the Move Immediate instruction in HLASM.
+Provide an explanation of the Move Immediate instruction in BAS.

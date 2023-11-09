@@ -67,4 +67,4 @@ ZERODIV EQU *
 PROMPT
 
 Provide an explanation of the Divide instruction and how to 
-protect against divide by zero errors in HLASM.
+protect against divide by zero errors in BAS.

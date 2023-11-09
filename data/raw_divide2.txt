@@ -66,4 +66,4 @@ MEM:B Before            MEM:B After
 
 PROMPT
 
-Provide an explanation of the Divide instruction in HLASM.
+Provide an explanation of the Divide instruction in BAS.

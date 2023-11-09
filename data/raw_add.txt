@@ -35,4 +35,4 @@ FIELDA DC   X'3'
 
 PROMPT
 
-Provide an explanation of the A instruction in HLASM.
+Provide an explanation of the A instruction in BAS.

@@ -68,4 +68,4 @@ IMM:F
 
 PROMPT
 
-Provide an explanation of the Divide instruction in HLASM.
+Provide an explanation of the Divide instruction in BAS.
