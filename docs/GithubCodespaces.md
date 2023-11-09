@@ -85,3 +85,8 @@ This will allow you to open the files with a single click, as opposed to double-
 ```
 
 
+## copy and paste notes
+
+Modified this setting:
+
+* Enabled: Terminal>Integrated: Copy on Selection
