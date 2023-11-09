@@ -1,0 +1,38 @@
+
+SAMPLE_CODE
+
+       A   R9,FIELDA
+
+COMMENTARY
+
+A R1,D2(X2,B2)
+
+OPCODE  R1X2   B2D2  D2D2
+
+The Add instruction performs two's compliment binary
+addition.  Operand 1 is a register containing a fullword
+integer.  Operand 2 is a fullword in memory.  The fullword
+in memory is added to the fullword in the register and the result
+is stored in the register.  The fullword in memory is not changed.
+The instruction ses the condition code as follows:
+
+condition code        meaning                   test with
+------------------------------------------------------------
+0                  Result is 0; no overflow     BE,JE,BZ,JZ
+1                  Result is <0; no overflow    BL,JL,BM,JM
+2                  Result is >0; no overflow    BH,JH,BP,JP
+3                  overflow
+
+As an example, consider the following code:
+
+       A   R9,AFIELD
+
+R9 Before               R9 After
+00000025 -------------> 00000028
+
+FIELDA DC   X'3'
+
+
+PROMPT
+
+Provide an explanation of the Add instruction in HLASM.

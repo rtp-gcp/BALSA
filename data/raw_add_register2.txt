@@ -1,0 +1,42 @@
+
+SAMPLE_CODE
+
+       AR   R5,R9
+
+COMMENTARY
+
+AR   R1,R2
+
+OPCODE  R1R2
+
+The Add Register instruction performs two's compliment binary
+addition.  Operand 1 and 2 are registers containing fullword
+integers.  The fullwords are added and the sum is stored
+in register 1.  Register 2 is unchanged.
+
+The instruction sets the condition code as follows:
+
+condition code        meaning                   test with
+------------------------------------------------------------
+0                  Result is 0; no overflow     BE,JE,BZ,JZ
+1                  Result is <0; no overflow    BL,JL,BM,JM
+2                  Result is >0; no overflow    BH,JH,BP,JP
+3                  overflow
+
+As an example, consider the following code:
+
+       AR   R5,R9
+
+
+
+R5 Before               R5 After
+00000025 -------------> 00000028
+
+R9 Before               R9 After
+00000003 -------------> 00000028
+
+
+
+PROMPT
+
+Provide an explanation of the Add Register instruction in HLASM.
