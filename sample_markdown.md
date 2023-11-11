@@ -3,3 +3,6 @@ This is normal text
 
 ## Level two heading
 This is also normal text
+
+### Level three heading
+This is also a paragraph text
