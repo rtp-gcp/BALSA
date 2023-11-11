@@ -11,3 +11,11 @@ This is also a paragraph text
 * Sample bullit
 * Another sample
 * And third one
+
+ This is how make a code block :
+ 
+ ```
+ print("Hello World")
+
+```
+
