@@ -90,3 +90,8 @@ This will allow you to open the files with a single click, as opposed to double-
 Modified this setting:
 
 * Enabled: Terminal>Integrated: Copy on Selection
+
+
+## Code hightligh issues
+
+* fixed with swithchswitching between color themes in settings
