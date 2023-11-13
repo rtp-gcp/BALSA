@@ -1,0 +1,55 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  width: 50%;
+  max-width: 600px;
+  text-align: center;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.input-field.large {
+  min-height: 150px;
+  /* Large enough for multiple paragraphs */
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: #5cb85c;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #4cae4c;
+}
+
+.button-group {
+  margin: 15px;
+  display: inline-block;
+}
+
+.button-group button {
+  width: 100px;
+  /* Resets the width to default instead of 100% */
+  margin: 0 5px;
+  /* Adds spacing between buttons */
+  background-color: gray;
+}
