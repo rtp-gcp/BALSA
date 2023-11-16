@@ -39,6 +39,6 @@ L R5,TABLE(R7)
 
 PROMPT
 
-Can you explain the Register and Register type instruction format also known as RR?
+Can you explain the Register and Indexed Storage type instruction format also known as RX?
 
 
