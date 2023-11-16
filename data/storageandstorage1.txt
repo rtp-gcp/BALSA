@@ -4,6 +4,7 @@ SAMPLE_CODE
 
 COMMENTARY
 
+# SS1 Storage and Storage Instruction Format
 
 There are two subtypes for Storage to Storage instructions.  The
 SS1 format applies to the MVC instruction below

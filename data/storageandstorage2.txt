@@ -5,6 +5,8 @@ SAMPLE_CODE
 COMMENTARY
 
 
+# SS2 Storage to Storage Instruction Format
+
 There are two subtypes for Storage to Storage instructions.  The
 SS2 format is a variation of the SS1 format that contains two
 lengths.
