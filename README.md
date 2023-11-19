@@ -3,6 +3,9 @@
 # BALSA Basic Assembly Language Source Assist
 
 
+
+![project img](img/DALLE_Balsa.png)
+
 # Project Objective
 
 Existing LLM code assist models are focused on modern programming languages: python, javascript, etc.

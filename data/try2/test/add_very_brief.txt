@@ -1,0 +1,28 @@
+
+RESULT
+
+```
+         AR   R3,R4
+         ST   R3,SUM 
+
+```
+
+PROMPT
+
+Write some code in IBM BAL Assembly to add two fullword registers and store the result in memory with a field name of SUM.  
+
+Your answer should be brief and in markdown format using a code section using this format:
+
+```
+put code here
+```
+
+Do not include any commentary or comments.  Only include code.
+
+Assume the values to add are already in registers R3 and R4.
+
+Obey column restrictions for the code.
+
+Do not show any subroutine standard entry and exit code.
+
+Do not show how the field name should be declared.

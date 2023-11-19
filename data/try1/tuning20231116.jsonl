@@ -1,0 +1,16 @@
+{
+  "messages": [
+    {
+      "role": "system",
+      "content": "you are a helpful assistant who understands IBM BAL (IBM Basic Assembler Language)"
+    },
+    {
+      "role": "user",
+      "content": "\n Can you explain the Storage Immediate type instruction format also \n known as SI?\n \n \n"
+    },
+    {
+      "role": "assistant",
+      "content": "\n \n with commentary: \n \n # SI Storage Immediate Format\n The SI format is used for storage immediate instructions.\n \n In this format, the second operand, the immediate constant,\n resides in the instructions second byte.  This constant\n usually specified as a self-defining term.\n \n The format is as follows:\n \n | byte1   | byte2 | byte3        | byte4 |\n |---------+-------+--------------+-------+\n | Op Code | I2I2  | B1D1         |  D1D1 |\n |         | Src   | Dest         |       |\n |         | Index | Base         |       |\n |         |       | Displacement | Disp. |\n \n * Byte 1 - the op code\n * Byte 2 - the immediate constant denoted in operand 2\n * Byte 3 and 4 - the base/displacement address associated with operand 1\n \n \n An example of this format is the CLI Compare Logical \n immediate instruction.\n \n ```\n CLI  CUSTTYPE,C'A'\n ```\n \n \n"
+    }
+  ]
+}

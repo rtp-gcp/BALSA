@@ -11,17 +11,17 @@ can assemble and emulate.
 ### Assembly
 
 Add the code to the root of the S370BALAsm git repo.  In this case the source file
-is named `john.s370`.  Assemble with the following command.
+is named `john.s370`.  Assemble with the following command.  The repo is [here](https://github.com/SYSPROG-JLS/S370BALAsm)
 
 ```
 $ cd S370BALAsm
 $ python3 S370BALAsm.py john
 ```
 
-### Exercise 
+### Exercise the assembly code using the Emulator
 
 From the assembly directory, invoke the emulator using the debug option.  This
-will bring up the Text UI and allow the code to be exercised.
+will bring up the Text UI and allow the code to be exercised.  The repo is [here](https://github.com/SYSPROG-JLS/S370BALEmulator)
 
 ```
 $ cd 
