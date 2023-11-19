@@ -77,4 +77,5 @@ def handle_prompt():
 @login_required
 def index():
     """Route for the home page."""
+    print("== hit index route === ")
     return render_template('index.html', email=session["email"])

@@ -11,6 +11,7 @@ db = firestore.Client()
 
 @auth.route("/login")
 def login():
+    print("=== hit login routine ===")
     return render_template("login.html", client_id=os.environ.get('CLIENT_ID'), login_uri=os.environ.get('LOGIN_URI'))
 
 
