@@ -8,6 +8,10 @@
   </head>
   <body>
     <div class="container">
+      <!-- AUTH -->
+      <h1>Welcome, {{ email }}</h1>
+      <a href="{{ url_for('auth.logout') }}">Logout</a>
+      <!--  -->
       <form action="/handle_prompt" method="post">
         <!-- Radio Buttons and Text Inputs -->
     <label for="tuned">Tuned</label>

@@ -8,6 +8,8 @@
 .env
 application_default_credentials.json
 webapp/myenvs/try1/
+data/try2/train/*.jsonl
+data/try2/test/*.jsonl
 
 
 
@@ -79,6 +81,7 @@ db.sqlite3-journal
 # Flask stuff:
 instance/
 .webassets-cache
+webapps/*/flask_session
 
 # Scrapy stuff:
 .scrapy

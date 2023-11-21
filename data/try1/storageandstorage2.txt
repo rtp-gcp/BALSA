@@ -31,6 +31,6 @@ The format is as follows:
 
 PROMPT
 
-Can you explain the Storage and Storage type twoinstruction format also known as SS2?
+Can you explain the Storage and Storage type two instruction format also known as SS2?
 
 
