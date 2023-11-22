@@ -48,12 +48,10 @@ an unamed 20 byte character field.
           DS    CL20  
 ```
 
-
 ### Example 3
 
 This defines two uninitialized character fields of 20 bytes each.   The
-first filed is called `PARTNAME`.  The second field is unamed but can be
-referred to as `PARTNAME+1`.
+first filed is called `PARTNAME`.  The second field is unamed.
 
 ```
 PARTNAME  DS    2CL20  
@@ -102,6 +100,14 @@ registers in a subroutine.
 SAVEAREA  DS    18F
 ```
 
+### Example 7
 
+Another example of an unamed DS statement is used for aligning code on a word boundary.
+In this case, the next statement after the `DS` would be either an instruction or a 
+DS/DC.   The next entity will be specified at a double word address.
+
+```
+          DS    0D  
+```
 
 
