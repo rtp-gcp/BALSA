@@ -48,3 +48,16 @@ $ gcloud config list
 # URLS
 
 * [cloud sdk install](https://cloud.google.com/sdk/docs/install)
+
+
+# switch to native mode in firestore
+
+The oauth2 stuff is in the api and credentials page
+
+```
+# not needed
+gcloud auth login
+# when done the prompt will show the project name
+gcloud config set project balsa-404914
+gcloud alpha firestore databases update --type=firestore-native
+```
