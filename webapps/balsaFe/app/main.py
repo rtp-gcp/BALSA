@@ -48,7 +48,7 @@ def handle_train_data():
         'prompt': prompt,
         'response': response
     })
-    return render_template('index.html')
+    return render_template('index.html', email=session["email"])
 
 @main.route('/handle_prompt', methods=['POST'])
 @login_required
@@ -67,7 +67,7 @@ def handle_prompt():
         return render_template('index.html', prompt=prompt, response=response, email=session["email"])
     elif action == 'good':
         # Serve a blank index.html template if 'Good'
-        return render_template('index.html')
+        return render_template('index.html', email=session["email"])
     elif action == 'bad':
         # Serve the train.html template for further editing if 'Bad'
         return render_template('train.html', prompt=prompt, response=response)
