@@ -7,6 +7,8 @@ import os
 
 auth = Blueprint("auth", __name__)
 db = firestore.Client()
+# bad gateway
+#db = firestore.client()
 
 
 @auth.route("/login")
@@ -17,6 +19,7 @@ def login():
 
 @auth.route("/login/callback", methods=["GET","POST"])
 def callback():
+    print("=== hit callback routine ===")
     # Extract the ID token sent by Google
     token = request.form.get("credential")
     try:
@@ -24,15 +27,24 @@ def callback():
         idinfo = id_token.verify_oauth2_token(token, requests.Request(), os.environ.get('CLIENT_ID'))
 
         # Check if the user's email is in the allowed list
+        print("==== Attempting to read firestore. ====")
         email = idinfo["email"]
+        print("== email:", email)
         users_ref = db.collection("allowed_users")
+        print("== allowed users:", users_ref)
         user_doc = users_ref.document(email).get()
+        print("== user_doc:", user_doc)
+        print("==== Got collection from firestore. ====")
+
+        #return "nope", 403
 
         if user_doc.exists:
             session["email"] = email
+            print("session: ", session)
             return redirect(url_for("main.index"))
         else:
             # User not allowed
+            print("No permission to read document?")
             return "Access Denied", 403
 
     except ValueError:

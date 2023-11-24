@@ -2,8 +2,23 @@ from flask import Blueprint, render_template,  request, session
 from app.auth import login_required
 from google.cloud import firestore
 import openai
+# import the dotenv package for client keys in .env file
 from dotenv import load_dotenv
+
+
+
 import os
+
+# Get the current working directory
+cwd = os.getcwd()
+
+# Construct the .env file path
+env_path = os.path.join(cwd, '.env')
+
+# Load the .env file
+load_dotenv(dotenv_path=env_path)
+
+
 
 main = Blueprint('main', __name__)
 db = firestore.Client()

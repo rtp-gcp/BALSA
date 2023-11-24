@@ -1,17 +1,26 @@
 runtime: python39
-instance_class: F1
+
+
+
+# service_account: "xx-sa@xxxx"
+
+
+# this appears to superflurios
+#instance_class: F1
+#entrypoint: gunicorn -b :$PORT 'app:create_app()'
+
+
 entrypoint: gunicorn -b :$PORT 'app:create_app()'
 
-automatic_scaling:
-  max_instances: 1
-  target_cpu_utilization: 0.65
-  target_throughput_utilization: 0.65
-  max_concurrent_requests: 10
+#automatic_scaling:
+#  max_instances: 1
+#  target_cpu_utilization: 0.65
+#  target_throughput_utilization: 0.65
+#  max_concurrent_requests: 10
 
-env_variables:
-  CLIENT_ID: ""
-  LOGIN_URI: "https://YOUR_URI/login/callback"
-  SECRET_KEY: ""
+# all of this is correct for last version
+# its just inthe last version, stati and templates dirs 
+# peers with app.yaml file.
 
 handlers:
 - url: /static
