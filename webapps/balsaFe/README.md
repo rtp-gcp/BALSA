@@ -54,4 +54,11 @@ The .env file looks like this:
 SECRET_KEY="somekey from api gcp page"
 CLIENT_ID="some email from api gcp page"
 LOGIN_URI="https://balsa-404914.uc.r.appspot.com/login/callback"
+
+OPENAI_API_KEY=""
+
+GPT_DEFAULT_MODEL="gpt-3.5-turbo-1106"
+GPT_TUNED_MODEL=""
+
+ADMIN="admin@gmail.com"
 ```
