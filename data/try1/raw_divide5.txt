@@ -1,0 +1,70 @@
+
+SAMPLE_CODE
+
+        L   R5,DIVISOR
+        C   R5,=F'0'               IS THE DIVISOR 0?
+        BE  ZERODIV                BRANCH IF DIVISOR is 0
+        D   R8,DIVISOR             OK to DIVIDE NOW
+        ...
+ZERODIV EQU *
+*
+* CODE TO HANDLE A ZERO DIVISOR
+*
+* TODO:
+
+
+COMMENTARY
+
+D   R1,D2(X2,B2)
+
+OPCODE  R1X2   B2D2  D2D2
+
+The Divide (D) instruction performs two's compliment binary
+integer division.  
+
+An example of integer division is:  
+
+Y = A / B with remainder R
+
+A is referred to as the dividend
+B is referred to as the divisor
+Y is referred to as quotient
+R is referred to as the remainder
+
+Operand 1 specifies a register pair.  Operand 1
+specifies an even register.  The second register is implied as the
+next register in the sequence.
+
+For example if Operand 1 is R2, the second register is R3.  This
+even:odd register pair forms the dividend.
+
+Operand 2 specifes the name of a fullword in memory containing
+the divisor.
+
+After the execution of the divide instruction, the resulting 
+quotient is in R1 and the remainder is in R2.   To clarify,
+R1 is R8 and R2 is R9 in the example code below.
+
+
+As an example, consider the following code which protects
+against divide by zero errors:
+
+        L   R5,DIVISOR
+        C   R5,=F'0'               IS THE DIVISOR 0?
+        BE  ZERODIV                BRANCH IF DIVISOR is 0
+        D   R8,DIVISOR             OK to DIVIDE NOW
+        ...
+ZERODIV EQU *
+*
+* CODE TO HANDLE A ZERO DIVISOR
+*
+* TODO:
+
+
+
+
+
+PROMPT
+
+Provide an explanation of the Divide instruction and how to 
+protect against divide by zero errors in BAS.

@@ -1,0 +1,14 @@
+
+SAMPLE_CODE
+
+This is sample code line 1
+This is sample code line 2
+This is sample code line 3
+
+COMMENTARY
+
+This is how to do X. And R1 contains the number 3.  R2 contains the number 5.  The sum is 8 and stored in memory associated with field name SUM.
+
+PROMPT
+
+Show me how to load two 32-bit Integer numbers to registers R1 and R2.  Afterwards show how to add R1 and R2 and write the result to memory using the field name SUM.

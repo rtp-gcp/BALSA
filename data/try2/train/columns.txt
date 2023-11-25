@@ -1,0 +1,40 @@
+
+RESULT
+
+This answer is using markdown format.
+
+This preformated text block shows the column usage for IBM BAL assembly.
+The column headings are shown as a number ruler and hidden from the 
+assembler using comment character in first column as `*`.
+
+```
+*        1         2         3         4         5         6         7         8 
+*2345678901234567890123456789012345678901234567890123456789012345678901234567890
+*name starts at column 1
+*        operation starts at column 10
+*             operands start at column 15
+*                              comments start at column 32
+*                                                                      continuation starts at column 72
+```
+
+* name starts at column 1
+* operation starts at 10
+* operands start at column 15
+* comments which do not start in column 1, must start in column 32
+* line continuation characters are placed in column 72
+* line continuation characters are typically `x`
+
+
+PROMPT
+
+Provide info on column usage when writing IBM BAL Assembly code.
+
+Your answer should be brief and in markdown format.  If you use preformated text blocks they
+should be in this form:
+
+```
+put preformated text here
+```
+
+Use `*` to identify a comment.
+

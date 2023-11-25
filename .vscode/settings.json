@@ -1,0 +1,10 @@
+{
+    "python.terminal.launchArgs": [
+
+    ],
+    "python.autoComplete.extraPaths": [
+        
+
+    ],
+    "python.analysis.extraPaths": []
+}

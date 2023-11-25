@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <title>Input Form</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  </head>
+  <body>
+    <div class="container">
+      <!-- AUTH -->
+      <h1>Welcome, {{ email }}</h1>
+      <a href="{{ url_for('auth.logout') }}">Logout</a>
+      <!--  -->
+      <form action="/handle_prompt" method="post">
+        <!-- Radio Buttons and Text Inputs -->
+    <label for="tuned">Tuned</label>
+    <input type="radio" id="tuned" name="our_mode" value="tuned">
+
+    <label for="normal">Normal</label>
+    <input type="radio" id="normal" name="our_mode" value="normal">
+
+    <input
+      type="text"
+      name="prompt"
+      class="input-field"
+      placeholder="Enter prompt here"
+      value="{{ prompt }}"
+    />
+    
+    <textarea
+      name="response"
+      class="input-field large"
+      placeholder=""
+    >{{ response }}</textarea>
+
+    <!-- Hidden Input to Track Which Button Was Clicked -->
+    <input type="hidden" name="action" id="form-action" value="submit">
+
+    <!-- Main Submit Button -->
+    <button type="submit" onclick="document.getElementById('form-action').value='submit';">Submit</button>
+
+    <!-- Evaluation Buttons -->
+    <div class="button-group">
+        <button type="submit" onclick="document.getElementById('form-action').value='good';" value="good">Good</button>
+        <button type="submit" onclick="document.getElementById('form-action').value='bad';" value="bad">Bad</button>
+    </div>
+    </form>
+    </div>
+  </body>
+</html>

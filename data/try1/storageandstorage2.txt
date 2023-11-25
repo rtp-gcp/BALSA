@@ -1,0 +1,36 @@
+
+SAMPLE_CODE
+
+
+COMMENTARY
+
+
+# SS2 Storage to Storage Instruction Format
+
+There are two subtypes for Storage to Storage instructions.  The
+SS2 format is a variation of the SS1 format that contains two
+lengths.
+
+
+The format is as follows:
+
+| OpCode | byte2 | byte3        | byte4 | byte5 | byte6 |
+|--------+-------+--------------+-------+-------+-------|
+| xx     | L1L2  | B1D1         |  D1D1 | B2D2  | D2D2  |
+|        | Length| Dest         |       | Src   |       |
+|        |       | Base         |       | Base  |       |
+|        |       | Displacement | Disp. | Disp. | Disp. |
+
+* Byte 1 - the op code
+* Byte 2 
+    - the number of bytes associated with operand 1 (minus 1)
+    - the number of bytes associated with operand 2 (minus 1)
+    - Each length value is 4 bits wide
+* Byte 3 and 4 - the base/displacement address associated with operand 1
+* Byte 5 and 6 - the base/displacement address associated with operand 2
+
+PROMPT
+
+Can you explain the Storage and Storage type two instruction format also known as SS2?
+
+
