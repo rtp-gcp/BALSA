@@ -5,8 +5,34 @@ service = Blueprint('service', __name__)
 ## openai api request
 def send_openai_request(prompt, our_mode):
     """Send a request to OpenAI API."""
-    system_msg = 'You are a helpful assistant who understands IBM HLASM'  # Default system message
+    system_msg = """
+    When writing code, always obey these rules:
+
+    * NAME corresponds to a LABEL and is always in column 1.
+        - The NAME is at most 8 characters long.
+        - The NAME begins with characters A-Z, a-z, $, # or @. 
+    * OPERATION corresponds to an instruction (mnemonic) and it starts in column 16.
+    * OPERANDS corresponds to an instruction argumennts or parameters.
+        - Multiple operands are separated by a comma `,`.
+        - Space ` ` characters are not permitted between OPERANDS.
+    * COMMENT a comment has two starting locations.  
+        - If the entire line is a comment, then the comment marker `*` starts in column 1.
+        - If the comment is used at the end of a line of code, it starts at column 32.
+    * Column 72 is used to identify a continuation of the current line to the next
+        - In this case, use a `x` in column 72 on the first line.
+        - On the second continued line, code starts at column 16.
+
+    All code should be output in markdown or preformatted text blocks like so:
+
+    ```
+    code here
+    ```
+
+    Above the code section show a ruler which has the column numbers.
+    """
+
     our_model = current_app.openai_tuned_model if our_mode == "tuned" else current_app.openai_default_model
+    print("======== our_mode: ", our_mode)
     response = current_app.openai_client.chat.completions.create(
         model=our_model,
         messages=[{"role": "system", "content": system_msg}, {"role": "user", "content": prompt}]
@@ -43,8 +69,6 @@ def handle_prompt():
     if action == 'submit':
         # Prepare and send the request to OpenAI
         response = send_openai_request(prompt, our_mode)
-        # # Mock response for demonstration purposes
-        # response = "def hello_world():\n    print('Hello, world!')\n\nhello_world()"
         return render_template('index.html', prompt=prompt, response=response, email=session["email"])
     elif action == 'good':
         # Serve a blank index.html template if 'Good'
