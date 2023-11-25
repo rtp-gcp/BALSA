@@ -47,3 +47,12 @@
 
 * [good short tutor part 1](https://www.youtube.com/watch?v%253DlnA9DMvHtfI%2526list%253DPLisMMQz00ChzbIQNBmzP5752Gk2yc_UJL%2526index%253D19%2526pp%253DgAQBiAQB)
 * [good short tutor part 2](https://www.youtube.com/watch?v%253DYDiSFS-yHwk%2526list%253DPLisMMQz00ChzbIQNBmzP5752Gk2yc_UJL%2526index%253D20%2526pp%253DgAQBiAQB)
+
+
+
+## Python Flask, gnunicor, WSGI, blueprints
+
+* [flask](https://flask.palletsprojects.com/en/3.0.x/)
+* [WSGI](https://en.wikipedia.org/wiki/Web_Server_Gateway_Interface)
+* [blueprints](https://flask.palletsprojects.com/en/3.0.x/blueprints/)
+* [gnunicorn](https://gunicorn.org/)
