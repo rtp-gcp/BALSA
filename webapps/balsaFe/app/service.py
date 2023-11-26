@@ -56,20 +56,20 @@ def handle_train_data():
         'prompt': prompt,
         'response': response
     })
-    return render_template('index.html', email=session["email"])
+    return render_template('index.html', email=session["email"], default_model_mode=session['our_mode'])
 
 @service.route('/prompt', methods=['POST'])
 def handle_prompt():
     """Handle form submissions from the index page."""
     action = request.form.get('action')
-    our_mode = request.form.get('our_mode')
     prompt = request.form.get('prompt')
     response = request.form.get('response')
+    session['our_mode'] = request.form.get('our_mode')
 
     if action == 'submit':
         # Prepare and send the request to OpenAI
-        response = send_openai_request(prompt, our_mode)
-        return render_template('index.html', prompt=prompt, response=response, email=session["email"])
+        response = send_openai_request(prompt, session['our_mode'])
+        return render_template('index.html', prompt=prompt, response=response, email=session["email"], default_model_mode=session['our_mode'], show_buttons=True)
     elif action == 'good':
         # Serve a blank index.html template if 'Good'
         return render_template('index.html', email=session["email"])
@@ -82,4 +82,8 @@ def handle_prompt():
 def index():
     """Route for the service page."""
     print("== hit index route === ")
-    return render_template('index.html', email=session["email"])
+    #set defalut model mode
+    if 'our_mode' not in session:
+        session['our_mode'] =  current_app.default_model_mode
+
+    return render_template('index.html', email=session["email"], default_model_mode=session['our_mode'])

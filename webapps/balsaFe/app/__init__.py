@@ -16,10 +16,10 @@ def create_app():
     app.config['SESSION_COOKIE_SECURE'] = True  
     app.config['SESSION_COOKIE_HTTPONLY'] = True
     app.config['SESSION_COOKIE_SAMESITE'] = 'Lax'
-
     app.admin = os.environ.get("ADMIN")
     app.client_id = os.environ.get('CLIENT_ID')
     app.login_uri = os.environ.get('LOGIN_URI')
+    app.default_model_mode = os.environ.get("DEFAULT_MODEL_MODE")
 
     # Init firestore client
     db = firestore.Client()

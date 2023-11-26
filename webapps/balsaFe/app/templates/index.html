@@ -15,19 +15,19 @@
       <form action="/prompt" method="post">
         <!-- Radio Buttons and Text Inputs -->
     <label for="tuned">Tuned</label>
-    <input type="radio" id="tuned" name="our_mode" value="tuned">
+    <input type="radio" id="tuned" name="our_mode" value="tuned" {% if default_model_mode == 'tuned' %}checked{% endif %}>
 
     <label for="normal">Normal</label>
-    <input type="radio" id="normal" name="our_mode" value="normal">
+    <input type="radio" id="normal" name="our_mode" value="normal" {% if default_model_mode == 'normal' %}checked{% endif %}>
 
     <input
-      type="text"
-      name="prompt"
-      class="input-field"
-      placeholder="Enter prompt here"
-      value="{{ prompt }}"
-    />
-    
+    type="text"
+    name="prompt"
+    class="input-field"
+    placeholder="Enter prompt here"
+    value="{{ prompt }}"
+  />
+  
     <textarea
       name="response"
       class="input-field large"
@@ -41,10 +41,12 @@
     <button type="submit" onclick="document.getElementById('form-action').value='submit';">Submit</button>
 
     <!-- Evaluation Buttons -->
+    {% if show_buttons %}
     <div class="button-group">
         <button type="submit" onclick="document.getElementById('form-action').value='good';" value="good">Good</button>
         <button type="submit" onclick="document.getElementById('form-action').value='bad';" value="bad">Bad</button>
     </div>
+    {% endif %}
     </form>
     </div>
   </body>

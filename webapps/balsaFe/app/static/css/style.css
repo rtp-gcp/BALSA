@@ -8,23 +8,23 @@ body {
 }
 
 .container {
-  max-width: 85vw;
+  min-width: 80vw;
   text-align: center;
 }
 
 .input-field {
   width: 100%;
-  height: 10vh;
   padding: 10px;
-  margin: 10px 0;
   border: 1px solid #ddd;
   border-radius: 4px;
   box-sizing: border-box;
+  font-size: 16px; /* Adjust font size for better readability */
 }
 
 .input-field.large {
-  min-height: 50vh;
-  /* Large enough for multiple paragraphs */
+  min-height: 65vh; /* Large enough for multiple paragraphs */
+  height: auto; /* Adjusts height based on content */
+  font-size: 18px; /* Slightly larger font for the large input */
 }
 
 button {
@@ -48,8 +48,6 @@ button:hover {
 
 .button-group button {
   width: 100px;
-  /* Resets the width to default instead of 100% */
   margin: 0 5px;
-  /* Adds spacing between buttons */
   background-color: gray;
 }
