@@ -1,0 +1,13 @@
+{
+    "type": "service_account",
+    "project_id": "balsa-404914",
+    "private_key_id": "12c323ffad0a1cc2487a5be333739a467dc65cee",
+    "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDAkATaxb1b/03i\nrsLS4D9Dhz9TkExqfnSYSNTjoS4cS096eLB+f4BVHfMEx8IlbUlvq8gT9lFtk18i\nayQdNLo1cC/MzI7kD66X/H8HZztqikPs4HOD459Ad5dZnuqekT2tm3Qz9dH4M1Zh\nLWtgAz/clIRq7Mieq9cr43K4Cezx55bz1Q4uqME2T8tJuKYt9lwzRaqgUItj86hI\nDhHNfWEWcm6izHfNfvy3erXZWZiRIFXYyd8xYVntVqPIrypn6uKnfqY4CGCw3qrT\nf5xU6EQTvNZ2O1CvdzTTXM6ZTuHgB+HNaVPPhchfiwZBYDukKM1j/8BL5jsRwtU+\nQha/0DXjAgMBAAECggEABZi9LPtEGX6jmF4Rvbc2uiqu+VRqFtM2RByKDu2eXW7k\nHSrmnxpR5zy+GauAOzWktJd7crJp7nN3O7+Os3MBgHq0eoz1/yaxIXi4/ebs5VO3\nGiY2JUdXcTRCNrG1jnEhOPPvRJKs4l5ZvZb5YvuP3JEhaIXEIb6YGcEmvR0zZ1pv\nn3+WsVuxQ7ZbNJVM7AcFaNzD6OP2wlM0HYaeQmQYseY+eMf9VUmzAyB326tOvbVl\n84WZ3Q3M7jXvWbem1ntxp6QGKU5R57B131TdeZP2ff6A25SBZwnbx7ZbRvTugCxb\nBQD09GRhWRrZKkx9g0NQZO9AmBA6AKtQ0hbcKnsHbQKBgQDshgqhR9uB3qu9V0nY\n9dLpGG/KVR21osNqKCfQpQecDjwagvhoTijkW/+yzoDHm0P5n/3DaTBBYchRfN0P\nmloMYG6EjHnLDjgTN2gB6rAMxFa4OXnC8dsM2JZD9krV/3bOBYR82ji6GsvEJBtO\nFUDFOj1FOxjIUXj5wDITOcfGxQKBgQDQa0V6eoW8HAFCHZsN5KTDled0c/KW+mFq\nAbIAfh5vJZLEoaHcPrCwgNLoJNuejcozBEado/nVNHXsl+iXX5yC6Vp7K/ubqOHw\ndmIxssbio8DSa5Ovdu83lloHVwePWKd6afTI+oGsGuL2m1Qj9MA3C02NvHIw4wvY\nxJbRcyMUhwKBgQCwdmTx5QmZAAdDkR8wdl7vt2KYIx6ySAfhaKoj2SwvOtOOuA4a\ny81oalcAEV81DNsPH1WVeCIfdZOdcDoBjRgHyd5Kl/+6BhbCB4FahLzqGYXVllQI\npKbYE7Mwa010EU+S77zj5W+TMbC62nFgtSyIuSXDRA7+TQKj2sfBXkd1PQKBgDCi\nZ5MeFikAK/b+q5kBWsVdLKaLC/fZM3QmMyBUTcvH68jAouGfK2H0ncKYHzuPgLiI\n7eWJRxpOZJoyFI+GOyJ9S6TkbZE0RozzQxSv0CNA7RTtD4hpa4cAKb/+uf/kQyiY\nowtnEW1U1NORCYBec6AknhNN/yOTR8dskHkNsgjvAoGAbdQT71H8yTwZm04iVOKp\nN9eu+NnBtAUh6wSx14C0MS5FedLUdB0w4ju6i2VTSSxsxgx7Zcrdo3+qcbTOf2VQ\nYNWa0bahAfaom3QQloY1lr7wLiz06YI/54jrzIeaIBkQNl5i9hRk5GxPzdHU8+MO\nhfYlb8bXpcd6fxmEQ5gSzvY=\n-----END PRIVATE KEY-----\n",
+    "client_email": "balsa-sa@balsa-404914.iam.gserviceaccount.com",
+    "client_id": "108124436770401010870",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/balsa-sa%40balsa-404914.iam.gserviceaccount.com",
+    "universe_domain": "googleapis.com"
+  }
