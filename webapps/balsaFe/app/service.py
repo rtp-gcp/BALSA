@@ -30,22 +30,20 @@ def handle_train_data():
         'prompt': prompt,
         'response': response
     })
-    return render_template('index.html', email=session["email"])
+    return render_template('index.html', email=session["email"], mode=session['our_mode'])
 
 @service.route('/prompt', methods=['POST'])
 def handle_prompt():
     """Handle form submissions from the index page."""
     action = request.form.get('action')
-    our_mode = request.form.get('our_mode')
     prompt = request.form.get('prompt')
     response = request.form.get('response')
+    session['our_mode'] = request.form.get('our_mode')
 
     if action == 'submit':
         # Prepare and send the request to OpenAI
-        response = send_openai_request(prompt, our_mode)
-        # # Mock response for demonstration purposes
-        # response = "def hello_world():\n    print('Hello, world!')\n\nhello_world()"
-        return render_template('index.html', prompt=prompt, response=response, email=session["email"])
+        response = send_openai_request(prompt, session['our_mode'])
+        return render_template('index.html', prompt=prompt, response=response, email=session["email"], show_buttons=True)
     elif action == 'good':
         # Serve a blank index.html template if 'Good'
         return render_template('index.html', email=session["email"])
@@ -58,4 +56,4 @@ def handle_prompt():
 def index():
     """Route for the service page."""
     print("== hit index route === ")
-    return render_template('index.html', email=session["email"])
+    return render_template('index.html', email=session["email"], mode=session['our_mode'])
