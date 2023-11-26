@@ -61,4 +61,6 @@ GPT_DEFAULT_MODEL="gpt-3.5-turbo-1106"
 GPT_TUNED_MODEL=""
 
 ADMIN="admin@gmail.com"
+
+DEFAULT_MODEL_MODE="normal"
 ```

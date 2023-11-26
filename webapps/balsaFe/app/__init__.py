@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, session
 from google.cloud import firestore
 from openai import OpenAI
 import os
@@ -16,10 +16,13 @@ def create_app():
     app.config['SESSION_COOKIE_SECURE'] = True  
     app.config['SESSION_COOKIE_HTTPONLY'] = True
     app.config['SESSION_COOKIE_SAMESITE'] = 'Lax'
-
     app.admin = os.environ.get("ADMIN")
     app.client_id = os.environ.get('CLIENT_ID')
     app.login_uri = os.environ.get('LOGIN_URI')
+
+    #set defalut model mode
+    if 'our_mode' not in session:
+        session['our_mode'] =  os.environ.get("DEFAULT_MODEL_MODE")
 
     # Init firestore client
     db = firestore.Client()
