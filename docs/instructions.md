@@ -2,15 +2,21 @@
 
 These are the instructions
 
-mach_inst_dict = {
-            'A':          ('5A','R1,D2(X2,B2)',       'RX BD DD'),
-            'AH':         ('4A','R1,D2(X2,B2)',       'RX BD DD'),
-            'AL':         ('5E','R1,D2(X2,B2)',       'RX BD DD'),
-            'ALR':        ('1E','R1,R2',              'RR'),
-            'AP':         ('FA','D1(L1,B1),D2(L2,B2)','L1L2 BD DD BD DD'),
-            'AR':         ('1A','R1,R2',              'RR'),
-            'BAL':        ('45','R1,D2(X2,B2)',       'RX BD DD'),
-            'BALR':       ('05','R1,R2',              'RR'),
+
+| Opcode | Description              | Opcode and Operands       | Encoding             | 
+|--------|--------------------------|---------------------------|----------------------|
+| A      | Add                      | A    R1,D2(X2,B2)         | 5A RX BD DD          |
+| AH     | Add halfword             | AH   R1,D2(X2,B2)         | 4A RX BD DD          |
+| AL     | Add ???                  | AL   R1,D2(X2,B2)         | 5E RX BD DD          |
+| ALR    | Add ??                   | ALR  R1,R2                | 1E RR                |
+| AP     | Add ??                   | AP   D1(L1,B1),D2(L2,B2)  | FA L1L2 BD DD BD DD  |
+| AR     | Add Register             | AR   R1,R2                | 1A 'RR               |
+| BAL    | Branch and Link          | BAL  R1,D2(X2,B2)         | 45 RX BD DD          |
+| BALR   | Branch and Link Register | BALR R1,R2                | 05 RR                |
+
+
+
+  
             'BAS':        ('4D','R1,D2(X2,B2)',       'RX BD DD'),
             'BASR':       ('0D','R1,R2',              'RR'),
             'BASSM':      ('0C','R1,R2',              'RR'),
