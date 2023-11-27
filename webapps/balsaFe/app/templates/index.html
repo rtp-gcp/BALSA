@@ -15,19 +15,20 @@
       <form action="/prompt" method="post">
         <!-- Radio Buttons and Text Inputs -->
     <label for="tuned">Tuned</label>
-    <input type="radio" id="tuned" name="our_mode" value="tuned" {% if mode == 'tuned' %}checked{% endif %}>
+    <input type="radio" id="tuned" name="our_mode" value="tuned" {% if default_model_mode == 'tuned' %}checked{% endif %}>
 
     <label for="normal">Normal</label>
-    <input type="radio" id="normal" name="our_mode" value="normal" {% if mode == 'normal' %}checked{% endif %}>
+    <input type="radio" id="normal" name="our_mode" value="normal" {% if default_model_mode == 'normal' %}checked{% endif %}>
+
 
     <input
-      type="text"
-      name="prompt"
-      class="input-field"
-      placeholder="Enter prompt here"
-      value="{{ prompt }}"
-    />
-    
+    type="text"
+    name="prompt"
+    class="input-field"
+    placeholder="Enter prompt here"
+    value="{{ prompt }}"
+  />
+  
     <textarea
       name="response"
       class="input-field large"

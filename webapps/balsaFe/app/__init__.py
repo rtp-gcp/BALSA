@@ -19,6 +19,7 @@ def create_app():
     app.admin = os.environ.get("ADMIN")
     app.client_id = os.environ.get('CLIENT_ID')
     app.login_uri = os.environ.get('LOGIN_URI')
+    app.default_model_mode = os.environ.get("DEFAULT_MODEL_MODE")
 
     #set defalut model mode
     if 'our_mode' not in session:
