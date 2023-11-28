@@ -28,6 +28,20 @@ These are the instructions
 | CH     | Compare Halfword                   | CH    R1,D2(X2,B2)         | 49 RX BD DD           |                         |
 | CL     | Compare Unsigned Fullword          | CL    R1,D2(X2,B2)         | 55 RX BD DD           | RX                      |
 | CLC    | Compare upto 256 consecutive bytes in Memory | CLC  D1(L,B1),D2(B2) | D5 LL BD DD BD DD | SS                      |
+| CLCL   | Compare Characters Long            | CLCL  R1,R2                | 0F RR                 | RR                      |
+| CLI    | Compare Logical Immediate          | CLI   D1(B1),I2            | 95 II BD DD           | SI                      |
+| CLM    | Compare Selected Bytes in Memory using mask  | CLM   R1,M3,D2(B2)     | BD RM BD DD     | RS                      |
+| CLR    | Compare Registers                  | CLR   R1,R2                | 15 RR                 | RR                      |
+| CP     | Compare Packed two fields in Memory| CP   D1(L1,B1),D2(L2,B2)   | F9 L1L2 BD DD BD DD   | SS                      |
+| CR     | Compare Signed Value in Register   | CR   R1,R2                 | 19 RR                 | RR                      |
+| CS     | Compare Fullword in Register to field in Memory | CS    R1,R3,D2(B2) | BA RR BD DD      | RS                      |
+| CVB    | Convert Packed Decimal Values in Memory to signed integers | CVB R1,D2(X2,B2)     | 4F RX BD DD           | RX    |
+| CVD    | Convert Signed Decimal in Register to Packed Decimal in Memory | CVD R1,D2(X2,B2) | 4E RX BD DD           | RX    |
+
+
+
+
+
 
 
   
@@ -36,15 +50,6 @@ These are the instructions
            
             
 
-            'CLCL':       ('0F','R1,R2',              'RR'),
-            'CLI':        ('95','D1(B1),I2',          'II BD DD'),
-            'CLM':        ('BD','R1,M3,D2(B2)',       'RM BD DD'),
-            'CLR':        ('15','R1,R2',              'RR'),
-            'CP':         ('F9','D1(L1,B1),D2(L2,B2)','L1L2 BD DD BD DD'),
-            'CR':         ('19','R1,R2',              'RR'),
-            'CS':         ('BA','R1,R3,D2(B2)',       'RR BD DD'),
-            'CVB':        ('4F','R1,D2(X2,B2)',       'RX BD DD'),
-            'CVD':        ('4E','R1,D2(X2,B2)',       'RX BD DD'),
             'D':          ('5D','R1,D2(X2,B2)',       'RX BD DD'),
             'DP':         ('FD','D1(L1,B1),D2(L2,B2)','L1L2 BD DD BD DD'),
             'DR':         ('1D','R1,R2',              'RR'),
