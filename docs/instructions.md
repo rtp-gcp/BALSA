@@ -40,16 +40,18 @@ These are the instructions
 | D      | Divide Register by value in Memory       | D    R1,D2(X2,B2)          | 5D RX BD DD           | RX                |
 | DP     | Divide Packed Decimals in Registers | DP  D1(L1,B1),D2(L2,B2)   | FD L1L2 BD DD BD DD   | SS                      |
 | DR     | Divide Register by Register        | DR   R1,R2                 | 1D RR                 | RR                      |
+| ED     | Edit - formats packed decimal field | ED   D1(L,B1),D2(B2)      | DE LL BD DD BD DD     | SS                      |
+| EDMK   | Edit and Mark - address of field in R1      | EDMK  D1(L,B1),D2(B2)      | DF LL BD DD BD DD     | SS             |
+| EX     | Execute a target instruction       | EX    R1,D2(X2,B2)         | 44 RX BD DD           | RX                      |
+| IC     | Insert Character - into register   | IC    R1,D2(X2,B2)         | 43 RX BD DD           | RX                      |
+| ICM    | Insert Characters under mask into register | ICM    R1,M3,D2(B2) |  BF RM BD DD         | RS                      |
+
+
 
            
             
 
  
-            'ED':         ('DE','D1(L,B1),D2(B2)',    'LL BD DD BD DD'),
-            'EDMK':       ('DF','D1(L,B1),D2(B2)',    'LL BD DD BD DD'),
-            'EX':         ('44','R1,D2(X2,B2)',       'RX BD DD'),
-                        'IC':         ('43','R1,D2(X2,B2)',       'RX BD DD'),
-            'ICM':        ('BF','R1,M3,D2(B2)',       'RM BD DD'),
             'L':          ('58','R1,D2(X2,B2)',       'RX BD DD'),
             'LA':         ('41','R1,D2(X2,B2)',       'RX BD DD'),
             'LCR':        ('13','R1,R2',              'RR'),
