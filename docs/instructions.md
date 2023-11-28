@@ -37,22 +37,14 @@ These are the instructions
 | CS     | Compare Fullword in Register to field in Memory | CS    R1,R3,D2(B2) | BA RR BD DD      | RS                      |
 | CVB    | Convert Packed Decimal Values in Memory to signed integers | CVB R1,D2(X2,B2)     | 4F RX BD DD           | RX    |
 | CVD    | Convert Signed Decimal in Register to Packed Decimal in Memory | CVD R1,D2(X2,B2) | 4E RX BD DD           | RX    |
-
-
-
-
-
-
-
-  
-  
+| D      | Divide Register by value in Memory       | D    R1,D2(X2,B2)          | 5D RX BD DD           | RX                |
+| DP     | Divide Packed Decimals in Registers | DP  D1(L1,B1),D2(L2,B2)   | FD L1L2 BD DD BD DD   | SS                      |
+| DR     | Divide Register by Register        | DR   R1,R2                 | 1D RR                 | RR                      |
 
            
             
 
-            'D':          ('5D','R1,D2(X2,B2)',       'RX BD DD'),
-            'DP':         ('FD','D1(L1,B1),D2(L2,B2)','L1L2 BD DD BD DD'),
-            'DR':         ('1D','R1,R2',              'RR'),
+ 
             'ED':         ('DE','D1(L,B1),D2(B2)',    'LL BD DD BD DD'),
             'EDMK':       ('DF','D1(L,B1),D2(B2)',    'LL BD DD BD DD'),
             'EX':         ('44','R1,D2(X2,B2)',       'RX BD DD'),
