@@ -3,28 +3,32 @@
 These are the instructions
 
 
-| Opcode | Description                        | Opcode and Operands        | Encoding              | 
-| :------| :----------------------------------| :--------------------------| :---------------------|
-| A      | Add                                | A     R1,D2(X2,B2)         | 5A RX BD DD           |
-| AH     | Add halfword                       | AH    R1,D2(X2,B2)         | 4A RX BD DD           |
-| AL     | Add ???                            | AL    R1,D2(X2,B2)         | 5E RX BD DD           |
-| ALR    | Add ??                             | ALR   R1,R2                | 1E RR                 |
-| AP     | Add ??                             | AP    D1(L1,B1),D2(L2,B2)  | FA L1L2 BD DD BD DD   |
-| AR     | Add Register                       | AR    R1,R2                | 1A RR                 |
-| BAL    | Branch and Link                    | BAL   R1,D2(X2,B2)         | 45 RX BD DD           |
-| BALR   | Branch and Link Register           | BALR  R1,R2                | 05 RR                 |
-| BAS    | Branch ???                         | BAS   R1,D2(X2,B2)         | 4D RX BD DD           |
-| BASR   | Branch ??                          | BASR  R1,R2                | 0D RR                 |
-| BASSM  | Branch ??                          | BASSM R1,R2                | 0C RR                 |
-| BC     | Branch on Condition                | BC    M1,D2(X2,B2)         | 47 MX BD DD           |
-| BCR    | Branch on Condition Register       | BCR   M1,R2                | 07 MR                 |
-| BCT    | Branch on Count                    | BCT   R1,D2(X2,B2)         | 46 RX BD DD           |
-| BCTR   | Branch on Count Register           | BCTR  R1,R2                | 06 RR                 |
-| BSM    | Branch ???                         | BSM   R1,R2                | 0B RR                 |
-| BXH    | Branch on Index Greater            | BXH   R1,R3,D2(B2)         | 86 RR BD DD           |
-| BXLE   | Branch on Index Less than or Equal | BXLE  R1,R3,D2(B2)         | 87 RR BD DD           |
-| C      | Compare Fullword                   | C     R1,D2(X2,B2)         | 59 RX BD DD           |
-| CDS    | Compare ???                        | CDS   R1,R3,D2(B2)         | BB RR BD DD           |
+| Opcode | Description                        | Opcode and Operands        | Encoding              | Instruction Format Type | 
+| :------| :----------------------------------| :--------------------------| :---------------------| :-----------------------|
+| A      | Add                                | A     R1,D2(X2,B2)         | 5A RX BD DD           |                         |
+| AH     | Add halfword                       | AH    R1,D2(X2,B2)         | 4A RX BD DD           |                         |
+| AL     | Add ???                            | AL    R1,D2(X2,B2)         | 5E RX BD DD           |                         |
+| ALR    | Add ??                             | ALR   R1,R2                | 1E RR                 |                         |
+| AP     | Add ??                             | AP    D1(L1,B1),D2(L2,B2)  | FA L1L2 BD DD BD DD   |                         |
+| AR     | Add Register                       | AR    R1,R2                | 1A RR                 |                         |
+| BAL    | Branch and Link                    | BAL   R1,D2(X2,B2)         | 45 RX BD DD           |                         |
+| BALR   | Branch and Link Register           | BALR  R1,R2                | 05 RR                 |                         |
+| BAS    | Branch ???                         | BAS   R1,D2(X2,B2)         | 4D RX BD DD           |                         |
+| BASR   | Branch ??                          | BASR  R1,R2                | 0D RR                 |                         |
+| BASSM  | Branch ??                          | BASSM R1,R2                | 0C RR                 |                         |
+| BC     | Branch on Condition                | BC    M1,D2(X2,B2)         | 47 MX BD DD           |                         |
+| BCR    | Branch on Condition Register       | BCR   M1,R2                | 07 MR                 |                         |
+| BCT    | Branch on Count                    | BCT   R1,D2(X2,B2)         | 46 RX BD DD           |                         |
+| BCTR   | Branch on Count Register           | BCTR  R1,R2                | 06 RR                 |                         |
+| BSM    | Branch ???                         | BSM   R1,R2                | 0B RR                 |                         |
+| BXH    | Branch on Index Greater            | BXH   R1,R3,D2(B2)         | 86 RR BD DD           |                         |
+| BXLE   | Branch on Index Less than or Equal | BXLE  R1,R3,D2(B2)         | 87 RR BD DD           |                         |
+| C      | Compare Fullword                   | C     R1,D2(X2,B2)         | 59 RX BD DD           |                         |
+| CDS    | Compare ???                        | CDS   R1,R3,D2(B2)         | BB RR BD DD           |                         |
+| CH     | Compare Halfword                   | CH    R1,D2(X2,B2)         | 49 RX BD DD           |                         |
+| CL     | Compare Unsigned Fullword          | CL    R1,D2(X2,B2)         | 55 RX BD DD           | RX                      |
+| CLC    | Compare upto 256 consecutive bytes in Memory | CLC  D1(L,B1),D2(B2) | D5 LL BD DD BD DD | SS                      |
+
 
   
   
@@ -32,9 +36,6 @@ These are the instructions
            
             
 
-            'CH':         ('49','R1,D2(X2,B2)',       'RX BD DD'),
-            'CL':         ('55','R1,D2(X2,B2)',       'RX BD DD'),
-            'CLC':        ('D5','D1(L,B1),D2(B2)',    'LL BD DD BD DD'),
             'CLCL':       ('0F','R1,R2',              'RR'),
             'CLI':        ('95','D1(B1),I2',          'II BD DD'),
             'CLM':        ('BD','R1,M3,D2(B2)',       'RM BD DD'),
