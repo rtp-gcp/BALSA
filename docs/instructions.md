@@ -52,42 +52,39 @@ These are the instructions
 | LM     | Load Multiple values from memory into registers | LM       R1,R3,D2(B2) | 98 RR BD DD   | RX                      |
 | LNR    | Load signed value in register R2 into register R1 with negative sign | LNR      R1,R2 | 11 RR | RR                |
 | LPR    | Load signed value in register R2 into register R1 with positive sign (absolute value) | LPR    R1,R2 | 10 RR | RR |
-
-
- 
-            'LR':         ('18','R1,R2',              'RR'),
-            'LTR':        ('12','R1,R2',              'RR'),
-            'M':          ('5C','R1,D2(X2,B2)',       'RX BD DD'),
-            'MH':         ('4C','R1,D2(X2,B2)',       'RX BD DD'),
-            'MP':         ('FC','D1(L1,B1),D2(L2,B2)','L1L2 BD DD BD DD'),
-            'MR':         ('1C','R1,R2',              'RR'),
-            'MVC':        ('D2','D1(L,B1),D2(B2)',    'LL BD DD BD DD'),
-            'MVCIN':      ('E8','D1(L,B1),D2(B2)',    'LL BD DD BD DD'),
-            'MVCL':       ('0E','R1,R2',              'RR'),
-            'MVI':        ('92','D1(B1),I2',          'II BD DD'),
-            'MVN':        ('D1','D1(L,B1),D2(B2)',    'LL BD DD BD DD'),
-            'MVO':        ('F1','D1(L1,B1),D2(L2,B2)','L1L2 BD DD BD DD'),
-            'MVZ':        ('D3','D1(L,B1),D2(B2)',    'LL BD DD BD DD'),
-            'N':          ('54','R1,D2(X2,B2)',       'RX BD DD'),
-            'NC':         ('D4','D1(L,B1),D2(B2)',    'LL BD DD BD DD'),
-            'NI':         ('94','D1(B1),I2',          'II BD DD'),
-            'NR':         ('14','R1,R2',              'RR'),
-            'O':          ('56','R1,D2(X2,B2)',       'RX BD DD'),
-            'OC':         ('D6','D1(L,B1),D2(B2)',    'LL BD DD BD DD'),
-            'OI':         ('96','D1(B1),I2',          'II BD DD'),
-            'OR':         ('16','R1,R2',              'RR'),
-            'PACK':       ('F2','D1(L1,B1),D2(L2,B2)','L1L2 BD DD BD DD'),
-            'S':          ('5B','R1,D2(X2,B2)',       'RX BD DD'),
-            'SH':         ('4B','R1,D2(X2,B2)',       'RX BD DD'),
-            'SL':         ('5F','R1,D2(X2,B2)',       'RX BD DD'),
-            'SLA':        ('8B','R1,D2(X2,B2)',       'R0 BD DD'),
-            'SLDA':       ('8F','R1,D2(X2,B2)',       'R0 BD DD'),
-            'SLDL':       ('8D','R1,D2(X2,B2)',       'R0 BD DD'),
-            'SLL':        ('89','R1,D2(X2,B2)',       'R0 BD DD'),
-            'SLR':        ('1F','R1,R2',              'RR'),
-            'SP':         ('FB','D1(L1,B1),D2(L2,B2)','L1L2 BD DD BD DD'),
-            'SR':         ('1B','R1,R2',              'RR'),
-            'SRA':        ('8A','R1,D2(X2,B2)',       'R0 BD DD'),
+| LR     | Load value from register R1 into register R2 | LR  R1,R2 | 18 RR | RR |
+| LTR    | Load and Test value in register R2 into register R1 | LTR    R1,R2 | 12 RR| RR |
+| M      | Multiply fullword in memory by fullword in even/odd register pair | M    R1,D2(X2,B2) | 5C RX BD DD | RX |
+| MH     | Multiply halfword in memory by fullword in even/odd register pair | MH   R1,D2(X2,B2) | 4C RX BD DD | RX |
+| MP     | Multiply Packed decimal in memory by packed decimal in memory | MP  D1(L1,B1),D2(L2,B2) | FC L1L2 BD DD BD DD | SS |
+| MR     | Multiply value in register by value in register | MR      R1,R2 | 1C RR                | RR |
+| MVC    |                                    | MVC   D1(L,B1),D2(B2)    | D2 LL BD DD BD DD      | XX                      |
+| MVCIN  |                                    | MVCIN D1(L,B1),D2(B2)    | E8 LL BD DD BD DD  ||
+| MVCL   |                                    | MVCL  R1,R2              | 0E RR   ||
+| MVI    |                                    | MVI D1(B1),I2            | 92 II BD DD  ||
+| MVN    |                                    | MVN D1(L,B1),D2(B2)      | D1 LL BD DD BD DD  ||
+| MVO    |                                    | MVO D1(L1,B1),D2(L2,B2)  | F1 L1L2 BD DD BD DD ||
+| MVZ    |                                    | MVZ D1(L,B1),D2(B2)      | D3 LL BD DD BD DD ||
+| N      |                                    | N   R1,D2(X2,B2)         | 54 RX BD DD  || 
+| NC     |                                    | NC   D1(L,B1),D2(B2)     | D4 LL BD DD BD DD  || 
+| NI     |                                    | NI   D1(B1),I2           | 94 II BD DD  || 
+| NR     |                                    | NR   R1,R2               | 14 RR  || 
+| O      |                                    | O   R1,D2(X2,B2)         | 56 RX BD DD  || 
+| OC     |                                    | OC  D1(L,B1),D2(B2)      | D6 LL BD DD BD DD  || 
+| OI     |                                    | OI   D1(B1),I2           | 96 II BD DD  || 
+| OR     |                                    | OR   R1,R2               | 16 RR  || 
+| PACK   |                                    | PACK D1(L1,B1),D2(L2,B2) | F2 L1L2 BD DD BD DD  || 
+| S      |                                    | S R1,D2(X2,B2)           | 5B RX BD DD  || 
+| SH     |                                    | SH R1,D2(X2,B2)          | 4B RX BD DD  || 
+| SL     |                                    | SL R1,D2(X2,B2)          | 5F RX BD DD  || 
+| SLA    |                                    | SLA R1,D2(X2,B2)         | 8B R0 BD DD  || 
+| SLDA   |                                    | SLDA R1,D2(X2,B2)        | 8F R0 BD DD  || 
+| SLDL   |                                    | SLDL R1,D2(X2,B2)        | 8D R0 BD DD  || 
+| SLL    |                                    | SLL R1,D2(X2,B2)         | 89 R0 BD DD  || 
+| SLR    |                                    | SLR R1,R2                | 1F RR  || 
+| SP     |                                    | SP D1(L1,B1),D2(L2,B2)   | FB L1L2 BD DD BD DD  || 
+| SR     |                                    | SR R1,R2                 | 1B RR  || 
+| SRA    |                                    | SRA  R1,D2(X2,B2)        | 8A R0 BD DD  || 
 
                         'SRDA':       ('8E','R1,D2(X2,B2)',       'R0 BD DD'),
             'SRDL':       ('8C','R1,D2(X2,B2)',       'R0 BD DD'),
