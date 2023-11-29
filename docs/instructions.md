@@ -44,21 +44,17 @@ These are the instructions
 | EDMK   | Edit and Mark - address of field in R1      | EDMK  D1(L,B1),D2(B2)      | DF LL BD DD BD DD     | SS             |
 | EX     | Execute a target instruction       | EX    R1,D2(X2,B2)         | 44 RX BD DD           | RX                      |
 | IC     | Insert Character - into register   | IC    R1,D2(X2,B2)         | 43 RX BD DD           | RX                      |
-| ICM    | Insert Characters under mask into register | ICM    R1,M3,D2(B2) |  BF RM BD DD         | RS                      |
+| ICM    | Insert Characters under mask into Register | ICM    R1,M3,D2(B2) |  BF RM BD DD         | RS                      |
+| L      | Load a fullword from memory into a register | L      R1,D2(X2,B2) | 58 RX BD DD         | RX                      |
+| LA     | Load address of a storage location into a register | LA  R1,D2(X2,B2) | 41 RX BD DD     | RX                      |
+| LCR    | Load signed value in Register2 into Register1 | LCR       R1,R2 | 13 RR                 | RR                      |
+| LH     | Load signed halfword from memory into a Register | LH     R1,D2(X2,B2) | 48 RX BD DD           | RX               |
+| LM     | Load Multiple values from memory into registers | LM       R1,R3,D2(B2) | 98 RR BD DD   | RX                      |
+| LNR    | Load signed value in register R2 into register R1 with negative sign | LNR      R1,R2 | 11 RR | RR                |
+| LPR    | Load signed value in register R2 into register R1 with positive sign (absolute value) | LPR    R1,R2 | 10 RR | RR |
 
-
-
-           
-            
 
  
-            'L':          ('58','R1,D2(X2,B2)',       'RX BD DD'),
-            'LA':         ('41','R1,D2(X2,B2)',       'RX BD DD'),
-            'LCR':        ('13','R1,R2',              'RR'),
-            'LH':         ('48','R1,D2(X2,B2)',       'RX BD DD'),
-            'LM':         ('98','R1,R3,D2(B2)',       'RR BD DD'),
-            'LNR':        ('11','R1,R2',              'RR'),
-            'LPR':        ('10','R1,R2',              'RR'),
             'LR':         ('18','R1,R2',              'RR'),
             'LTR':        ('12','R1,R2',              'RR'),
             'M':          ('5C','R1,D2(X2,B2)',       'RX BD DD'),
