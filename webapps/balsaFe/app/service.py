@@ -91,5 +91,6 @@ def index():
     if 'our_mode' not in session:
         session['our_mode'] =  current_app.default_model_mode
 
-    return render_template('index.html', email=session["email"], default_model_mode=session['our_mode'])
+    #return render_template('index.html', email=session["email"], default_model_mode=session['our_mode'])
+    return render_template('index.html', email=session["email"], default_model_mode=request.form.get('our_mode'))
 
