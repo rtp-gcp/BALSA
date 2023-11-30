@@ -61,3 +61,7 @@
 
 * [Free shortcourse on RAG](https://www.deeplearning.ai/short-courses/building-evaluating-advanced-rag/?utm_campaign=The%20Batch&utm_medium=email&_hsmi=284569762&_hsenc=p2ANqtz--PebA6JyMpd-ohCFCMAXdDd03NVDrC9qryo0OGYO3PbYHZiTJwu8aB26HPV00EREHIug4oHX8GmOceED2vS1gyjZn7wQ&utm_content=284569762&utm_source=hs_email)
 * [All free short courses from deeplearning.ai](https://www.deeplearning.ai/short-courses/?utm_campaign=The%20Batch&utm_medium=email&_hsmi=284569762&_hsenc=p2ANqtz-8sbDWUMfb68OOtku7NYFPyexz9LzEz5UQGa3EkIkqCMj1KIRisrLnxQcAvEwCZkntjyF3si2TIkN99PSvxSYuC_gF_6g&utm_content=284569762&utm_source=hs_email)
+
+## OpenSource LLMs
+
+* [GPT4All](https://gpt4all.io/index.html)
