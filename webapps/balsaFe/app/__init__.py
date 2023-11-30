@@ -22,8 +22,8 @@ def create_app():
     app.default_model_mode = os.environ.get("DEFAULT_MODEL_MODE")
 
     #set defalut model mode
-    if 'our_mode' not in session:
-        session['our_mode'] =  os.environ.get("DEFAULT_MODEL_MODE")
+    #if 'our_mode' not in session:
+    #    session['our_mode'] =  os.environ.get("DEFAULT_MODEL_MODE")
 
     # Init firestore client
     db = firestore.Client()
