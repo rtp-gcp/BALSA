@@ -59,52 +59,51 @@ These are the instructions
 | MP     | Multiply Packed decimal in memory by packed decimal in memory | MP  D1(L1,B1),D2(L2,B2) | FC L1L2 BD DD BD DD | SS |
 | MR     | Multiply value in register by value in register | MR      R1,R2 | 1C RR                | RR |
 | MVC    |                                    | MVC   D1(L,B1),D2(B2)    | D2 LL BD DD BD DD      | XX                      |
-| MVCIN  |                                    | MVCIN D1(L,B1),D2(B2)    | E8 LL BD DD BD DD  ||
-| MVCL   |                                    | MVCL  R1,R2              | 0E RR   ||
-| MVI    |                                    | MVI D1(B1),I2            | 92 II BD DD  ||
-| MVN    |                                    | MVN D1(L,B1),D2(B2)      | D1 LL BD DD BD DD  ||
-| MVO    |                                    | MVO D1(L1,B1),D2(L2,B2)  | F1 L1L2 BD DD BD DD ||
-| MVZ    |                                    | MVZ D1(L,B1),D2(B2)      | D3 LL BD DD BD DD ||
-| N      |                                    | N   R1,D2(X2,B2)         | 54 RX BD DD  || 
-| NC     |                                    | NC   D1(L,B1),D2(B2)     | D4 LL BD DD BD DD  || 
-| NI     |                                    | NI   D1(B1),I2           | 94 II BD DD  || 
-| NR     |                                    | NR   R1,R2               | 14 RR  || 
-| O      |                                    | O   R1,D2(X2,B2)         | 56 RX BD DD  || 
-| OC     |                                    | OC  D1(L,B1),D2(B2)      | D6 LL BD DD BD DD  || 
-| OI     |                                    | OI   D1(B1),I2           | 96 II BD DD  || 
-| OR     |                                    | OR   R1,R2               | 16 RR  || 
-| PACK   |                                    | PACK D1(L1,B1),D2(L2,B2) | F2 L1L2 BD DD BD DD  || 
-| S      |                                    | S R1,D2(X2,B2)           | 5B RX BD DD  || 
-| SH     |                                    | SH R1,D2(X2,B2)          | 4B RX BD DD  || 
-| SL     |                                    | SL R1,D2(X2,B2)          | 5F RX BD DD  || 
-| SLA    |                                    | SLA R1,D2(X2,B2)         | 8B R0 BD DD  || 
-| SLDA   |                                    | SLDA R1,D2(X2,B2)        | 8F R0 BD DD  || 
-| SLDL   |                                    | SLDL R1,D2(X2,B2)        | 8D R0 BD DD  || 
-| SLL    |                                    | SLL R1,D2(X2,B2)         | 89 R0 BD DD  || 
-| SLR    |                                    | SLR R1,R2                | 1F RR  || 
-| SP     |                                    | SP D1(L1,B1),D2(L2,B2)   | FB L1L2 BD DD BD DD  || 
-| SR     |                                    | SR R1,R2                 | 1B RR  || 
-| SRA    |                                    | SRA  R1,D2(X2,B2)        | 8A R0 BD DD  || 
-
-                        'SRDA':       ('8E','R1,D2(X2,B2)',       'R0 BD DD'),
-            'SRDL':       ('8C','R1,D2(X2,B2)',       'R0 BD DD'),
-            'SRL':        ('88','R1,D2(X2,B2)',       'R0 BD DD'),
-            'SRP':        ('F0','D1(L1,B1),D2(B2),I3','LI BD DD BD DD'),
-            'ST':         ('50','R1,D2(X2,B2)',       'RX BD DD'),
-            'STC':        ('42','R1,D2(X2,B2)',       'RX BD DD'),
-            'STCM':       ('BE','R1,M3,D2(B2)',       'RM BD DD'),
-            'STH':        ('40','R1,D2(X2,B2)',       'RX BD DD'),
-            'STM':        ('90','R1,R3,D2(B2)',       'RR BD DD'),
-            'SVC':        ('0A','I1',                 'II'),
-            'TM':         ('91','D1(B1),I2',          'II BD DD'),
-            'TR':         ('DC','D1(L,B1),D2(B2)',    'LL BD DD BD DD'),
-            'TRT':        ('DD','D1(L,B1),D2(B2)',    'LL BD DD BD DD'),
-            'UNPK':       ('F3','D1(L1,B1),D2(L2,B2)','L1L2 BD DD BD DD'),
-            'X':          ('57','R1,D2(X2,B2)',       'RX BD DD'),
-            'XC':         ('D7','D1(L,B1),D2(B2)',    'LL BD DD BD DD'),
-            'XI':         ('97','D1(B1),I2',          'II BD DD'),
-            'XR':         ('17','R1,R2',              'RR'),
-            'ZAP':        ('F8','D1(L1,B1),D2(L2,B2)','L1L2 BD DD BD DD') }
+| MVCIN  |                                    | MVCIN D1(L,B1),D2(B2)    | E8 LL BD DD BD DD      ||
+| MVCL   |                                    | MVCL  R1,R2              | 0E RR                  ||
+| MVI    |                                    | MVI D1(B1),I2            | 92 II BD DD            ||
+| MVN    |                                    | MVN D1(L,B1),D2(B2)      | D1 LL BD DD BD DD      ||
+| MVO    |                                    | MVO D1(L1,B1),D2(L2,B2)  | F1 L1L2 BD DD BD DD    ||
+| MVZ    |                                    | MVZ D1(L,B1),D2(B2)      | D3 LL BD DD BD DD      ||
+| N      |                                    | N   R1,D2(X2,B2)         | 54 RX BD DD            || 
+| NC     |                                    | NC   D1(L,B1),D2(B2)     | D4 LL BD DD BD DD      || 
+| NI     |                                    | NI   D1(B1),I2           | 94 II BD DD            || 
+| NR     |                                    | NR   R1,R2               | 14 RR                  || 
+| O      |                                    | O   R1,D2(X2,B2)         | 56 RX BD DD            || 
+| OC     |                                    | OC  D1(L,B1),D2(B2)      | D6 LL BD DD BD DD      || 
+| OI     |                                    | OI   D1(B1),I2           | 96 II BD DD            || 
+| OR     |                                    | OR   R1,R2               | 16 RR                  || 
+| PACK   |                                    | PACK D1(L1,B1),D2(L2,B2) | F2 L1L2 BD DD BD DD    || 
+| S      |                                    | S R1,D2(X2,B2)           | 5B RX BD DD            || 
+| SH     |                                    | SH R1,D2(X2,B2)          | 4B RX BD DD            || 
+| SL     |                                    | SL R1,D2(X2,B2)          | 5F RX BD DD            || 
+| SLA    |                                    | SLA R1,D2(X2,B2)         | 8B R0 BD DD            || 
+| SLDA   |                                    | SLDA R1,D2(X2,B2)        | 8F R0 BD DD            || 
+| SLDL   |                                    | SLDL R1,D2(X2,B2)        | 8D R0 BD DD            || 
+| SLL    |                                    | SLL R1,D2(X2,B2)         | 89 R0 BD DD            || 
+| SLR    |                                    | SLR R1,R2                | 1F RR                  || 
+| SP     |                                    | SP D1(L1,B1),D2(L2,B2)   | FB L1L2 BD DD BD DD    || 
+| SR     |                                    | SR R1,R2                 | 1B RR                  || 
+| SRA    |                                    | SRA  R1,D2(X2,B2)        | 8A R0 BD DD            || 
+| SRDA   |                                    | SRDA R1,D2(X2,B2)        | 8E R0 BD DD            ||
+| SRDL   |                                    | SRDL R1,D2(X2,B2)        | 8C R0 BD DD            ||
+| SRL    |                                    | SRL R1,D2(X2,B2)         | 88 R0 BD DD            ||
+| SRP    |                                    | SRP D1(L1,B1),D2(B2),I3  | F0 LI BD DD BD DD      ||
+| ST     |                                    | ST R1,D2(X2,B2)          | 50 RX BD DD            ||
+| STC    |                                    | STC R1,D2(X2,B2)         | 42 RX BD DD            ||
+| STCM   |                                    | STCM R1,M3,D2(B2)        | BE RM BD DD            ||
+| STH    |                                    | STH R1,D2(X2,B2)         | 40 RX BD DD            ||
+| STM    |                                    | STM R1,R3,D2(B2)         | 90 RR BD DD            ||
+| SVC    |                                    | SVC I1                   | 0A II                  ||
+| TM     |                                    | TM D1(B1),I2             | 91 II BD DD            ||
+| TR     |                                    | TR D1(L,B1),D2(B2)       | DC LL BD DD BD DD      ||
+| TRT    |                                    | TRT D1(L,B1),D2(B2)      | DD LL BD DD BD DD      ||
+| UNPK   |                                    | UNPK D1(L1,B1),D2(L2,B2) | F3 L1L2 BD DD BD DD    ||
+| X      |                                    | X R1,D2(X2,B2)           | 57 RX BD DD            ||
+| XC     |                                    | XC D1(L,B1),D2(B2)       | D7 LL BD DD BD DD      ||
+| XI     |                                    | XI D1(B1),I2             | 97 II BD DD            ||
+| XR     |                                    | XR R1,R2                 | 17 RR                  ||
+| ZAP    |                                    | ZAP D1(L1,B1),D2(L2,B2)  | F8 L1L2 BD DD BD DD    ||
 
 
 # Extended instructions
