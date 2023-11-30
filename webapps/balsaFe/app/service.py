@@ -29,6 +29,10 @@ def send_openai_request(prompt, our_mode):
     ```
 
     Above the code section show a ruler which has the column numbers.
+
+    Unless explictly told to do so, do not include any commentary.
+
+    When specifiying registers be explicity as in register R1, rather than 1.
     """
 
     our_model = current_app.openai_tuned_model if our_mode == "tuned" else current_app.openai_default_model
