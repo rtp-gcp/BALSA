@@ -91,19 +91,19 @@ These are the instructions
 | SRP    | Shift (and round) packed number in memory by low six bits. negative shifts right. | SRP   D1(L1,B1),D2(B2),I3  | F0 LI BD DD BD DD | SS |
 | ST     | Store fullword in register to memory | ST    R1,D2(X2,B2)          | 50 RX BD DD            | RX |
 | STC    | Store lowest byte in register to memory | STC   R1,D2(X2,B2)         | 42 RX BD DD      | RX |
-| STCM   |                                    | STCM  R1,M3,D2(B2)        | BE RM BD DD            ||
-| STH    |                                    | STH   R1,D2(X2,B2)         | 40 RX BD DD            ||
-| STM    |                                    | STM   R1,R3,D2(B2)         | 90 RR BD DD            ||
-| SVC    |                                    | SVC   I1                   | 0A II                  ||
-| TM     |                                    | TM    D1(B1),I2             | 91 II BD DD            ||
-| TR     |                                    | TR    D1(L,B1),D2(B2)       | DC LL BD DD BD DD      ||
-| TRT    |                                    | TRT   D1(L,B1),D2(B2)      | DD LL BD DD BD DD      ||
-| UNPK   |                                    | UNPK  D1(L1,B1),D2(L2,B2) | F3 L1L2 BD DD BD DD    ||
-| X      |                                    | X     R1,D2(X2,B2)           | 57 RX BD DD            ||
-| XC     |                                    | XC    D1(L,B1),D2(B2)       | D7 LL BD DD BD DD      ||
-| XI     |                                    | XI    D1(B1),I2             | 97 II BD DD            ||
-| XR     |                                    | XR    R1,R2                 | 17 RR                  ||
-| ZAP    |                                    | ZAP   D1(L1,B1),D2(L2,B2)  | F8 L1L2 BD DD BD DD    ||
+| STCM   | Store selected bytes in register to memory using mask | STCM  R1,M3,D2(B2)        | BE RM BD DD            | RS |
+| STH    | Store halfword in register to memory | STH   R1,D2(X2,B2)         | 40 RX BD DD            | RX |
+| STM    | Store values of several registers to fullwords in memory | STM   R1,R3,D2(B2)         | 90 RR BD DD            | RS |
+| SVC    | Supervisor call - invoke operating service number  | SVC   I1                   | 0A II                  | I |
+| TM     | Test bits of byte in memory using mask | TM    D1(B1),I2             | 91 II BD DD            | SI |
+| TR     | Translate memory area at address using table in memory | TR    D1(L,B1),D2(B2)       | DC LL BD DD BD DD      | SS |
+| TRT    | Examine memory by bytes using table | TRT   D1(L,B1),D2(B2)      | DD LL BD DD BD DD      | SS |
+| UNPK   | Convert packed decimal in memory to zoned decimal in memory | UNPK  D1(L1,B1),D2(L2,B2) | F3 L1L2 BD DD BD DD    | SS |
+| X      | Logical XOR register with memory | X     R1,D2(X2,B2)           | 57 RX BD DD            | RX |
+| XC     | Logical XOR up to 256 bytes in memory with bytes in memory | XC    D1(L,B1),D2(B2)       | D7 LL BD DD BD DD      | SS |
+| XI     | Logical XOR byte in memory with immediate | XI    D1(B1),I2             | 97 II BD DD            | SI |
+| XR     | Logical XOR register with register | XR    R1,R2                 | 17 RR                  | RR |
+| ZAP    | Set packed decimal number in memory to 0 and then add from memory | ZAP   D1(L1,B1),D2(L2,B2)  | F8 L1L2 BD DD BD DD    | SS |
 
 
 # Extended instructions
