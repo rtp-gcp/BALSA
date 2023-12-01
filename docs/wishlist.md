@@ -44,3 +44,4 @@ Obectives of the tool
 | Can you write a Hello World program?|                                                                       |
 | How does a simple program begin?|                                                                           |
 | How does a simple program end?|                                                                             |
+| How do you protect against divide-by-zero error?      | Dave will add                                       | 
