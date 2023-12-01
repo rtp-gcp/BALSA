@@ -94,7 +94,7 @@ These are the instructions
 | STCM   | Store selected bytes in register to memory using mask | STCM  R1,M3,D2(B2)        | BE RM BD DD            | RS |
 | STH    | Store halfword in register to memory | STH   R1,D2(X2,B2)         | 40 RX BD DD            | RX |
 | STM    | Store values of several registers to fullwords in memory | STM   R1,R3,D2(B2)         | 90 RR BD DD            | RS |
-| SVC    | Supervisor call - invoke OS service number  | SVC   I1                   | 0A II                  | I |
+| SVC    | Supervisor call - invoke Operating System service number  | SVC   I1                   | 0A II                  | I |
 | TM     | Test bits of byte in memory using mask | TM    D1(B1),I2             | 91 II BD DD            | SI |
 | TR     | Translate memory area at address using table in memory | TR    D1(L,B1),D2(B2)       | DC LL BD DD BD DD      | SS |
 | TRT    | Examine memory by bytes using table, a non-zero value is inserted into the low byte of R2 | TRT   D1(L,B1),D2(B2)      | DD LL BD DD BD DD      | SS |
