@@ -1,26 +1,32 @@
-
 RESULT
 
 This answer is using markdown format.
 
 This preformated text block shows the column usage for IBM BAL assembly.
-The column headings are shown as a number ruler and hidden from the 
-assembler using comment character in first column as `*`.
+The column headings are shown as a number ruler and hidden from the
+assembler using comment character in first column as `*`.  Assume the first
+column on left is number 1 and the columns increase in size while
+moving to the right.
+
+As an example here is a code block with commented text describing the
+column layout to use for all code blocks.
 
 ```
-*        1         2         3         4         5         6         7         8 
+*        1         2         3         4         5         6         7         8
 *2345678901234567890123456789012345678901234567890123456789012345678901234567890
-*name starts at column 1
-*        operation starts at column 10
-*             operands start at column 15
-*                              comments start at column 32
+*label name starts in column 1
+*        operation starts in column 10
+*             operands start in column 15
+*                              comments start in column 32
 *                                                                      continuation starts at column 72
 ```
 
-* name starts at column 1
-* operation starts at 10
-* operands start at column 15
-* comments which do not start in column 1, must start in column 32
+Here is a concise list of the same rules:
+
+* label name starts in column 1
+* operation starts in 10
+* operands start in column 15
+* comments which are not start in column 1, must start in column 32
 * line continuation characters are placed in column 72
 * line continuation characters are typically `x`
 
