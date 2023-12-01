@@ -9,7 +9,7 @@ Obectives of the tool
 |-------------------------------------------------------|-----------------------------------------------------|
 | What is a bit?                                        | handled by base GPT functionality                   |
 | What is a byte?                                       | handled by base GPT functionality                   |
-| How is memory organized?                              | expert should add                                   |
+| How is memory organized?                              | in training data                                    |
 | What is the purpose of a register?                    |                                                     |
 | How large are registers?                              |                                                     |
 | What is the PSW?                                      |                                                     |
