@@ -58,52 +58,52 @@ These are the instructions
 | MH     | Multiply halfword in memory by fullword in even/odd register pair | MH   R1,D2(X2,B2) | 4C RX BD DD | RX |
 | MP     | Multiply Packed decimal in memory by packed decimal in memory | MP  D1(L1,B1),D2(L2,B2) | FC L1L2 BD DD BD DD | SS |
 | MR     | Multiply value in register by value in register | MR      R1,R2 | 1C RR                | RR |
-| MVC    |                                    | MVC   D1(L,B1),D2(B2)    | D2 LL BD DD BD DD      | XX                      |
+| MVC    | Copy L bytes to memory             | MVC   D1(L,B1),D2(B2)    | D2 LL BD DD BD DD      | SS                      |
 | MVCIN  |                                    | MVCIN D1(L,B1),D2(B2)    | E8 LL BD DD BD DD      ||
-| MVCL   |                                    | MVCL  R1,R2              | 0E RR                  ||
-| MVI    |                                    | MVI D1(B1),I2            | 92 II BD DD            ||
-| MVN    |                                    | MVN D1(L,B1),D2(B2)      | D1 LL BD DD BD DD      ||
-| MVO    |                                    | MVO D1(L1,B1),D2(L2,B2)  | F1 L1L2 BD DD BD DD    ||
-| MVZ    |                                    | MVZ D1(L,B1),D2(B2)      | D3 LL BD DD BD DD      ||
-| N      |                                    | N   R1,D2(X2,B2)         | 54 RX BD DD            || 
-| NC     |                                    | NC   D1(L,B1),D2(B2)     | D4 LL BD DD BD DD      || 
-| NI     |                                    | NI   D1(B1),I2           | 94 II BD DD            || 
-| NR     |                                    | NR   R1,R2               | 14 RR                  || 
-| O      |                                    | O   R1,D2(X2,B2)         | 56 RX BD DD            || 
-| OC     |                                    | OC  D1(L,B1),D2(B2)      | D6 LL BD DD BD DD      || 
-| OI     |                                    | OI   D1(B1),I2           | 96 II BD DD            || 
-| OR     |                                    | OR   R1,R2               | 16 RR                  || 
-| PACK   |                                    | PACK D1(L1,B1),D2(L2,B2) | F2 L1L2 BD DD BD DD    || 
-| S      |                                    | S R1,D2(X2,B2)           | 5B RX BD DD            || 
-| SH     |                                    | SH R1,D2(X2,B2)          | 4B RX BD DD            || 
-| SL     |                                    | SL R1,D2(X2,B2)          | 5F RX BD DD            || 
-| SLA    |                                    | SLA R1,D2(X2,B2)         | 8B R0 BD DD            || 
-| SLDA   |                                    | SLDA R1,D2(X2,B2)        | 8F R0 BD DD            || 
-| SLDL   |                                    | SLDL R1,D2(X2,B2)        | 8D R0 BD DD            || 
-| SLL    |                                    | SLL R1,D2(X2,B2)         | 89 R0 BD DD            || 
-| SLR    |                                    | SLR R1,R2                | 1F RR                  || 
-| SP     |                                    | SP D1(L1,B1),D2(L2,B2)   | FB L1L2 BD DD BD DD    || 
-| SR     |                                    | SR R1,R2                 | 1B RR                  || 
-| SRA    |                                    | SRA  R1,D2(X2,B2)        | 8A R0 BD DD            || 
-| SRDA   |                                    | SRDA R1,D2(X2,B2)        | 8E R0 BD DD            ||
-| SRDL   |                                    | SRDL R1,D2(X2,B2)        | 8C R0 BD DD            ||
-| SRL    |                                    | SRL R1,D2(X2,B2)         | 88 R0 BD DD            ||
-| SRP    |                                    | SRP D1(L1,B1),D2(B2),I3  | F0 LI BD DD BD DD      ||
-| ST     |                                    | ST R1,D2(X2,B2)          | 50 RX BD DD            ||
-| STC    |                                    | STC R1,D2(X2,B2)         | 42 RX BD DD            ||
-| STCM   |                                    | STCM R1,M3,D2(B2)        | BE RM BD DD            ||
-| STH    |                                    | STH R1,D2(X2,B2)         | 40 RX BD DD            ||
-| STM    |                                    | STM R1,R3,D2(B2)         | 90 RR BD DD            ||
-| SVC    |                                    | SVC I1                   | 0A II                  ||
-| TM     |                                    | TM D1(B1),I2             | 91 II BD DD            ||
-| TR     |                                    | TR D1(L,B1),D2(B2)       | DC LL BD DD BD DD      ||
-| TRT    |                                    | TRT D1(L,B1),D2(B2)      | DD LL BD DD BD DD      ||
-| UNPK   |                                    | UNPK D1(L1,B1),D2(L2,B2) | F3 L1L2 BD DD BD DD    ||
-| X      |                                    | X R1,D2(X2,B2)           | 57 RX BD DD            ||
-| XC     |                                    | XC D1(L,B1),D2(B2)       | D7 LL BD DD BD DD      ||
-| XI     |                                    | XI D1(B1),I2             | 97 II BD DD            ||
-| XR     |                                    | XR R1,R2                 | 17 RR                  ||
-| ZAP    |                                    | ZAP D1(L1,B1),D2(L2,B2)  | F8 L1L2 BD DD BD DD    ||
+| MVCL   | Copy or fill bytes in memory       | MVCL  R1,R2              | 0E RR                  | RR |
+| MVI    | Store byte I2 to memory            | MVI   D1(B1),I2            | 92 II BD DD            | SI |
+| MVN    | Copy low nibbles from memory to memory | MVN   D1(L,B1),D2(B2)      | D1 LL BD DD BD DD      | SS |
+| MVO    | Copy nibbles from memory to memory | MVO   D1(L1,B1),D2(L2,B2)  | F1 L1L2 BD DD BD DD    | SS |
+| MVZ    | Copy high nibbles from memory to memory | MVZ   D1(L,B1),D2(B2)      | D3 LL BD DD BD DD      | SS |
+| N      | Logical AND register and full word in memory | N     R1,D2(X2,B2)         | 54 RX BD DD            | RX | 
+| NC     | Logical AND consecutive bytes in memory with memory | NC    D1(L,B1),D2(B2)     | D4 LL BD DD BD DD      | SS | 
+| NI     | Logical AND byte in memory with immediate | NI    D1(B1),I2           | 94 II BD DD            | SI | 
+| NR     | Logical AND register with register | NR    R1,R2               | 14 RR                  | RR | 
+| O      | Logical OR register with memory | O     R1,D2(X2,B2)         | 56 RX BD DD            | RX | 
+| OC     | Logical OR consecutive bytes in memory with memory | OC    D1(L,B1),D2(B2)      | D6 LL BD DD BD DD      | SS | 
+| OI     | Logical OR byte in memory with immediate | OI    D1(B1),I2           | 96 II BD DD            | SI | 
+| OR     | Logical OR register with register | OR    R1,R2               | 16 RR                  | RR | 
+| PACK   | Convert zoned decimal (characters) in memory to packed decimal numbers in memory | PACK  D1(L1,B1),D2(L2,B2) | F2 L1L2 BD DD BD DD | SS | 
+| S      | Subtract signed fullword in memory from register  | S     R1,D2(X2,B2)           | 5B RX BD DD            | RX | 
+| SH     | Subtract signed halfword in memory from register | SH    R1,D2(X2,B2)          | 4B RX BD DD            | RX | 
+| SL     | Subtract unsigned fullword in memory from register | SL    R1,D2(X2,B2)          | 5F RX BD DD            | RX | 
+| SLA    | Shift left register arithmetically | SLA   R1,D2(X2,B2)         | 8B R0 BD DD            | RS | 
+| SLDA   | Shift left signed 64-bit value from even/odd register pair arithmetically | SLDA  R1,D2(X2,B2)| 8F R0 BD DD      | RS | 
+| SLDL   | Shift left signed 64-bit value from even/odd register pair logically | SLDL  R1,D2(X2,B2)        | 8D R0 BD DD   | RS | 
+| SLL    | Shift left register                | SLL   R1,D2(X2,B2)         | 89 R0 BD DD            | RS | 
+| SLR    | Subtract unsigned fullword in register by register                | SLR   R1,R2                | 1F RR                  | RR | 
+| SP     | Subtract packed decimals in memory | SP    D1(L1,B1),D2(L2,B2)   | FB L1L2 BD DD BD DD    | SS | 
+| SR     | Subtract signed values in register by register | SR    R1,R2                 | 1B RR                  | RR | 
+| SRA    | Shift right register arithmetically | SRA   R1,D2(X2,B2)        | 8A R0 BD DD            | RS | 
+| SRDA   | Shift right signed 64-bit value from even/odd register pair arithmetically | SRDA  R1,D2(X2,B2)        | 8E R0 BD DD    | RS |
+| SRDL   | Shift right signed 64-bit value from even/odd register pair logically | SRDL  R1,D2(X2,B2)        | 8C R0 BD DD            | RS |
+| SRL    | Shift right register               | SRL   R1,D2(X2,B2)         | 88 R0 BD DD            | RS |
+| SRP    | Shift (and round) packed number in memory by low six bits. negative shifts right. | SRP   D1(L1,B1),D2(B2),I3  | F0 LI BD DD BD DD | SS |
+| ST     | Store fullword in register to memory | ST    R1,D2(X2,B2)          | 50 RX BD DD            | RX |
+| STC    | Store lowest byte in register to memory | STC   R1,D2(X2,B2)         | 42 RX BD DD      | RX |
+| STCM   |                                    | STCM  R1,M3,D2(B2)        | BE RM BD DD            ||
+| STH    |                                    | STH   R1,D2(X2,B2)         | 40 RX BD DD            ||
+| STM    |                                    | STM   R1,R3,D2(B2)         | 90 RR BD DD            ||
+| SVC    |                                    | SVC   I1                   | 0A II                  ||
+| TM     |                                    | TM    D1(B1),I2             | 91 II BD DD            ||
+| TR     |                                    | TR    D1(L,B1),D2(B2)       | DC LL BD DD BD DD      ||
+| TRT    |                                    | TRT   D1(L,B1),D2(B2)      | DD LL BD DD BD DD      ||
+| UNPK   |                                    | UNPK  D1(L1,B1),D2(L2,B2) | F3 L1L2 BD DD BD DD    ||
+| X      |                                    | X     R1,D2(X2,B2)           | 57 RX BD DD            ||
+| XC     |                                    | XC    D1(L,B1),D2(B2)       | D7 LL BD DD BD DD      ||
+| XI     |                                    | XI    D1(B1),I2             | 97 II BD DD            ||
+| XR     |                                    | XR    R1,R2                 | 17 RR                  ||
+| ZAP    |                                    | ZAP   D1(L1,B1),D2(L2,B2)  | F8 L1L2 BD DD BD DD    ||
 
 
 # Extended instructions
