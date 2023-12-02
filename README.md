@@ -18,6 +18,9 @@ subset of the language - Basic Assembly Language BAL circa 1960s.
 
 Why BAL and not HASM?  BAL is a smaller target and more resources are available to the open source developer.
 
+Test it [here](https://balsa.rtp-gcp.org)
+
+
 # Guide to the repo
 
 * data dir
