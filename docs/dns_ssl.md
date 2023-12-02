@@ -58,3 +58,29 @@ Another tool to use is `whois`
 $ whois balsa.rtp-gcp.org
 ```
 
+#### Notes on non interactive mode
+
+If you wish to use in non-interactive mode, you can use the query option like so:
+
+```
+$ nslookup -type=CNAME rtp-gcp.org
+```
+If you wish to get all info 
+
+```
+$ nslookup -type=any rtp-gcp.org
+```
+
+If you wish to use a specific dns server
+
+```
+$ nslookup -type=any rtp.gcp.org 8.8.8.8
+```
+
+## dig
+
+Get CNAME records for domain from using google DNS server
+
+```
+$ dig -t CNAME rtp-gcp.org @8.8.8.8.8
+```
