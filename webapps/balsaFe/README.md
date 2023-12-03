@@ -80,21 +80,3 @@ gcloud firestore databases create --type=firestore-native --location=nam5
 ```
 - create collection 'allowed_users' and for each user create a document with email assigned to document ID
 
-# .env file
-
-The .env file looks like this:
-
-```
-SECRET_KEY="somekey from api gcp page"
-CLIENT_ID="some email from api gcp page"
-LOGIN_URI="https://balsa-404914.uc.r.appspot.com/login/callback"
-
-OPENAI_API_KEY=""
-
-GPT_DEFAULT_MODEL="gpt-3.5-turbo-1106"
-GPT_TUNED_MODEL=""
-
-ADMIN="admin@gmail.com"
-
-DEFAULT_MODEL_MODE="normal"
-```
