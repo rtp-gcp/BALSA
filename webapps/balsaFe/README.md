@@ -27,13 +27,47 @@ Using GCP console create consent screen for auth link [https://console.cloud.goo
 
 In API's & Services also create OAuth client ID credentials for web application
 - Set URI's:
-    - for 'Authorised JavaScript origins': https://YOUR_APPENGINE.com
-    - for 'Authorised redirect URIs': https://YOUR_APPENGINE.com/login/callback
+    - AppSpot
+        - for 'Authorised JavaScript origins': https://YOUR_APPENGINE.com
+        - for 'Authorised redirect URIs': https://YOUR_APPENGINE.com/login/callback
+    - DNS ie. balsa.rtp-gcp.org
+        - for 'Authorised JavaScript origins': https://YOUR_APP.rtp-gcp.org
+        - for 'Authorised redirect URIs': https://YOUR_APP.rtp-gcp.org/login/callback
 
-In the app.yaml file set env vars:
-- CLIENT_ID to given at previous steps value
-- LOGIN_URI to https://YOUR_APPENGINE.com/login/callback
-- SECRET_KEY to your desired value
+
+The `.env` file should look like this:
+
+```
+# in gcp console from hamburger menu in left sidebar
+# = : API APIs & Services -> Credentials -> OAuth 2.0 Client IDs ->
+# Client Secrets on Right hand side of page
+SECRET_KEY="from client secrets entry"
+# Additional Information on Right hand side of page at top
+CLIENT_ID="from Client ID entry"
+# These need to be added to lower left under the section
+# titled "Authorized Redirect URIs"
+# Currently, I have both specified.  
+# For code, I am only using the DNS version and not
+# the appspot one.
+# If using appspot
+#LOGIN_URI="https://balsa-404914.uc.r.appspot.com/login/callback"
+# If using DNS
+LOGIN_URI="https://balsa.rtp-gcp.org/login/callback"
+
+# This is the OPEN API key
+OPENAI_API_KEY="put key here"
+
+
+GPT_DEFAULT_MODEL="gpt-3.5-turbo-1106"
+
+# This is the tuned model key
+GPT_TUNED_MODEL=""
+
+ADMIN="admin@gmail.com"
+
+```
+
+
 
 
 
