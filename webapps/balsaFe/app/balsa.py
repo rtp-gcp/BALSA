@@ -1,6 +1,6 @@
 from flask import Blueprint, render_template,  request, session, redirect, url_for, current_app
 
-service = Blueprint('service', __name__)
+balsa = Blueprint('balsa', __name__)
 
 ## openai api request
 def send_openai_request(prompt, our_mode):
@@ -43,12 +43,12 @@ def send_openai_request(prompt, our_mode):
     )
     return response.choices[0].message.content
 
-@service.before_request
+@balsa.before_request
 def require_login():
     if "email" not in session:
             return redirect(url_for("auth.login"))
 
-@service.route('/train-data', methods=['POST'])
+@balsa.route('/balsa/train-data', methods=['POST'])
 def handle_train_data():
     """Handle submissions for training data."""
     prompt = request.form['prompt']
@@ -61,10 +61,10 @@ def handle_train_data():
         'response': response
     })
 
-    return render_template('index.html', email=session["email"], default_model_mode=session['our_mode'])
+    return render_template('balsa.html', email=session["email"], default_model_mode=session['our_mode'])
 
 
-@service.route('/prompt', methods=['POST'])
+@balsa.route('/balsa/prompt', methods=['POST'])
 def handle_prompt():
     """Handle form submissions from the index page."""
     action = request.form.get('action')
@@ -76,25 +76,28 @@ def handle_prompt():
         # Prepare and send the request to OpenAI
         response = send_openai_request(prompt, session['our_mode'])
 
-        return render_template('index.html', prompt=prompt, response=response, email=session["email"], default_model_mode=session['our_mode'], show_buttons=True)
+        return render_template('balsa.html', prompt=prompt, response=response, email=session["email"], default_model_mode=session['our_mode'], show_buttons=True)
 
     elif action == 'good':
         # Serve a blank index.html template if 'Good'
-        return render_template('index.html', email=session["email"])
+        return render_template('balsa.html', email=session["email"])
     elif action == 'bad':
         # Serve the train.html template for further editing if 'Bad'
         return render_template('train.html', prompt=prompt, response=response)
     
 
-@service.route('/', methods=['GET'])
-def index():
+
+@balsa.route('/balsa', methods=['GET'])
+def balsa_index():
     """Route for the service page."""
-    print("== hit index route === ")
+    print("== hit balsa route === ")
 
     #set defalut model mode
     if 'our_mode' not in session:
         session['our_mode'] =  current_app.default_model_mode
 
-    #return render_template('index.html', email=session["email"], default_model_mode=session['our_mode'])
-    return render_template('index.html', email=session["email"], default_model_mode=request.form.get('our_mode'))
+    return render_template('balsa.html', email=session["email"], default_model_mode=request.form.get('our_mode'))
+
+
+
 

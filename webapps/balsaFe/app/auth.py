@@ -6,8 +6,7 @@ auth = Blueprint("auth", __name__)
 
 @auth.route("/login")
 def login():
-    #print("=== hit login routine ===")
-    return render_template("login.html", client_id=current_app.client_id, login_uri=current_app.login_uri)
+    return render_template("auth.html", client_id=current_app.client_id, login_uri=current_app.login_uri)
 
 
 @auth.route("/login/callback", methods=["GET","POST"])
@@ -34,7 +33,7 @@ def callback():
         if user_doc.exists:
             session["email"] = email
             #print("session: ", session)
-            return redirect(url_for("service.index"))
+            return redirect(url_for("balsa.balsa_index"))
         else:
             # User not allowed
             #print("No permission to read document?")

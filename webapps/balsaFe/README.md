@@ -68,7 +68,9 @@ ADMIN="admin@gmail.com"
 ```
 
 
+## Balsa.rtp-gcp.org notes
 
+Need to use the google search page.  See [here](https://search.google.com/search-console?utm_source=about-page&resource_id=sc-domain:rtp-gcp.org)
 
 
 
