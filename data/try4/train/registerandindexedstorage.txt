@@ -1,0 +1,38 @@
+RESULT
+
+# RX Register and Indexed Storage Format
+The RX format is used for register and indexed storage instructions.
+
+
+The format is as follows:
+
+| OpCode | byte2 | byte3        | byte4 |
+|:-------|:------|:-------------|:------|
+| xx     | L1X2  | B2D2         |  D2D2 |
+|        | Length| Dest         |       |
+|        | Index | Base         |       |
+|        |       | Displacement | Disp. |
+
+* Byte 1 - the op code
+* Byte 2 
+    - R1 - the register which is operand 1
+    - X2 - the index register associated with operand 2
+* Byte 3 and 4 - the base/displacement address associated with operand 2
+
+
+An example of this format is the L Load instruction.
+The effect of the instruction is to copy a fullword from memory/storage
+in to the register specified by operand 1.
+The following example would cause the contents of
+memory from the effective address of defined storage `TABLE`
+with offset specified by R7. Note in IBM Assembler syntax
+the offset is known as displacement.
+
+```
+         L    R5,TABLE(R7)
+```
+
+
+PROMPT
+
+Can you explain the Register and Indexed Storage type instruction format also known as RX in BAL?
