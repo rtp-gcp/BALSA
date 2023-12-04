@@ -1,0 +1,32 @@
+RESULT
+
+
+# SS1 Storage and Storage Instruction Format
+
+There are two subtypes for Storage to Storage instructions.  The
+SS1 format applies to the MVC instruction below
+
+
+
+```
+         MVC  COSTOUT,COSTIN
+```
+
+
+The format is as follows:
+
+| OpCode | byte2 | byte3        | byte4 | byte5 | byte6 |
+| :------| :-----| :------------| :-----| :-----| :-----|
+| xx     | L1L1  | B1D1         |  D1D1 | B2D2  | D2D2  |
+|        | Length| Dest         |       | Src   |       |
+|        |       | Base         |       | Base  |       |
+|        |       | Displacement 1 | Displacement 1 | Displacement 2 | Displacement 2 |
+
+* Byte 1 - the op code
+* Byte 2 - the number of bytes associated with operand 1 (minus 1)
+* Byte 3 and 4 - the base/displacement address associated with operand 1
+* Byte 5 and 6 - the base/displacement address associated with operand 2
+
+PROMPT
+
+Can you explain the Storage and Storage type one instruction format also known as SS1?
