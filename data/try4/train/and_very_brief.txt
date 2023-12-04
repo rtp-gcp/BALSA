@@ -1,0 +1,27 @@
+
+RESULT
+
+```
+         NR   R1,R2
+         ST   R1,ANS 
+```
+
+PROMPT
+
+Write some code in IBM BAL Assembly to logical and two fullword registers and store the result in memory with a field name of ANS.  
+
+Your answer should be brief and in markdown format using a code section using this format:
+
+```
+put code here
+```
+
+Do not include any commentary.  Just produce the code and comments.
+
+Assume the values to logical and are already in registers R1 and R2.
+
+Use `*` to identify a comment and obey column restrictions for the code.
+
+Do not show any subroutine standard entry and exit code.
+
+Do not show how the field name should be declared.
