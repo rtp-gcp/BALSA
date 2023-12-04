@@ -31,6 +31,8 @@ As an example, consider the following code:
          AR   R5,R9
 ```
 
+This does the following:
+
 ```
 R5 Before               R5 After
 00000025 -------------> 00000028
