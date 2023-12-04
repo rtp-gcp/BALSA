@@ -1,0 +1,146 @@
+RESULT
+
+
+The term explicit addressing refers to a programming practice of coding
+base registers, index registers and displacement to specify an address
+instead of using symbolic names.  It can also involve coding an 
+explicit length.  If possible we would prefer to represent a byte in
+memory by a symbolic name rathr by using an explicit address.
+We also want to avoid using explict lengths.  Usually this is possible.
+For instance, consider the following declaration:
+
+
+```
+XFIELD   DS   CL5
+```
+
+While this field does specify a length attribute of five, the symbol
+`XFIELD` represents the address of the **first** byte of that field.
+This is important because the assembler will convert this symbolic
+address to a base/displacement format representing the address
+of the **first** byte of the field.  This base/displacement address 
+(BDDD in hexadecimal) occupies two bytes in assembled code, as seen
+in the SS instruction format.
+
+The explicit format for the MVC Move Copy instruction is shown as:
+
+```
+         MVC  D1(L1,B1),D2(B2)
+```
+
+* D1 - Operand 1 displacement
+* L1 - Operand 1 length
+* B1 - Operand 1 base register
+* D2 - Operand 2 displacement
+* B2 - Operand 2 base register
+
+Consider the following example which uses explicit addressing:
+
+```
+         MVC  4(8,12),32(8)
+```
+
+* 4 is D1 or displacement/offset1
+* 8 is L1 or length
+* 12 is B1 or Base register1
+* 32 is D2 or displacement/offset2
+* 8 is B2 or base register2
+
+Using the explicit format above, we can decipher what the instruction will
+do.  First we note it is an MVC instruction which copies 8 bytes since the 
+number of bytes is determined by the length of operand 1.  Why didn't we
+subtract one and code 4(7,12)?  The **answer** is that the assembler will 
+subtract one when the assembled code is assembled into object code.
+
+Where is the source of that data being moved?
+
+The answer is given explcitly as 32(8).  This represents a
+32-byte displacement from register 8.  During execution, the effective
+address i s computed by adding the contents of base register 8 plus the
+32-byte displacement.
+
+EA Effective Address = Contents(base register 8) + 32
+
+During execution, it is imperitive that register 8 contains a "known" 
+address (the base address) and the second field is 32 bytes from this
+base address.
+
+What is the target address where the data will be copied?
+
+The answer is given explictly as 4(12).  This represents a 4-byte
+displacement from register 12.  The effective address is computed to
+be the contents of base register 12 plus 4.  The field to receive
+the data must be an address which is 4 bytes larger than the execution
+time address in register 12.
+
+Each instruction has its own explicit format we can use for coding.  Besides
+learning the instruction formats for each instruction, we also need to knw how
+to explictily code each instruction (or be willing to look it up).  For
+example, the load instruction format appears below:
+
+```
+     L    R1,D2(X2,B2)
+```
+
+Consider the following explictly code instruction,
+
+```
+    L     10,4(3,5)
+```
+
+Register 10 is loaded with a fullword in memory.  The source word
+is formed from base register 5, with register 3 as an index register,
+and 4 is the displacement.  The effective source address is computed
+by adding the contents of the base register, plus the contents of the 
+index register, plus the displacement.
+
+EA Effective Address = base R5 contents + index R3 contents + displacement 4.
+
+### TIP
+
+Always refer to registers with their equated names: 
+
+```
+         R5   EQU  5
+```
+
+such that above becomes:
+
+```
+         L    R10,4(R3,R5)
+```
+
+Knowledge of the explict format notation is critical to understanding many 
+instructions.  For example, it is common practice for an assembler 
+programmer to code an instruction similar to below:
+
+```
+         LA   R5,10
+```
+
+How do we interpret this code?  First, we could look up a Load Address LA
+instruction and discover that is an RX instruction, and that t has an explict
+format similar to the load instruction described above.  The first operand,
+R5 (equated to 5), is the target register of the load.  The second operand of
+an RX format instruction appears as D2(X2,B2).  But the instruction above
+has no parenthese - they were omitted, and therefore the base and index
+registers are treated as D2(R0,R0).  This means that 10 is a displacement.
+
+So what is the effective address?
+
+Since the base and index registers were omitted, zero was chosen for the base
+and index registers.
+
+### TIP
+
+Register zero, when used as a base or index register, doesn't contribute
+the effective address.
+
+This means that the effective address is simply 10.  The instructions effect
+is to load an immediate address into register 5.  The largest immediate
+address loaded this way is 4095 or X'FFF' or 0xFFF.
+
+
+PROMPT
+
+Can you explain the concept of explicit addressing when using IBM BAL?
