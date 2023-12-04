@@ -1,0 +1,26 @@
+
+RESULT
+
+         MVI  D1(B1),I2
+
+
+Move immediate (MVI) is used to store a one-byte immediate constant
+to a field in storage.  Operand 1 denotes the target in main storage,
+while operand 2 is coded as a self-defining term which is placed
+in the instruction.
+
+As an example, consider the following code,
+ 
+         MVI  FIELDA,X'C1'
+       ...
+FIELDA   DC   X'123456'
+
+This will place the value X'C1' in the first byte of FIELDA, with
+the result being
+
+FIELDA   DC   X'C13456'
+
+
+PROMPT
+
+Provide an explanation of the MVI instruction in BAL.
