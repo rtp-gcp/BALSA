@@ -44,3 +44,9 @@ OpenAI appears to be the current leader in terms of GenAI.  We are not trying to
 are simply trying to use what is currently avaialable.  For our purposes, we will need to tune an existing model.  While
 GCP Vertex AI would be my preferred approach, it is cost prohibitive.  On the other hand, OpenAI GPT models are relatively 
 cheap to tune.
+
+# Google Cloud Platform Micro Services Architecture
+
+Here is the high level diagram
+
+![microservice architecture img](img/BALSA_Microarchitecture.png)
