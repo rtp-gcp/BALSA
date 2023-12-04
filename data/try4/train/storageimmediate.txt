@@ -1,0 +1,36 @@
+RESULT
+
+
+# SI Storage Immediate Format
+The SI format is used for storage immediate instructions.
+
+In this format, the second operand, the immediate constant,
+resides in the instructions second byte.  This constant
+usually specified as a self-defining term.
+
+The format is as follows:
+
+| byte1   | byte2 | byte3        | byte4 |
+| :-------| :-----| :------------| :-----|
+| Op Code | I2I2  | B1D1         |  D1D1 |
+|         | Src   | Dest         |       |
+|         | Index | Base         |       |
+|         |       | Displacement 1| Displacement 1|
+
+* Byte 1 - the op code
+* Byte 2 - the immediate constant denoted in operand 2
+* Byte 3 and 4 - the base/displacement address associated with operand 1
+
+
+An example of this format is the CLI Compare Logical 
+immediate instruction.
+
+```
+         CLI  CUSTTYPE,C'A'
+```
+
+
+PROMPT
+
+Can you explain the Storage Immediate type instruction format also 
+known as SI?
