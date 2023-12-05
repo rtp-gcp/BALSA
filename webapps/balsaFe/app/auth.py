@@ -31,7 +31,11 @@ def callback():
         #return "nope", 403
 
         if user_doc.exists:
-            session["email"] = email
+            # create user session with email and our_mode key values dict
+            session["user"] = {
+                'email': email,
+                'our_mode': "normal" if not current_app.default_model_mode else current_app.default_model_mode
+            }
             #print("session: ", session)
             return redirect(url_for("balsa.balsa_index"))
         else:
@@ -46,5 +50,5 @@ def callback():
 
 @auth.route("/logout")
 def logout():
-    session.pop("email", None)
+    session.pop("user", None)
     return redirect(url_for("auth.login"))
