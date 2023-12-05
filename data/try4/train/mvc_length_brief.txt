@@ -9,7 +9,7 @@ SOURCE   DS   CL20'ABCDEFGH XXXXXXXXXX'
 
 PROMPT
 
-Write some code in BAL Assembly to copy 8 charcters from a source value in memory to a target field in memory. The maximum length of the copied value is 256.  
+Write some code in BAL Assembly to copy 8 charcters from a SOURCE value in memory to a TARGET field in memory. The maximum length of the copied value is 256.  
 
 Your answer should be brief and in markdown format using a code section using this format:
 
