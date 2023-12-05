@@ -1,0 +1,22 @@
+
+RESULT
+
+```
+BRANCH AND SAVE AND SET MODE (BASM) calls a subroutine, preserving the addressing mode.
+The addressing mode is changed to the addressing mode of the subroutine.
+The subroutine is expected to return via BRANCH AND SET MODE (BSM) to restore the
+addressing mode of the caller
+It is primarilly intended to aid calling routines which may have a different addressing mode.
+
+         AMODE ANY
+         BASM R14,SUBR
+...
+SUBR     DS   0H
+         AMODE 31
+...
+         BSM   R14         
+```
+
+PROMPT
+
+Write some code in BAL Assembly to call a subroutine using a different addressing mode and preserve addressing mode 

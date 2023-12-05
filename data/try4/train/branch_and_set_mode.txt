@@ -1,0 +1,19 @@
+
+RESULT
+
+```
+BRANCH AND SET MODE (BSM) returns from a subroutine, restoring the addressing mode of the caller.
+which is saved in high order bit of the return address
+
+         AMODE ANY
+         BASM R14,SUBR
+...
+SUBR     DS   0H
+         AMODE 31
+...
+         BSM   R14         
+```
+
+PROMPT
+
+Write some code in BAL Assembly to return from a subroutine and restore calling addressing mode
