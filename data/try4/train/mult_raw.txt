@@ -1,0 +1,100 @@
+RESULT
+
+This is an example of a Multiply instruction - `M`:
+
+```
+         M    R8,Y               Multiply R8 R9 by Y
+```
+
+
+The instruction looks like this:
+
+```
+         M    R1,D2(X2,B2)
+```
+
+
+Multiply `M` is of instruction format type `RX`.  It uses
+this format:
+
+| op code   | operands     |
+|:---------:| :----------: |
+| M         | R1,D2(X2,B2) |
+
+
+The encoded instruction looks like this:
+
+
+| Byte 1  | Byte 2     | Byte 3         | Byte 4         |
+|:--------|:-----------|:---------------|:---------------|
+| 5C      | R1X2       | B2D2           |  D2D2          |
+| Op Code | Result     |                |                |
+|         | Operand 1  | Operand 2      | Operand 2      |
+|         | Operand 2  | Operand 2      | Operand 2      |
+|         | Register   | Dest           |                |
+|         | Index 2    | Base 2         |                |
+|         |            | Displacement 2 | Displacement 2 |
+
+
+The Multiply `D` instruction performs two's compliment binary
+integer multiplication.  
+
+An example of integer multiplacation is:  
+
+Y = A * B
+
+A is referred to as the multiplicand
+B is referred to as the multiplier
+Y is referred to as product
+
+Operand 1 specifies a register pair.  Operand 1
+specifies an even register.  The second register is implied as the
+next register in the sequence.
+
+For example if Operand 1 is R2, the second register is R3.  This
+even:odd register pair forms the multiplicand.
+
+Operand 2 specifes the name of a fullword in memory containing
+the multiplier.
+
+After the execution of the multiply instruction, the resulting 
+product is in R1 and R2.   To clarify,
+R1 is R8 and R2 is R9 in the example code below.
+
+
+As an example, consider the following code:
+
+```
+         L    R8,A        PUT THE MULTIPLICAND IN THE EVEN REGISTER
+         SRDA R8,32       ALGEBRAICALLY SHIFT R8 INTO R9
+         M    R8,B        MULTIPLY A BY B
+
+A        DC   F'19'       DIVIDEND 
+B        DC   F'5'        DIVISOR 
+```
+
+19/5 -> 3 r=4
+
+
+
+| R8 Before |             | R8 After  |
+| :-------- | :----------:| :-------- |
+| 00000004  | ----------> | 00000004  |
+
+| R9 Before |             | R9 After  |
+| :-------- | :----------:| :-------- |
+| 00000013  | ----------> | 00000003  |
+
+| memory:A Before |             | memory:A After  |
+| :------------ | :----------:| :------------ |
+| 00000013      | unchanged   | 00000013      |
+
+| memory:B Before |             | memory:B After  |
+| :------------ | :----------:| :------------ |
+| 00000005      | unchanged   | 00000005      |
+
+
+
+PROMPT
+
+Provide an explanation of the D instruction in BAS.
