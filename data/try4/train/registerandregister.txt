@@ -6,10 +6,10 @@ The RR format is used for register and register instructions.
 
 The format is as follows:
 
-| OpCode | byte2     |
-|:-------|:----------|
-| xx     | R1R2      |
-|        | Registers |
+| Byte 1  | Byte 2    |
+|:------- |:----------|
+| xx      | R1R2      |
+| Op Code | Registers |
 
 * Byte 1 - the op code
 * Byte 2 

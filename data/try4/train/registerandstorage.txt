@@ -7,17 +7,17 @@ There are only a few instructions of this type.  The index
 register is replaced by a register reference or a 4-bit mask.
 One unusual feature of RS instructions is the use of three
 operands.  The explicit coding for this instruction is:
-R1,R3,D2(B2)
+`R1,R3,D2(B2)`
 
 
 The format is as follows:
 
-| OpCode | byte2 | byte3        | byte4 |
-|:-------|:------|:-------------|:------|
-| xx     | R1X3  | B2D2         |  D2D2 |
-|        | Length| Dest         |       |
-|        | Index | Base         |       |
-|        |       | Displacement | Disp. |
+| Byte 1  | Byte 2 | Byte 3       | Byte 4 |
+|:--------|:-------|:-------------|:-------|
+| xx      | R1X3   | B2D2         |  D2D2  |
+| Op Code | Length | Dest         |        |
+|         | Index  | Base         |        |
+|         |        | Displacement | Displacement |
 
 * Byte 1 - the op code
 * Byte 2 
