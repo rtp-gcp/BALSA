@@ -23,4 +23,4 @@ FIELDA   DC   X'C13456'
 
 PROMPT
 
-Provide an explanation of the MVI instruction in BAL.
+Provide an explanation of the Move Immediate instruction in BAL.

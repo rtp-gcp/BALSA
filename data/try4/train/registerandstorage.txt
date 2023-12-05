@@ -12,11 +12,11 @@ operands.  The explicit coding for this instruction is:
 
 The format is as follows:
 
-| Byte 1  | Byte 2 | Byte 3       | Byte 4 |
-|:--------|:-------|:-------------|:-------|
-| xx      | R1X3   | B2D2         |  D2D2  |
-| Op Code | Length | Dest         |        |
-|         | Index  | Base         |        |
+| Byte 1  | Byte 2 | Byte 3       | Byte 4       |
+|:--------|:-------|:-------------|:-------------|
+| xx      | R1X3   | B2D2         |  D2D2        |
+| Op Code | Length | Dest         |              |
+|         | Index  | Base         |              |
 |         |        | Displacement | Displacement |
 
 * Byte 1 - the op code
