@@ -44,7 +44,7 @@ def send_openai_request(prompt, our_mode):
 
 @balsa.before_request
 def require_login():
-    if "email" not in session:
+    if "user" not in session:
             return redirect(url_for("auth.login"))
 
 @balsa.route('/balsa/train-data', methods=['POST'])
@@ -60,7 +60,7 @@ def handle_train_data():
         'response': response
     })
 
-    return render_template('balsa.html', email=session["email"], default_model_mode=session['our_mode'])
+    return render_template('balsa.html', email=session["user"]["email"], default_model_mode=session['user']['our_mode'])
 
 
 @balsa.route('/balsa/prompt', methods=['POST'])
@@ -69,33 +69,27 @@ def handle_prompt():
     action = request.form.get('action')
     prompt = request.form.get('prompt')
     response = request.form.get('response')
-    session['our_mode'] = request.form.get('our_mode')
+    session['user']['our_mode'] = request.form.get('our_mode')
 
     if action == 'submit':
         # Prepare and send the request to OpenAI
-        response = send_openai_request(prompt, session['our_mode'])
+        response = send_openai_request(prompt, session['user']['our_mode'])
 
-        return render_template('balsa.html', prompt=prompt, response=response, email=session["email"], default_model_mode=session['our_mode'], show_buttons=True)
+        return render_template('balsa.html', prompt=prompt, response=response, email=session["user"]["email"], default_model_mode=session["user"]['our_mode'], show_buttons=True)
 
     elif action == 'good':
         # Serve a blank index.html template if 'Good'
-        return render_template('balsa.html', email=session["email"])
+        return render_template('balsa.html', email=session["user"]["email"], default_model_mode=session["user"]['our_mode'])
     elif action == 'bad':
         # Serve the train.html template for further editing if 'Bad'
         return render_template('train.html', prompt=prompt, response=response)
     
 
-
 @balsa.route('/balsa', methods=['GET'])
 def balsa_index():
     """Route for the service page."""
     print("== hit balsa route === ")
-
-    #set defalut model mode
-    if 'our_mode' not in session:
-        session['our_mode'] =  current_app.default_model_mode
-
-    return render_template('balsa.html', email=session["email"], default_model_mode=request.form.get('our_mode'))
+    return render_template('balsa.html', email=session["user"]["email"], default_model_mode=session['user']['our_mode'])
 
 
 

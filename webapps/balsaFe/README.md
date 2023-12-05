@@ -57,6 +57,7 @@ LOGIN_URI="https://balsa.rtp-gcp.org/login/callback"
 # This is the OPEN API key
 OPENAI_API_KEY="put key here"
 
+DEFAULT_MODEL_MODE="normal"
 
 GPT_DEFAULT_MODEL="gpt-3.5-turbo-1106"
 
