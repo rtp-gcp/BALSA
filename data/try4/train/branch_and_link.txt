@@ -1,15 +1,15 @@
 
 RESULT
 
-```
 BRANCH AND LINK (BAL) is provided primarily for compatibility.
 For programs written for System/370; BRANCH AND SAVE (BAS) is recommended 
 instead of BRANCH AND LINK (BAL)
 
+```
          BAL  R14,SUBR
-...
+   
 SUBR     DS   0H
-...
+ 
          BR   R14         
 ```
 
