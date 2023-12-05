@@ -1,16 +1,16 @@
 RESULT
 
-This is an example of a Compare instruction - `C`:
+This is an example of a Compare instruction - `CH`:
 
 ```
-         C    R8,B
+         CH    R8,B
 ```
 
 
 The instruction looks like this:
 
 ```
-         C    R1,D2(X2,B2)
+         CH    R1,D2(X2,B2)
 ```
 
 
@@ -19,7 +19,7 @@ this format:
 
 | op code   | operands     |
 |:---------:| :----------: |
-| C         | R1,D2(X2,B2) |
+| CH        | R1,D2(X2,B2) |
 
 
 The encoded instruction looks like this:
@@ -35,7 +35,7 @@ The encoded instruction looks like this:
 |         |            | Displacement 2 | Displacement 2 |
 
 
-The Compare `C` instruction compares signed half-word at address`D2(X2,B2)`
+The Compare `CH` instruction compares signed half-word at address`D2(X2,B2)`
 to value in register R1. Doesn't change anything. CC: comparision.
 
 | Condition Code   | Meaning           | Test With       | 
@@ -69,4 +69,4 @@ GOAT     DC   H'3'
 
 PROMPT
 
-Provide an explanation of the C instruction in BAL Assembly.
+Provide an explanation of the CH instruction in BAL Assembly.
