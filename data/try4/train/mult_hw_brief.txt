@@ -4,12 +4,13 @@ RESULT
          MH   R1,Y
          ST   R1,PRODUCT 
 
+Y        DC   F'5'
 PRODUCT  DC   F'0'
 ```
 
 PROMPT
 
-Write some code in BAL Assembly to multiply a value in a register by a halfword in memory and store the result in field name of SUM.  
+Write some code in BAL Assembly to multiply a value in a register by a halfword in memory and store the result in memory with the filed name of PRODUCT.  
 
 Your answer should be brief and in markdown format using a code section using this format:
 
