@@ -1,0 +1,12 @@
+Examples in SimpleLang:
+
+Writing a Function.
+
+To write a simple function that adds two numbers:
+
+f addNumbers(a, b) {
+    result = a + b
+    p(result)
+}
+
+In this example, f addNumbers(a, b) { ... } defines a new function named addNumbers with two parameters a and b. Inside the function, result is calculated as the sum of a and b, and then it is printed using p(result). The curly braces {} enclose the function body.
