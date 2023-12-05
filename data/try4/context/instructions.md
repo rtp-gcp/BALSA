@@ -19,12 +19,12 @@ When considered instructions to these:
 | BCR    | Branch on Condition Register       | 
 | BCT    | Branch on Count                    | 
 | BCTR   | Branch on Count Register           | 
-| BSM    | Branch and Set Mode                | 
-| BXH    | Branch on Index Greater            | 
-| BXLE   | Branch on Index Less than or Equal | 
-| C      | Compare Fullword                   | 
-| CDS    | Compare Doubleword and Swap        | 
-| CH     | Compare Halfword                   | 
+| BSM    | Branch and Set Mode                          | 
+| BXH    | Branch on Index Greater                      | 
+| BXLE   | Branch on Index Less than or Equal           | 
+| C      | Compare Fullword                             | 
+| CDS    | Compare Doubleword and Swap                  | 
+| CH     | Compare Halfword                             | 
 | CL     | Compare unsigned fullword                    | 
 | CLC    | Compare up to 256 consecutive bytes in Memory | 
 | CLCL   | Compare Characters Long            | 
@@ -34,7 +34,7 @@ When considered instructions to these:
 | CP     | Compare Packed two fields in Memory| 
 | CR     | Compare Fullword in Registers      | 
 | CS     | Compare Fullword in Register to field in Memory | 
-| CVB    | Convert Packed Decimal Values in Memory to signed integers in re
+| CVB    | Convert Packed Decimal Values in Memory to signed integers in re |
 | CVD    | Convert Signed Decimal in Register to Packed Decimal in Memory |
 | D      | Divide Register by value in Memory       | 
 | DP     | Divide Packed Decimals two fields in Memory | 
@@ -50,13 +50,13 @@ When considered instructions to these:
 | LH     | Load signed halfword from memory into a Register | 
 | LM     | Load Multiple fullword values from memory into registers | 
 | LNR    | Load value in register R2 into register R1 with negative sign | 
-| LPR    | Load value in register R2 into register R1 with positive sign (a
+| LPR    | Load value in register R2 into register R1 with positive sign (a |
 | LR     | Load value from register R1 into register R2 | 
 | LTR    | Load and Test value in register R2 into register R1 | 
-| M      | Multiply register fullword in even/odd register pair by fullword
-| MH     | Multiply fullword register by halfowrd in memory in even/odd reg
+| M      | Multiply register fullword in even/odd register pair by fullword |
+| MH     | Multiply fullword register by halfowrd in memory in even/odd reg |
 | MP     | Multiply Packed decimal in memory by packed decimal in memory | 
-| MR     | Multiply fullword value in even/odd register pair by fullword va
+| MR     | Multiply fullword value in even/odd register pair by fullword va |
 | MVC    | Copy L bytes from memory to memory             | 
 | MVCIN  | Copy L bytes from memory to memory reversing order of values    
 | MVCL   | Copy or fill bytes in memory       | 
@@ -77,17 +77,17 @@ When considered instructions to these:
 | SH     | Subtract signed halfword in memory from register | 
 | SL     | Subtract unsigned fullword in memory from register | 
 | SLA    | Shift left register arithmetically by specified number of bits |
-| SLDA   | Shift left signed 64-bit value in even/odd register pair arithme
-| SLDL   | Shift left signed 64-bit value in even/odd register pair logical
+| SLDA   | Shift left signed 64-bit value in even/odd register pair arithme |
+| SLDL   | Shift left signed 64-bit value in even/odd register pair logical |
 | SLL    | Shift left register logically by specified number of bits  | 
-| SLR    | Subtract unsigned fullword in register by register              
+| SLR    | Subtract unsigned fullword in register by register           |   
 | SP     | Subtract packed decimals in memory | 
 | SR     | Subtract signed values in register by register | 
 | SRA    | Shift right register arithmetically by specified number of bits 
 | SRDA   | Shift right signed 64-bit value from even/odd register pair arit
 | SRDL   | Shift right signed 64-bit value from even/odd register pair logi
 | SRL    | Shift right register by specified number of bits               |
-| SRP    | Shift packed number in memory by the 6-bit signed number a negat
+| SRP    | Shift packed number in memory by the 6-bit signed number a negat |
 | ST     | Store fullword in register to memory | 
 | STC    | Store lowest byte in register to memory | 
 | STCM   | Store selected bytes in register to memory using mask | 
@@ -102,7 +102,7 @@ When considered instructions to these:
 | XC     | Logical XOR up to 256 bytes in memory with bytes in memory | 
 | XI     | Logical XOR byte in memory with immediate | 
 | XR     | Logical XOR register with register | 
-| ZAP    | Set packed decimal number in memory to 0 and then add from memor
+| ZAP    | Set packed decimal number in memory to 0 and then add from memor |
 
 
 # Extended instructions
