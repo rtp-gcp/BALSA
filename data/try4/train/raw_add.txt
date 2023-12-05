@@ -38,17 +38,28 @@ As an example, consider the following code:
 
 ```
        A   R9,AFIELD
+
+AFIELD DC   X'3'
 ```
+
+
+
 
 This does the following:
 
-```
-R9 Before               R9 After
-00000025 -------------> 00000028
 
-FIELDA DC   X'3'
-```
+| R9 Before |             | R9 After  |
+| :-------- | :----------:| :-------- |
+| 00000025  | ----------> | 00000028  |
+
+
+| AFIELD Before |             | AFIELD After  |
+| :------------ | :----------:| :------------ |
+| 00000003      | unchanged   | 00000003      |
+
+
+
 
 PROMPT
 
-Provide an explanation of the A instruction in BAS.
+Provide an explanation of the A instruction in BAS Assembly.

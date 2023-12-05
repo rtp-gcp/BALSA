@@ -35,11 +35,12 @@ An example of this format is the STM Store Multiple instruction.
          STM  R14,R12,12(R13)
 ```
 
-The instruction would generate the following object code
+The instruction would generate the following object code:
 
-```
-90ECD00C
-```
+
+| byte 1 | byte 2 | byte 3 | byte 4 |
+| :----: | :----: | :----: | :----: |
+| 90     | EC     | D0     | 0C     |
 
 * 90 corresponds to STM
 * E corresponds to R14 or R1

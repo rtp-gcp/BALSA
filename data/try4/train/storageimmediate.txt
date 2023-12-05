@@ -2,6 +2,7 @@ RESULT
 
 
 # SI Storage Immediate Format
+
 The SI format is used for storage immediate instructions.
 
 In this format, the second operand, the immediate constant,
@@ -10,12 +11,12 @@ usually specified as a self-defining term.
 
 The format is as follows:
 
-| byte1   | byte2 | byte3        | byte4 |
-| :-------| :-----| :------------| :-----|
-| Op Code | I2I2  | B1D1         |  D1D1 |
-|         | Src   | Dest         |       |
-|         | Index | Base         |       |
-|         |       | Displacement 1| Displacement 1|
+| byte 1  | byte 2 | byte 3       | byte 4 |
+| :-------| :------| :------------| :----- |
+| Op Code | I2I2   | B1D1         |  D1D1  |
+|         | Src    | Dest         |        |
+|         | Index  | Base         |        |
+|         |        | Displacement 1| Displacement 1|
 
 * Byte 1 - the op code
 * Byte 2 - the immediate constant denoted in operand 2
@@ -33,4 +34,4 @@ immediate instruction.
 PROMPT
 
 Can you explain the Storage Immediate type instruction format also 
-known as SI?
+known as SI in BAL Assembly?
