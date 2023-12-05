@@ -1,13 +1,14 @@
 
 RESULT
 
-```
+
 BRANCH ALWAYS causes the program counter to unconditionally move to the specicied address or label
 
+```
          BC   R15,EXIT
-...
+
 EXIT     DS   0H
-...
+
          BR   R14         
 ```
 
