@@ -2,16 +2,16 @@
 RESULT
 
 ```
-         S    R1,FIELD
-         ST   R1,DIFF
+         SH   R1,FIELD
+         STH  R1,DIFF
 
 
-DIFF     DC   F'0'
+DIFF     DC   H'0'
 ```
 
 PROMPT
 
-Write some code in BAL Assembly to subtract a fullword integer in storage from a register and store the result in memory with a field name of DIFF.
+Write some code in BAL Assembly to subtract a halfword integer in storage from a register and store the result in memory with a field name of DIFF.
 
 Your answer should be brief and in markdown format using a code section using this format:
 
@@ -21,7 +21,7 @@ put code here
 
 Do not include any commentary.  Just produce the code and comments.
 
-Assume the register R1 already contains the subtrahend, and the fullword FIELD contains the minuend.
+Assume the register R1 already contains the subtrahend, and the halfword FIELD contains the minuend.
 
 Use `*` to identify a comment and obey column restrictions for the code.
 

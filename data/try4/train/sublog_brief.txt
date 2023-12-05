@@ -2,13 +2,16 @@
 RESULT
 
 ```
-         S    R1,FIELD
+         SL   R1,FIELD
          ST   R1,DIFF
+
+
+DIFF     DC   F'0'
 ```
 
 PROMPT
 
-Write some code in BAL Assembly to subtract a fullword integer in storage from a register and store the result in memory with a field name of DIFF.
+Write some code in BAL Assembly to subtract an fullword unsigned integer in storage from a register and store the result in memory with a field name of DIFF.
 
 Your answer should be brief and in markdown format using a code section using this format:
 
@@ -24,4 +27,4 @@ Use `*` to identify a comment and obey column restrictions for the code.
 
 Do not show any subroutine standard entry and exit code.
 
-Do not show how the field name should be declared.
+Show how the field name should be declared.
