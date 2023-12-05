@@ -1,0 +1,24 @@
+RESULT
+
+```
+         MVC  TARGET(8),SOURCE
+
+TARGET   DS   CL8
+SOURCE   DS   CL20'ABCDEFGH XXXXXXXXXX'
+```
+
+PROMPT
+
+Write some code in BAL Assembly to copy 8 charcters from a source value in memory to a target field in memory. The maximum length of the copied value is 256.  
+
+Your answer should be brief and in markdown format using a code section using this format:
+
+```
+put code here
+```
+
+Do not include any commentary or comments.  Only include code.
+
+Assume the values to add are already in registers R1 and R2.
+
+Obey column restrictions for the code.
