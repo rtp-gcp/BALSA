@@ -106,38 +106,39 @@ These are the instructions
 | ZAP    | Set packed decimal number in memory to 0 and then add from memory | ZAP   D1(L1,B1),D2(L2,B2)  | F8 L1L2 BD DD BD DD    | SS |
 
 
-# Extended instructions
+## Extended BAL Assembly Instructions
 
-           'B': '15',
-            'BR': '15',
-            'NOP': '0',
-            'NOPR': '0',
-            'BH': '2',
-            'BHR': '2',
-            'BL': '4',
-            'BLR': '4',
-            'BE': '8',
-            'BER': '8',
-            'BNH': '13',
-            'BNHR': '13',
-            'BNL': '11',
-            'BNLR': '11',
-            'BNE': '7',
-            'BNER': '7',
-            'BO': '1',
-            'BOR': '1',
-            'BP': '2',
-            'BPR': '2',
-            'BM': '4',
-            'BMR': '4',
-            'BNP': '13',
-            'BNPR': '13',
-            'BNM': '11',
-            'BNMR': '11',
-            'BNZ': '7',
-            'BNZR': '7',
-            'BZ': '8',
-            'BZR': '8',
-            'BNO': '14',
-            'BNOR': '14' }
-
+| Op Code | Equivalent Code          | Condition                              | 
+| :-------| :------------------------| :--------------------------------------|
+| B       | `BC        15,addr`      | Branch Always                          |
+| BR      | `??        15???`        | ?                                      |
+| NOP     | `BC        0,addr`       | Branch Never                           |
+| NOPR    | `BC        0,addr`       | ?                                      |
+| BH      | `BC        2,addr`       | Operand 1 > Operand 2                  |
+| BHR     | `??        2????`        | ?                                      |
+| BL      | `BC        4,addr`       | Operand 1 < Operand 2                  |
+| BLR     | `??        4,addr`       | ?                                      |
+| BE      | `BC        8,addr`       | Operand 1 = Operand 2                  |
+| BER     | `BC        8,addr`       | ?                                      |
+| BNH     | `??        13,???`       | ?                                      |
+| BNHR    | `??        13,???`       | ?                                      |
+| BNL     | `BC        11,???`       | Operand 1 >= Operand 2                 |
+| BNLR    | `BC        11,???`       | ?                                      |
+| BNE     | `BC        7,addr`       | Operand 1 != Operand 2                 |
+| BNER    | `BC        7,addr`       | ?                                      |
+| BO      | `BC        1,addr`       | Overflow (or all bits one in TM)       |
+| BOR     | `??        1,addr`       | ?                                      |
+| BP      | `BC        2,addr`       | Result > 0                             |
+| BPR     | `BC        2,addr`       | ?                                      |
+| BM      | `BC        4,addr`       | Result < 0 (or bits mixed in TM)       |
+| BMR     | `BC        4,???`        | ?                                      |
+| BNP     | `BC        13,addr`      | Result <= 0                            |
+| BNPR    | `BC        13,addr`      | ?                                      |
+| BNM     | `BC        11,addr`      | Result >= 0 (or bits not mixed in TM)  |
+| BNMR    | `BC        11,???`       | ?                                      |
+| BNZ     | `BC        7,addr`       | Result != (or not all bits zero in TM) |
+| BNZR    | `BC        7,addr`       | ?                                      |
+| BZ      | `BC        8,addr`       | Result = 0 (or all bits zero in TM)    |
+| BZR     | `BC        8,addr`       | ?                                      |
+| BNO     | `BC        14,addr`      | Not overflow (or not all bits in TM)   |
+| BNOR    | `BC        14,???`       | ?                                      |
