@@ -1,0 +1,68 @@
+RESULT
+
+This is an example of a Compare instruction - `C`:
+
+```
+         C    R8,B
+```
+
+
+The instruction looks like this:
+
+```
+         C    R1,D2(X2,B2)
+```
+
+
+Compare `C` is of instruction format type `RX`.  It uses
+this format:
+
+| op code   | operands     |
+|:---------:| :----------: |
+| C         | R1,D2(X2,B2) |
+
+
+The encoded instruction looks like this:
+
+
+| Byte 1  | Byte 2     | Byte 3       | Byte 4 |
+|:--------|:-----------|:-------------|:-------|
+| 59      | R1X2       | B2D2         |  D2D2  |
+| Op Code | Result     |              |        |
+|         | Operand 1  | Operand 2    | Operand 2 |
+|         | Register   |              |        |
+|         | Index 2    | Base 2       |        |
+|         |            | Displacement 2 | Displacement 2 |
+
+
+The Compare `C` instruction compares signed full-word at address`D2(X2,B2)`
+to value register R1. Doesn't change anything. CC: comparision.
+
+| Condition Code   | Meaning           | Test With       | 
+|:-----------------|:------------------|:----------------|
+| 0                | Operands are equal | BE,JE,BNE,JNE  |
+| 1                | First operand is low | BL,JL,BNL,JNL|
+| 2                | First operand is high| BH,JH,BNH,JNH|
+| 3                | -
+
+As an example, consider the following code:
+
+R4 = X'FFFFFFD5' -43 IN 2's COMPLEMENT
+R5 = X'00000028' +40 IN 2'S COMPLEMENT
+R6 = X'00000004' +4  IN 2'S COMPLEMENT
+
+```
+DOG        DC   F'35'       
+CAT        DC   F'4'   
+           C    R4,=F'20'      CONDITION CODE = LOW
+           C    R5,=F'-20'     CONDITION CODE = HIGHT
+           C    R6,=F'20'      CONDITION CODE = LOW
+           C    R6,=F'4'       CONDITION CODE = EQUAL
+           C    R5,=F'40'      CONDITION CODE = EQUAL
+           C    R5,DOG         CONDITION CODE = HIGH
+           C    R6,DOG(R6)     CONDITION CODE = EQUAL
+```
+
+PROMPT
+
+Provide an explanation of the C instruction in BAL Assembly.
