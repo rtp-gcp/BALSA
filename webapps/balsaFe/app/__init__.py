@@ -21,9 +21,6 @@ def create_app():
     app.login_uri = os.environ.get('LOGIN_URI')
     app.default_model_mode = os.environ.get("DEFAULT_MODEL_MODE")
 
-    #set defalut model mode
-    #if 'our_mode' not in session:
-    #    session['our_mode'] =  os.environ.get("DEFAULT_MODEL_MODE")
 
     # Init firestore client
     db = firestore.Client()
@@ -44,10 +41,15 @@ def create_app():
     app.openai_tuned_model = os.environ.get('GPT_TUNED_MODEL')
 
     # register blueprints
+
+    from .main import main as main_blueprint
+    app.register_blueprint(main_blueprint)
+
+
     from .auth import auth as auth_blueprint
     app.register_blueprint(auth_blueprint)
 
-    from .service import service as service_blueprint
-    app.register_blueprint(service_blueprint)
+    from .balsa import balsa as balsa_blueprint
+    app.register_blueprint(balsa_blueprint)
 
     return app

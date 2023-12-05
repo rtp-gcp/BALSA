@@ -1,0 +1,54 @@
+RESULT
+
+# RS Register and Storage Format
+The RS format is used for register and storage instructions.
+
+There are only a few instructions of this type.  The index
+register is replaced by a register reference or a 4-bit mask.
+One unusual feature of RS instructions is the use of three
+operands.  The explicit coding for this instruction is:
+`R1,R3,D2(B2)`
+
+
+The format is as follows:
+
+| Byte 1  | Byte 2 | Byte 3       | Byte 4 |
+|:--------|:-------|:-------------|:-------|
+| xx      | R1X3   | B2D2         |  D2D2  |
+| Op Code | Length | Dest         |        |
+|         | Index  | Base         |        |
+|         |        | Displacement | Displacement |
+
+* Byte 1 - the op code
+* Byte 2 
+    - R1 - the register which is operand 1
+    - X3 - the index register associated with operand 2
+* Byte 3 and 4 - the base/displacement address associated with operand 3
+
+The numbering is funny here.  In this explicit coding, the second
+operand is X3 and the third opeand is D2(B2)
+
+
+An example of this format is the STM Store Multiple instruction.
+
+```
+         STM  R14,R12,12(R13)
+```
+
+The instruction would generate the following object code:
+
+
+| byte 1 | byte 2 | byte 3 | byte 4 |
+| :----: | :----: | :----: | :----: |
+| 90     | EC     | D0     | 0C     |
+
+* 90 corresponds to STM
+* E corresponds to R14 or R1
+* C corresponds to R12 or X3
+* D correcponds to 13 or B2
+* 00C corresponds to 12 or D2
+
+
+PROMPT
+
+Can you explain the Register and Storage type instruction format also known as RS in BAL?

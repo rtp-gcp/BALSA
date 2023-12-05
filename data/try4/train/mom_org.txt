@@ -19,4 +19,4 @@ hex number 0x01234567:
 
 PROMPT
 
-How is memory organized in BAL?
+How is memory organized in BAL Assembly?

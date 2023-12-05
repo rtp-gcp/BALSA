@@ -11,7 +11,7 @@ DIFF     DC   F'0'
 
 PROMPT
 
-Write some code in IBM BAL Assembly to subtract two fullword registers using integers and store the result in memory with a field name of DIFF.  
+Write some code in BAL Assembly to subtract two fullword registers using integers and store the result in memory with a field name of DIFF.  
 
 Your answer should be brief and in markdown format using a code section using this format:
 
