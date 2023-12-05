@@ -69,21 +69,21 @@ As an example, consider the following code:
          SRDA R8,32       ALGEBRAICALLY SHIFT R8 INTO R9
          M    R8,B        MULTIPLY A BY B
 
-A        DC   F'19'       DIVIDEND 
-B        DC   F'5'        DIVISOR 
+A        DC   F'19'       MULTIPLICAND 
+B        DC   F'5'        MULTIPLIER 
 ```
 
-19/5 -> 3 r=4
+19*5 -> 95
 
 
 
 | R8 Before |             | R8 After  |
 | :-------- | :----------:| :-------- |
-| 00000004  | ----------> | 00000004  |
+| 00000000  | ----------> | 00000000  |
 
 | R9 Before |             | R9 After  |
 | :-------- | :----------:| :-------- |
-| 00000013  | ----------> | 00000003  |
+| 00000013  | ----------> | 0000005F  |
 
 | memory:A Before |             | memory:A After  |
 | :------------ | :----------:| :------------ |
@@ -97,4 +97,4 @@ B        DC   F'5'        DIVISOR
 
 PROMPT
 
-Provide an explanation of the D instruction in BAS.
+Provide an explanation of the M instruction in BAS.
