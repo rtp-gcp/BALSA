@@ -10,9 +10,8 @@ RESULT
 *                              comments start at column 32
 *                                                                      continuation starts at column 72
 
-         SR   R1,R2
+         S    R1,FIELD
          ST   R1,DIFF
-
 
 
 DIFF     DC   F'0'
@@ -20,7 +19,7 @@ DIFF     DC   F'0'
 
 PROMPT
 
-Write some code in IBM BAL Assembly to subtract two fullword registers using integers and store the result in memory with a field name of DIFF.  
+Write some code in BAL Assembly to subtract a fullword integer in storage from a register and store the result in memory with a field name of DIFF.
 
 Your answer should be brief and in markdown format using a code section using this format:
 
@@ -30,11 +29,7 @@ put code here
 
 Do not include any commentary.  Just produce the code and comments.
 
-Assume the values to add are already in registers R1 and R2.  
-
-R1 will contain the minuend.
-
-R2 will contain the subtrahend.
+Assume the register R1 already contains the subtrahend, and the fullword FIELD contains the minuend.
 
 Use `*` to identify a comment and obey column restrictions for the code.
 

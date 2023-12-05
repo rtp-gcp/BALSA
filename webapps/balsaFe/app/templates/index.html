@@ -4,13 +4,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="UTF-8" />
     <title>BALSA</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
   </head>
+
   <body>
+    <H1>
+      Welcome to BALSA
+    </H1>
+    <P> Basic Assembly Language Source Assist </P>
+    <P> BALSA is a Prompt Engineering tool for 1960s era IBM Assembler.  It can provide code samples, explain assembly code on an individual instruction
+      basis, commentary for small sequences of instructions and provide insight to poorly written assembly code.  In all cases, assembly refers
+      to BAL assembly.
+    </P>
+
     <div class="container">
-      <P> Welcome to BALSA </P>
-      <P> Basic Assembly Language Source Analyser? </P>
-      <P> Basic Assembly Language Source Assistant? </P>
+      <p></p>
       <P> In order to demo the BAL Source Assistant, please login.</P>
       <P> <a href="https://github.com/rtp-gcp/BALSA">Here</a> is the source code for this webapp </P>
       <a href="{{ url_for('auth.login') }}">login</a>

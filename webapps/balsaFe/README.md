@@ -82,3 +82,8 @@ gcloud firestore databases create --type=firestore-native --location=nam5
 ```
 - create collection 'allowed_users' and for each user create a document with email assigned to document ID
 
+## stuff cut
+
+```
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  ```

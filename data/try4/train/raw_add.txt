@@ -1,23 +1,40 @@
 
 RESULT
 
-This is an example of an Add instruction - A:
+This is an example of an Add instruction - `A`:
 
 ```
          A    R9,FIELDA
 ```
 
-The format looks like this:
+The instruction looks like this:
 
 ```
          A    R1,D2(X2,B2)
 ```
 
+Divide `A` is of instruction format type `RX`.  It uses
+this format:
+
+| op code   | operands     |
+|:---------:| :----------: |
+| A         | R1,D2(X2,B2) |
+
+
+
 The encoded instruction looks like this:
 
-```
-OPCODE  R1X2   B2D2  D2D2
-```
+
+| Byte 1  | Byte 2     | Byte 3       | Byte 4 |
+|:--------|:-----------|:-------------|:-------|
+| 5A      | R1X2       | B2D2         |  D2D2  |
+| Op Code | Result     |              |        |
+|         | Operand 1  | Operand 2    |        |
+|         | Register   | Dest         |        |
+|         | Index 2    | Base 2       |        |
+|         |            | Displacement 2 | Displacement 2 |
+
+
 
 
 The Add instruction performs two's compliment binary
@@ -38,17 +55,28 @@ As an example, consider the following code:
 
 ```
        A   R9,AFIELD
+
+AFIELD DC   X'3'
 ```
+
+
+
 
 This does the following:
 
-```
-R9 Before               R9 After
-00000025 -------------> 00000028
 
-FIELDA DC   X'3'
-```
+| R9 Before |             | R9 After  |
+| :-------- | :----------:| :-------- |
+| 00000025  | ----------> | 00000028  |
+
+
+| memory:AFIELD Before |             | memory:AFIELD After  |
+| :------------ | :----------:| :------------ |
+| 00000003      | unchanged   | 00000003      |
+
+
+
 
 PROMPT
 
-Provide an explanation of the A instruction in BAS.
+Provide an explanation of the A instruction in BAS Assembly.

@@ -33,7 +33,7 @@ This is a ruler to ensure column starting locations are correct.
 This defines 20 bytes of character data which is unitialized and has the field name of `PARTNAME`.
 
 ```
-PARTNAME  DS    CL20  
+PARTNAME DS   CL20  
 ```
 
 ### Example 2
@@ -41,7 +41,7 @@ PARTNAME  DS    CL20
 This defines an unamed region of memory of 20 bytes.  In other words an unamed 20 byte character field.
 
 ```
-          DS    CL20  
+         DS   CL20  
 ```
 
 ### Example 3
@@ -49,7 +49,7 @@ This defines an unamed region of memory of 20 bytes.  In other words an unamed 2
 This defines two uninitialized character fields of 20 bytes each.   The first filed is called `PARTNAME`.  The second field is unamed.
 
 ```
-PARTNAME  DS    2CL20  
+PARTNAME DS   2CL20  
 ```
 
 
@@ -61,10 +61,10 @@ location specified by NAME and FNAME are equivalent.  In terms of C, this would 
 the following fields `FNAME`, `MI`, and `LNAME` are considered subfields of `NAME`.
 
 ```
-NAME      DS    0CL41          CUSTOMER NAME
-FNAME     DS     CL20          CUSTOMER FIRST NAME
-MI        DS     CL1           CUSTOMER MIDDLE INITIAL
-LNAME     DS     CL20          CUSTOMER LAST NAME
+NAME     DS   0CL41         CUSTOMER NAME
+FNAME    DS   CL20          CUSTOMER FIRST NAME
+MI       DS   CL1           CUSTOMER MIDDLE INITIAL
+LNAME    DS   CL20          CUSTOMER LAST NAME
 ```
 
 ### Example 5
@@ -73,7 +73,7 @@ This defines a 6-byte character field named `ITEM`.  The field is uninitialized 
 
 
 ```
-ITEM      DS    CL6'HAMMER'
+ITEM     DS   CL6'HAMMER'
 ```
 
 
@@ -82,7 +82,7 @@ ITEM      DS    CL6'HAMMER'
 This defines a 18-fullword region named `SAVEAREA`.  This region is for saving registers and restoring registers in a subroutine.
 
 ```
-SAVEAREA  DS    18F
+SAVEAREA DS   18F
 ```
 
 ### Example 7
@@ -100,5 +100,5 @@ SAVEAREA  DS    18F
 In this example, the assembler would cause the location counter to be aligned on a doubleword boundary. It's implied that the next use of storage, either for an instruction or other use of storage, requires doubleword alignment.
 
 ```
-          DS    0D  
+         DS   0D  
 ```

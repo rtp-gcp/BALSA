@@ -143,4 +143,4 @@ address loaded this way is 4095 or X'FFF' or 0xFFF.
 
 PROMPT
 
-Can you explain the concept of explicit addressing when using IBM BAL?
+Can you explain the concept of explicit addressing when using BAL Assembly?

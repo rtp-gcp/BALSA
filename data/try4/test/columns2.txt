@@ -21,11 +21,11 @@ assembler using comment character in first column as `*`.
 * operands start in column 15
 * comments which do not start in column 1, must start in column 32
 * line continuation characters are placed in column 72
-* line continuation characters are typically `x`
+* line continuation characters are typically `x`.  They are used when an instruction spans more than one line.
 
 
 PROMPT
 
-Provide info on column usage when writing IBM BAL Assembly code.
+Provide info on column usage when writing BAL Assembly code.
 
 Your answer should be brief and in markdown format.  
