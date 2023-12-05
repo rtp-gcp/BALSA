@@ -25,10 +25,10 @@ the following two tables:
 | BSM     | Branch and Set Mode                          | 
 | BXH     | Branch on Index Greater                      | 
 | BXLE    | Branch on Index Less than or Equal           | 
-| C       | Compare Fullword                             | 
-| CDS     | Compare Doubleword and Swap                  | 
+| C       | Compare Fullword in register against memory  | 
+| CDS     | Compare Doubleword in even/odd register pair against memory and Swap                  | 
 | CH      | Compare Halfword                             | 
-| CL      | Compare unsigned fullword                    | 
+| CL      | Compare logically unsigned fullword in register against memory   | 
 | CLC     | Compare up to 256 consecutive bytes in Memory | 
 | CLCL    | Compare Characters Long            | 
 | CLI     | Compare Logical Immediate          | 
@@ -36,12 +36,12 @@ the following two tables:
 | CLR     | Compare Logical Registers          | 
 | CP      | Compare Packed two fields in Memory| 
 | CR      | Compare Fullword in Registers      | 
-| CS      | Compare Fullword in Register to field in Memory | 
-| CVB     | Convert Packed Decimal Values in Memory to signed integers in register |
-| CVD     | Convert Signed Decimal in Register to Packed Decimal in Memory |
-| D       | Divide Register by value in Memory       | 
+| CS      | Compare Fullword in register against memory and Swap | 
+| CVB     | Convert Packed Decimal Value in Memory to signed integers in register |
+| CVD     | Convert Signed Fullword in Register to Packed Decimal in Memory |
+| D       | Divide doubleword in in even/odd register pair by fullword value in Memory       | 
 | DP      | Divide Packed Decimals two fields in Memory | 
-| DR      | Divide fullword Register by fullword Register        | 
+| DR      | Divide doubleword in in even/odd register pair by fullword Register        | 
 | ED      | Edit - formats packed decimal field | 
 | EDMK    | Edit and Mark - address of first significant digit in R1      | 
 | EX      | Execute a target instruction       | 
@@ -61,7 +61,7 @@ the following two tables:
 | MP      | Multiply Packed decimal in memory by packed decimal in memory | 
 | MR      | Multiply fullword value in even/odd register pair by fullword value in register |
 | MVC     | Copy L bytes from memory to memory             | 
-| MVCIN   | Copy L bytes from memory to memory reversing order of values    
+| MVCIN   | Copy L bytes from memory to memory reversing order of values with second operand is last byte |   
 | MVCL    | Copy or fill bytes in memory       | 
 | MVI     | Store byte I2 to memory            | 
 | MVN     | Copy low nibbles from memory to memory | 
@@ -79,10 +79,10 @@ the following two tables:
 | S       | Subtract signed fullword in memory from register  | 
 | SH      | Subtract signed halfword in memory from register | 
 | SL      | Subtract unsigned fullword in memory from register | 
-| SLA     | Shift left register arithmetically by specified number of bits |
+| SLA     | Shift left fullword register arithmetically by specified number of bits |
 | SLDA    | Shift left signed 64-bit value in even/odd register pair arithmetically by specified number of bits |
-| SLDL    | Shift left signed 64-bit value in even/odd register pair logical |
-| SLL     | Shift left register logically by specified number of bits  | 
+| SLDL    | Shift left signed 64-bit value in even/odd register pair logicallby specified number of bits |
+| SLL     | Shift left fullword register logically by specified number of bits  | 
 | SLR     | Subtract unsigned fullword in register by register           |   
 | SP      | Subtract packed decimals in memory | 
 | SR      | Subtract signed values in register by register | 
@@ -90,7 +90,7 @@ the following two tables:
 | SRDA    | Shift right signed 64-bit value from even/odd register pair arithmetically by specified number of bits |
 | SRDL    | Shift right signed 64-bit value from even/odd register pair logically by specified number of bits |
 | SRL     | Shift right register by specified number of bits               |
-| SRP     | Shift packed number in memory by the 6-bit signed number a negative value shifts right, using the value I3 as a rounding value. |
+| SRP     | Shift packed number in memory by the 6-bit signed number using the value I3 as a rounding value and with a negative value shifting right. |
 | ST      | Store fullword in register to memory | 
 | STC     | Store lowest byte in register to memory | 
 | STCM    | Store selected bytes in register to memory using mask | 
@@ -99,7 +99,7 @@ the following two tables:
 | SVC     | Supervisor call - invoke Operating System service number  | 
 | TM      | Test bits of byte in memory using mask | 
 | TR      | Translate memory area at address using table in memory | 
-| TRT     | Examine memory by bytes using table, a non-zero value is inserted into the low byte of R2 |
+| TRT     | Examine table in memory by using memory bytes as an index with the first non-zero value found is inserted into the low byte of R2 |
 | UNPK    | Convert packed decimal in memory to zoned decimal in memory | 
 | X       | Logical XOR register with memory | 
 | XC      | Logical XOR up to 256 bytes in memory with bytes in memory | 
