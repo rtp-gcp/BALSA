@@ -1,7 +1,6 @@
 
 RESULT
 
-```
 The ADD HALFWORD instruction algebraically adds the contents of a two-byte field 
 in storage to the contents of a register. 
 
@@ -30,11 +29,12 @@ Machine Format
 Assembler Format
 Op Code R1,D2(X2,B2)
 -----------------—————————————
+```
          AH   5,X'6B0'(13,12)
+```
 
 After the instruction is executed, register 5 contains 00 00 00 17 = 2310. 
 Condition code 2 is set to indicate a result greater than zero.
-```
 
 PROMPT
 
