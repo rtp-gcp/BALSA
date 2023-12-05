@@ -113,34 +113,34 @@ the following two tables:
 | Op Code | Equivalent Code          | Condition                              | 
 | :-------| :------------------------| :--------------------------------------|
 | B       | `BC        15,addr`      | Branch Always                          |
-| BR      | `??        15???`        | ?                                      |
-| NOP     | `BC        0,addr`       | Branch Never                           |
-| NOPR    | `BC        0,addr`       | ?                                      |
+| BR      | `BCR       15,r1`        | Branch Always to address in register   |
+| NOP     | `BC        0,addr`       | No Operation (4 bytes)                 |
+| NOPR    | `BCR       0,,r1`        | No Operation (2 bytes)                 |
 | BH      | `BC        2,addr`       | Operand 1 > Operand 2                  |
-| BHR     | `??        2????`        | ?                                      |
+| BHR     | `BCR       2,r1`         | Operand 1 > Operand 2 to address in register                  |
 | BL      | `BC        4,addr`       | Operand 1 < Operand 2                  |
-| BLR     | `??        4,addr`       | ?                                      |
+| BLR     | `BCR       4,r1`         | Operand 1 < Operand 2 to address in register                   |
 | BE      | `BC        8,addr`       | Operand 1 = Operand 2                  |
-| BER     | `BC        8,addr`       | ?                                      |
-| BNH     | `??        13,???`       | ?                                      |
-| BNHR    | `??        13,???`       | ?                                      |
-| BNL     | `BC        11,???`       | Operand 1 >= Operand 2                 |
-| BNLR    | `BC        11,???`       | ?                                      |
+| BER     | `BCR       8,r1`         | Operand 1 = Operand 2 to address in register                   |
+| BNH     | `BC        13,addr`      | Operand 1 <= Operand 2                 |
+| BNHR    | `BCR       13,r1`        | Operand 1 <= Operand 2 to address in register                  |
+| BNL     | `BC        11,addr`      | Operand 1 >= Operand 2                 |
+| BNLR    | `BCR       11,r1`        | Operand 1 >= Operand 2 to address in register                  |
 | BNE     | `BC        7,addr`       | Operand 1 != Operand 2                 |
-| BNER    | `BC        7,addr`       | ?                                      |
+| BNER    | `BCR       7,r1`         | Operand 1 != Operand 2 to address in register                  |
 | BO      | `BC        1,addr`       | Overflow (or all bits one in TM)       |
-| BOR     | `??        1,addr`       | ?                                      |
+| BOR     | `BCR       1,r1`         | Overflow (or all bits one in TM) to address in register       |
 | BP      | `BC        2,addr`       | Result > 0                             |
-| BPR     | `BC        2,addr`       | ?                                      |
+| BPR     | `BCR       2,r1`         | Result > 0 to address in register                              |
 | BM      | `BC        4,addr`       | Result < 0 (or bits mixed in TM)       |
-| BMR     | `BC        4,???`        | ?                                      |
+| BMR     | `BCR       4,r1`         | Result < 0 (or bits mixed in TM) to address in register        |
 | BNP     | `BC        13,addr`      | Result <= 0                            |
-| BNPR    | `BC        13,addr`      | ?                                      |
+| BNPR    | `BCR       13,r1`        | Result <= 0 to address in register                             |
 | BNM     | `BC        11,addr`      | Result >= 0 (or bits not mixed in TM)  |
-| BNMR    | `BC        11,???`       | ?                                      |
+| BNMR    | `BCR       11,r1`        | Result >= 0 (or bits not mixed in TM) to address in register   |
 | BNZ     | `BC        7,addr`       | Result != (or not all bits zero in TM) |
-| BNZR    | `BC        7,addr`       | ?                                      |
+| BNZR    | `BCR       7,r1`         | Result != (or not all bits zero in TM) to address in register  |
 | BZ      | `BC        8,addr`       | Result = 0 (or all bits zero in TM)    |
-| BZR     | `BC        8,addr`       | ?                                      |
+| BZR     | `BCR       8,r1`         | Result = 0 (or all bits zero in TM) to address in register     |
 | BNO     | `BC        14,addr`      | Not overflow (or not all bits in TM)   |
-| BNOR    | `BC        14,???`       | ?                                      |
+| BNOR    | `BCR       14,r1`        | Not overflow (or not all bits in TM) to address in register    |
