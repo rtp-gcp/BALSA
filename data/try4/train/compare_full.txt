@@ -52,15 +52,15 @@ R5 = X'00000028' +40 IN 2'S COMPLEMENT
 R6 = X'00000004' +4  IN 2'S COMPLEMENT
 
 ```
-DOG        DC   F'35'       
-CAT        DC   F'4'   
-           C    R4,=F'20'      CONDITION CODE = LOW
-           C    R5,=F'-20'     CONDITION CODE = HIGHT
-           C    R6,=F'20'      CONDITION CODE = LOW
-           C    R6,=F'4'       CONDITION CODE = EQUAL
-           C    R5,=F'40'      CONDITION CODE = EQUAL
-           C    R5,DOG         CONDITION CODE = HIGH
-           C    R6,DOG(R6)     CONDITION CODE = EQUAL
+DOG      DC   F'35'       
+CAT      DC   F'4'   
+         C    R4,=F'20'      CONDITION CODE = LOW
+         C    R5,=F'-20'     CONDITION CODE = HIGH
+         C    R6,=F'20'      CONDITION CODE = LOW
+         C    R6,=F'4'       CONDITION CODE = EQUAL
+         C    R5,=F'40'      CONDITION CODE = EQUAL
+         C    R5,DOG         CONDITION CODE = HIGH
+         C    R6,DOG(R6)     CONDITION CODE = EQUAL
 ```
 
 PROMPT
