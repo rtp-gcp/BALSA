@@ -142,7 +142,7 @@ When issuing instruction commands, only consider the instructions / op code in t
 """
 
     response = current_app.openai_client.chat.completions.create(
-        model="ft:gpt-3.5-turbo-1106:personal::8SXoaFOx",
+        model="ft:gpt-3.5-turbo-1106:personal::8SaPp8w8",
         messages=[{"role": "system", "content": system_msg}, {"role": "user", "content": prompt}]
     )
     return response.choices[0].message.content
