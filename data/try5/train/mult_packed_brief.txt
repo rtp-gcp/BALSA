@@ -3,15 +3,10 @@ RESULT
 ```
          MP   X,Y
 
-X        DC   PL3'4'
-Y        DC   PL6'5'
+X        DC   PL6'4'
+Y        DC   PL3'5'
 ```
 
 PROMPT
 
-Write some code in BAL Assembly to multiply a packed decimal multiplicand in memory by a packed decimal multiiplier in memory. The multiplicand field is set to the product.  
-
-
-Assume the values to add are already in registers R1 and R2.
-
-
+Write some code in BAL Assembly to multiply a packed decimal multiplicand in memory field X by a packed decimal multiiplier in memory field Y. The multiplicand field X is set to the product.
