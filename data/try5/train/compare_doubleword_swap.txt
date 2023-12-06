@@ -46,7 +46,12 @@ in memory.
 | 3                | -                     |                  |
 
 As an example, consider the following code:
-
+```
+         CDS  R4,R6,64(R12)
+```
+COMPARE VALUE IN R4-R5 TO THE 8-BYTE VALUE AT R12 ADDRESS+64; 
+IF EQUAL, STORE VALUE IN R6-R7 AT R12 ADDRESS+64; 
+IF NOT EQUAL, LOAD 8-BYTE VALUE AT R12 ADDRESS+64 INTO R4-R5 REGISTER PAIR
 
 PROMPT
 
