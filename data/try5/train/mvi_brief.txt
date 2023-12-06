@@ -1,0 +1,11 @@
+RESULT
+
+```
+         MVI  TARGET,C'X'
+
+TARGET   DS   CL1
+```
+
+PROMPT
+
+Write some code in BAL Assembly to store a literal 1 byte value in a TARGET field in memory.
