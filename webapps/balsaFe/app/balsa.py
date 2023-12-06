@@ -173,7 +173,7 @@ the list:
 """
 
     response = current_app.openai_client.chat.completions.create(
-        model="ft:gpt-3.5-turbo-1106:personal::8Stt6jFv",
+        model="ft:gpt-3.5-turbo-1106:personal::8Sv7Yd5Z",
         messages=[{"role": "system", "content": system_msg}, {"role": "user", "content": prompt}]
     )
     return response.choices[0].message.content

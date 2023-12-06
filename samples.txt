@@ -1,5 +1,5 @@
 
-Can you show me how to add two fullword integers and store the result in memory at field named SUM?  Assume the integers are already present in register R1 and R2.
+Using BAL show me how to add two fullword integers and store the result in memory at field named SUM?  Assume the integers are already present in register R1 and R2.
 
 Can you explain in BAL assembly what the RR instruction format is?
 
