@@ -1,0 +1,73 @@
+
+RESULT
+
+# MACROS
+
+Macros recognized by the BAL assembler
+
+## WTO
+
+Write to Operator
+
+TODO: add examples
+
+## DCB
+
+```
+         DCB  DDNAME=ddname,                                           x
+              MACRF=[P|G][M|L],                                        x
+              DSORG=PS,                                                x
+              RECFM=recfm,                                             x
+              LRECL=lrecl,                                             x
+              BLKSIZE=blksize,                                         x
+              EODAD=eodad        
+
+```
+
+
+Generate `DCB`` (data control block) for a sequential dataset (QSAM). The ddname is a string used as DD name. The MACRF denotes macros being used - either GET or PUT in move or locate mode. Parameters recfm, lrecl and blksize are same as in JCL. The eodad parameter is address where the branch is made if the EOF is encountered during GET.
+
+* `EODAD`
+
+TODO: (DAVIS) is this correct? This specifies what routine to call when EOF is reached.
+
+## OPEN
+
+
+```
+         OPEN (dcb,([INPUT|OUTPUT])) 
+```
+
+Open DCB at address dcb for input or output, as specified. The unspecified parameters in DCB are filled first from the JCL and then from dataset attributes.
+
+
+## CLOSE
+
+```
+         CLOSE (dcb addr) 
+```
+
+Close open DCB at address `dcb addr`
+
+## GET
+
+```
+         GET  dcb[,area]
+```
+
+Read an input record from the open DCB at address dcb. In move mode, copy the record to address area. In locate mode, return the address of the record read in register 1.
+
+## PUT
+
+```
+         PUT  dcb[,area]
+
+```
+
+Write a record into the open DCB at address dcb. In move mode, write an output record from address area. In locate mode, return in register 1 address where the next output record should be written.
+
+
+
+PROMPT
+
+What macros are available in BAL?

@@ -1,0 +1,39 @@
+
+RESULT
+
+```
+*        1         2         3         4         5         6         7         8 
+*2345678901234567890123456789012345678901234567890123456789012345678901234567890
+*name starts at column 1
+*        operation starts at column 10
+*             operands start at column 15
+*                              comments start at column 32
+*                                                                      continuation starts at column 72
+
+         AR   R3,R4
+         ST   R3,SUM 
+
+
+
+SUM      DC   F'0'
+```
+
+PROMPT
+
+Write some code in BAL Assembly to add two fullword registers and store the result in memory with a field name of SUM.  
+
+Your answer should be brief and in markdown format using a code section using this format:
+
+```
+put code here
+```
+
+Do not include any commentary.  Just produce the code and comments.
+
+Assume the values to add are already in registers R3 and R4.
+
+Use `*` to identify a comment and obey column restrictions for the code.
+
+Do not show any subroutine standard entry and exit code.
+
+Show how the field name should be declared.

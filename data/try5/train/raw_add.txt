@@ -1,0 +1,82 @@
+
+RESULT
+
+This is an example of an Add instruction - `A`:
+
+```
+         A    R9,FIELDA
+```
+
+The instruction looks like this:
+
+```
+         A    R1,D2(X2,B2)
+```
+
+Divide `A` is of instruction format type `RX`.  It uses
+this format:
+
+| op code   | operands     |
+|:---------:| :----------: |
+| A         | R1,D2(X2,B2) |
+
+
+
+The encoded instruction looks like this:
+
+
+| Byte 1  | Byte 2     | Byte 3       | Byte 4 |
+|:--------|:-----------|:-------------|:-------|
+| 5A      | R1X2       | B2D2         |  D2D2  |
+| Op Code | Result     |              |        |
+|         | Operand 1  | Operand 2    |        |
+|         | Register   | Dest         |        |
+|         | Index 2    | Base 2       |        |
+|         |            | Displacement 2 | Displacement 2 |
+
+
+
+
+The Add instruction performs two's compliment binary
+addition.  Operand 1 is a register containing a fullword
+integer.  Operand 2 is a fullword in memory.  The fullword
+in memory is added to the fullword in the register and the result
+is stored in the register.  The fullword in memory is not changed.
+The instruction ses the condition code as follows:
+
+| condition code |     meaning                |    test with.   |
+| :-------------:|:---------------------------|:----------------|
+| 0              |  Result is 0; no overflow  |  BE,JE,BZ,JZ    |
+| 1              |  Result is <0; no overflow |  BL,JL,BM,JM    |
+| 2              |  Result is >0; no overflow |  BH,JH,BP,JP    |
+| 3              |  overflow                  |                 |
+
+As an example, consider the following code:
+
+```
+       A   R9,AFIELD
+
+AFIELD DC   X'3'
+```
+
+
+
+
+This does the following:
+
+
+| R9 Before |             | R9 After  |
+| :-------- | :----------:| :-------- |
+| 00000025  | ----------> | 00000028  |
+
+
+| memory:AFIELD Before |             | memory:AFIELD After  |
+| :------------ | :----------:| :------------ |
+| 00000003      | unchanged   | 00000003      |
+
+
+
+
+PROMPT
+
+Provide an explanation of the A instruction in BAS Assembly.
