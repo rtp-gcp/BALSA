@@ -9,8 +9,8 @@ the following two tables:
 | :-------| :----------------------------------|
 | A       | Add fullword                       |
 | AH      | Add halfword                       |
-| AL      | Add unsigned fullword               |
-| ALR     | Add unsigned register               |
+| AL      | Add unsigned fullword              |
+| ALR     | Add unsigned register              |
 | AP      | Add Packed two fields in Memory    | 
 | AR      | Add Register fullword              | 
 | BAL     | Branch and Link                    | 
@@ -22,13 +22,13 @@ the following two tables:
 | BCR     | Branch on Condition Register       | 
 | BCT     | Branch on Count                    | 
 | BCTR    | Branch on Count Register           | 
-| BSM     | Branch and Set Mode                          | 
-| BXH     | Branch on Index Greater                      | 
-| BXLE    | Branch on Index Less than or Equal           | 
-| C       | Compare Fullword                             | 
-| CDS     | Compare Doubleword and Swap                  | 
-| CH      | Compare Halfword                             | 
-| CL      | Compare unsigned fullword                    | 
+| BSM     | Branch and Set Mode                | 
+| BXH     | Branch on Index Greater            | 
+| BXLE    | Branch on Index Less than or Equal | 
+| C       | Compare Fullword                   | 
+| CDS     | Compare Doubleword and Swap        | 
+| CH      | Compare Halfword                   | 
+| CL      | Compare unsigned fullword          | 
 | CLC     | Compare up to 256 consecutive bytes in Memory | 
 | CLCL    | Compare Characters Long            | 
 | CLI     | Compare Logical Immediate          | 
@@ -113,34 +113,34 @@ the following two tables:
 | Op Code | Equivalent Code          | Condition                              | 
 | :-------| :------------------------| :--------------------------------------|
 | B       | `BC        15,addr`      | Branch Always                          |
-| BR      | `??        15???`        | ?                                      |
+| BR      | `BCR       15,reg`       | Branch Always                          |
 | NOP     | `BC        0,addr`       | Branch Never                           |
-| NOPR    | `BC        0,addr`       | ?                                      |
+| NOPR    | `BCR       0,reg`        | Branch Never                           |
 | BH      | `BC        2,addr`       | Operand 1 > Operand 2                  |
-| BHR     | `??        2????`        | ?                                      |
+| BHR     | `BCR       2,reg`        | Operand 1 > Operand 2                  |
 | BL      | `BC        4,addr`       | Operand 1 < Operand 2                  |
-| BLR     | `??        4,addr`       | ?                                      |
+| BLR     | `BCR       4,reg`        | Operand 1 < Operand 2                  |
 | BE      | `BC        8,addr`       | Operand 1 = Operand 2                  |
-| BER     | `BC        8,addr`       | ?                                      |
-| BNH     | `??        13,???`       | ?                                      |
-| BNHR    | `??        13,???`       | ?                                      |
-| BNL     | `BC        11,???`       | Operand 1 >= Operand 2                 |
-| BNLR    | `BC        11,???`       | ?                                      |
+| BER     | `BCR       8,reg`        | Operand 1 = Operand 2                  |
+| BNH     | `BC        13,addr`      | Result <= 0                            |
+| BNHR    | `BCR       13,reg`       | Result <= 0                            |
+| BNL     | `BC        11,addr`      | Operand 1 >= Operand 2                 |
+| BNLR    | `BCR       11,reg`       | Operand 1 >= Operand 2                 |
 | BNE     | `BC        7,addr`       | Operand 1 != Operand 2                 |
-| BNER    | `BC        7,addr`       | ?                                      |
+| BNER    | `BCR       7,reg`        | Operand 1 != Operand 2                 |
 | BO      | `BC        1,addr`       | Overflow (or all bits one in TM)       |
-| BOR     | `??        1,addr`       | ?                                      |
+| BOR     | `BCR       1,reg`        | Overflow (or all bits one in TM)       |
 | BP      | `BC        2,addr`       | Result > 0                             |
-| BPR     | `BC        2,addr`       | ?                                      |
+| BPR     | `BCR       2,reg`        | Result > 0                             |
 | BM      | `BC        4,addr`       | Result < 0 (or bits mixed in TM)       |
-| BMR     | `BC        4,???`        | ?                                      |
+| BMR     | `BCR       4,reg`        | Result < 0 (or bits mixed in TM)       |
 | BNP     | `BC        13,addr`      | Result <= 0                            |
-| BNPR    | `BC        13,addr`      | ?                                      |
+| BNPR    | `BCR       13,reg`       | Result <= 0                            |
 | BNM     | `BC        11,addr`      | Result >= 0 (or bits not mixed in TM)  |
-| BNMR    | `BC        11,???`       | ?                                      |
+| BNMR    | `BCR       11,reg`       | Result >= 0 (or bits not mixed in TM)  |
 | BNZ     | `BC        7,addr`       | Result != (or not all bits zero in TM) |
-| BNZR    | `BC        7,addr`       | ?                                      |
+| BNZR    | `BCR       7,reg`        | Result != (or not all bits zero in TM) |
 | BZ      | `BC        8,addr`       | Result = 0 (or all bits zero in TM)    |
-| BZR     | `BC        8,addr`       | ?                                      |
+| BZR     | `BCR       8,reg`        | Result = 0 (or all bits zero in TM)    |
 | BNO     | `BC        14,addr`      | Not overflow (or not all bits in TM)   |
-| BNOR    | `BC        14,???`       | ?                                      |
+| BNOR    | `BCR       14,reg`       | Not overflow (or not all bits in TM)   |
