@@ -25,14 +25,14 @@ this format:
 The encoded instruction looks like this:
 
 
-| Byte 1  | Byte 2     | Byte 3       | Byte 4 |
-|:--------|:-----------|:-------------|:-------|
-| 19      | R1X2       | B2D2         |  D2D2  |
-| Op Code | Result     |              |        |
-|         | Operand 1  | Operand 2    | Operand 2 |
-|         | Register   |              |        |
-|         | Index 2    | Base 2       |        |
-|         |            | Displacement 2 | Displacement 2 |
+| Byte 1  | Byte 2     |
+|:--------|:-----------|
+| 19      | R1R2       | 
+| Op Code | Result     |
+|         | Operand 1  | 
+|         | Register   |  
+|         | Index 2    | 
+|         |            | 
 
 
 The Compare `CR` instruction compares signed value in register R2
