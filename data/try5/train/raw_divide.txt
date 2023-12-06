@@ -98,4 +98,4 @@ B        DC   F'5'        DIVISOR
 
 PROMPT
 
-Provide an explanation of the D instruction in BAL Assembly.
+Provide an explanation of the `D` instruction in BAL Assembly.

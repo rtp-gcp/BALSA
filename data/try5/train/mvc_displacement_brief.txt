@@ -12,14 +12,5 @@ PROMPT
 Write some code in BAL Assembly to copy 4 characters from the 3rd character of a SOURCE value in memory
 to the 5th character of a TARGET field in memory. The maximum nuber of characters that can be copied is 256.   
 
-Your answer should be brief and in markdown format using a code section using this format:
-
-```
-put code here
-```
-
-Do not include any commentary or comments.  Only include code.
-
 Assume the values to add are already in registers R1 and R2.
 
-Obey column restrictions for the code.

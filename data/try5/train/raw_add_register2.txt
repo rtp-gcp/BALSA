@@ -5,8 +5,6 @@ RESULT
 This is example for the AR instruction in BAL:
 
 ```
-*        OPCODE  is AR
-*             OPERANDS are R1 and R2
          AR   R1,R2
 ```
 

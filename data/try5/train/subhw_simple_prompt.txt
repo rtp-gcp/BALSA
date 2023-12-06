@@ -2,16 +2,11 @@
 RESULT
 
 ```
-         SH   R1,FIELD
+         SH   R1,AFIELD
          STH  R1,DIFF
 ```
 
 PROMPT
 
-Write some code in BAL Assembly to subtract a halfword integer in storage from a register and store the result in memory with a field name of DIFF.
+Write some code in BAL Assembly to subtract a halfword integer in storage with a field name AFIELD from a register and store the result in memory with a field name of DIFF.
 
-Your answer should be brief and in markdown format using a code section using this format:
-
-```
-put code here
-```
