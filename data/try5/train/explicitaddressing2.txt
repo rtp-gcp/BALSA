@@ -1,0 +1,75 @@
+RESULT
+
+
+
+Each instruction has its own explicit format we can use for coding.  Besides
+learning the instruction formats for each instruction, we also need to know how
+to explictily code each instruction (or be willing to look it up).  For
+example, the load instruction format appears below:
+
+```
+     L    R1,D2(X2,B2)
+```
+
+Consider the following explictly code instruction,
+
+```
+    L     10,4(3,5)
+```
+
+Register 10 is loaded with a fullword in memory.  The source word
+is formed from base register 5, with register 3 as an index register,
+and 4 is the displacement.  The effective source address is computed
+by adding the contents of the base register, plus the contents of the 
+index register, plus the displacement.
+
+EA Effective Address = base R5 contents + index R3 contents + displacement 4.
+
+### TIP
+
+Always refer to registers with their equated names: 
+
+```
+         R5   EQU  5
+```
+
+such that above becomes:
+
+```
+         L    R10,4(R3,R5)
+```
+
+Knowledge of the explict format notation is critical to understanding many 
+instructions.  For example, it is common practice for an assembler 
+programmer to code an instruction similar to below:
+
+```
+         LA   R5,10
+```
+
+How do we interpret this code?  First, we could look up a Load Address LA
+instruction and discover that is an RX instruction, and that t has an explict
+format similar to the load instruction described above.  The first operand,
+R5 (equated to 5), is the target register of the load.  The second operand of
+an RX format instruction appears as D2(X2,B2).  But the instruction above
+has no parenthese - they were omitted, and therefore the base and index
+registers are treated as D2(R0,R0).  This means that 10 is a displacement.
+
+So what is the effective address?
+
+Since the base and index registers were omitted, zero was chosen for the base
+and index registers.
+
+### TIP
+
+Register zero, when used as a base or index register, doesn't contribute
+the effective address.
+
+This means that the effective address is simply 10.  The instructions effect
+is to load an immediate address into register 5.  The largest immediate
+address loaded this way is 4095 or X'FFF' or 0xFFF.
+
+
+PROMPT
+
+What tips are good to know regarding explicit addressing when using BAL Assembly?
