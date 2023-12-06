@@ -1,3 +1,4 @@
+
 RESULT
 
 # MACROS
@@ -64,9 +65,6 @@ Read an input record from the open DCB at address dcb. In move mode, copy the re
 ```
 
 Write a record into the open DCB at address dcb. In move mode, write an output record from address area. In locate mode, return in register 1 address where the next output record should be written.
-
-
-
 
 
 
