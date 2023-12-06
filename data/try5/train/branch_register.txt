@@ -7,8 +7,11 @@ RESULT
          BR   R15
 
 EXIT     DS   0H
+         nop
+         nop
+         nop
 
-         BR   R14         
+         BR   R14                       * this returns from the subroutine      
 ```
 
 

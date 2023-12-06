@@ -9,7 +9,7 @@ RESULT
 
 PROMPT
 
-Write some code in BAL Assembly to add two fullword registers and store the result in memory with a field name of SUM.  
+Write code in BAL Assembly to add two fullword registers and store the result in memory with a field name of SUM.  
 
 Assume the values to add are already in registers R1 and R2.
 

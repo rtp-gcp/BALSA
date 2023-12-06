@@ -12,6 +12,6 @@ PROMPT
 
 Write some code in BAL Assembly to add two fullword registers and store the result in memory with a field name of SUM.  
 
-Do not show any subroutine standard entry and exit code.
+Assume the values to add are already in registers R3 and R4.
 
 Show how the field name should be declared.

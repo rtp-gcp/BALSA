@@ -3,16 +3,15 @@ RESULT
 
 ```
          AR   R1,R2
-         ST   R1,SUM 
+         ST   R1,RESULT 
 
 
-
-SUM      DC   F'0'
+RESULT   DC   F'0'
 ```
 
 PROMPT
 
-Write some code in BAL Assembly to add two fullword registers and store the result in memory with a field name of SUM.  
+Write code in BAL Assembly to add two fullword registers and store the result in memory with a field name of RESULT.  
 
 Assume the values to add are already in registers R1 and R2.
 

@@ -7,10 +7,11 @@ RESULT
 
 SUBR     DS   0H
          AMODE 31
-         NOP
-         NOP
-         NOP
-         BSM   R14         
+         nop                            * this code is in diff addressing mode
+         nop
+         nop
+
+         BSM  R14                       * this returns from the subroutine  with the basm    
 ```
 
 BRANCH AND SAVE AND SET MODE (BASSM) calls a subroutine, preserving the addressing mode.

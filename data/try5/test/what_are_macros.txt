@@ -9,7 +9,10 @@ Macros recognized by the BAL assembler
 
 Write to Operator
 
-TODO: add examples
+```
+         WTO  'text',ROUTCDE=nn|(nn,nn…)
+				 
+```
 
 ## DCB
 
@@ -25,32 +28,55 @@ TODO: add examples
 ```
 
 
-Generate `DCB`` (data control block) for a sequential dataset (QSAM). The ddname is a string used as DD name. The MACRF denotes macros being used - either GET or PUT in move or locate mode. Parameters recfm, lrecl and blksize are same as in JCL. The eodad parameter is address where the branch is made if the EOF is encountered during GET.
+Generate `DCB`` (data control block) for a sequential dataset (QSAM). 
 
-* TODO DDNAME
-     - yadd ayada
-* TODO
-     - ayad
+The parameters are:
+
+* `DDNAME`
+
+This specifies the DD name that the JCL for the data set will use.
+
+* `MACRF`
+
+This specifies the macro(s) to be used with this DCB (`G` for Get, `P` for Put), and the I/O mode (`M` for move, `L` for Locate). One from each pair must be specified, e.g., GL, PM.
+
+* `DSORG`
+
+This specifies the data set organization of the data set. For BAL Assembly, this is always `PS` (physical sequential).
+
+* `RECFM`
+
+This specifies the record format of the data set.
+
+* `LRECL`
+
+This specifies the logical record length for the data set.
+
+* `BLKSIZE`
+ 
+ This specifies the block size for the data set.
+ 
 * `EODAD`
-     - This specifies what routine to branch to when EOF is reached.
+
+This specifies what address to branch to when EOF is reached.
 
 ## OPEN
 
 
 ```
-         OPEN (dcb,([INPUT|OUTPUT])) 
+         OPEN (dcb,([INPUT|OUTPUT]))
 ```
 
-Open DCB at address dcb for input or output, as specified. The unspecified parameters in DCB are filled first from the JCL and then from dataset attributes.
+Open DCB at address `dcb` for input or output, as specified. The unspecified parameters in the associated DCB macro are filled first from the JCL and then from the data set attributes on disk.
 
 
 ## CLOSE
 
 ```
-         CLOSE (dcb addr) 
+         CLOSE (dcb)
 ```
 
-Close open DCB at address `dcb addr`
+Close open DCB at address `dcb`
 
 ## GET
 
@@ -58,7 +84,7 @@ Close open DCB at address `dcb addr`
          GET  dcb[,area]
 ```
 
-Read an input record from the open DCB at address dcb. In move mode, copy the record to address area. In locate mode, return the address of the record read in register 1.
+Read an input record from the open DCB at address `dcb`. In move mode, copy the record to address area. In locate mode, return the address of the record read in register 1.
 
 ## PUT
 
@@ -67,10 +93,11 @@ Read an input record from the open DCB at address dcb. In move mode, copy the re
 
 ```
 
-Write a record into the open DCB at address dcb. In move mode, write an output record from address area. In locate mode, return in register 1 address where the next output record should be written.
+Write a record into the open DCB at address dcb. In move mode, write an output record from address area. In locate mode, return in register 1 address where the next output record should be written. Populate the area pointed to by R1 after the PUT macro is executed.
+
 
 
 
 PROMPT
 
-Give an overview of the macros are available in BAL?
+Provide the macros in BAL.

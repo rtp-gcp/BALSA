@@ -6,8 +6,6 @@ RESULT
          BCR  15,R15
 
 EXIT     DS   0H
-
-         BR   R14         
 ```
 
 PROMPT

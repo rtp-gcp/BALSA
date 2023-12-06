@@ -6,8 +6,6 @@ RESULT
          B    EXIT
 
 EXIT     DS   0H
-
-         BR   R14         
 ```
 
 BRANCH ALWAYS causes the program counter to unconditionally move to the specicied address or label

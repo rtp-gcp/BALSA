@@ -6,8 +6,11 @@ RESULT
          BAS  R14,SUBR
 
 SUBR     DS   0H
+         nop
+         nop
+         nop
 
-         BR   R14         
+         BR   R14                       * this returns from the subroutine      
 ```
 
 PROMPT

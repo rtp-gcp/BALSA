@@ -19,7 +19,7 @@ this format:
 
 | op code   | operands     |
 |:---------:| :----------: |
-| C         | R1,R3,D2(B2) |
+| CDS       | R1,R3,D2(B2) |
 
 
 The encoded instruction looks like this:
@@ -45,7 +45,6 @@ in memory.
 | 2                | First operand is high | BH,JH,BNH,JNH    |
 | 3                | -                     |                  |
 
-As an example, consider the following code:
 
 
 PROMPT

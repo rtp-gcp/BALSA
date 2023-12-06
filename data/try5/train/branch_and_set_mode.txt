@@ -7,8 +7,12 @@ RESULT
 
 SUBR     DS   0H
          AMODE 31
+         nop                            * some code with different mode
+         nop
+         nop
 
-         BSM   R14         
+         BSM  R14                       * this returns from the subroutine and sets mode     
+
 ```
 
 BRANCH AND SET MODE (BSM) returns from a subroutine, restoring the addressing mode of the caller.

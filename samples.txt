@@ -1,0 +1,23 @@
+
+Can you show me how to add two fullword integers and store the result in memory at field named SUM?  Assume the integers are already present in register R1 and R2.
+
+Can you explain in BAL assembly what the RR instruction format is?
+
+Write some code in BAL Assembly to go to a particular label called EXIT via Register. 
+
+What does the OI instruction do it BAL?
+
+what is my fortune?
+
+
+There is a problem with this code for BAL Assembly.  It does not seem to exit properly.
+
+ ```
+          LA   R15,EXIT
+          BR   R14
+ EXIT     DS   0H
+          L    R15,0(R13)
+          LM   R14,R12,12(R13)
+          XR   R15,R15
+          BR   R14  
+ ```
