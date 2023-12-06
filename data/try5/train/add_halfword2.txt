@@ -3,7 +3,6 @@ RESULT
 
 ```
          AH   R1,=H'4095'
-
 ```
 
 PROMPT

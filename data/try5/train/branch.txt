@@ -2,8 +2,6 @@
 RESULT
 
 
-BRANCH ALWAYS causes the program counter to unconditionally move to the specicied address or label
-
 ```
          B    EXIT
 
@@ -12,6 +10,9 @@ EXIT     DS   0H
          BR   R14         
 ```
 
+BRANCH ALWAYS causes the program counter to unconditionally move to the specicied address or label
+
+
 PROMPT
 
-Write some code in BAL Assembly to go to a particular label called EXIT
+Write some code in BAL Assembly to go to a particular label called EXIT.  Provide brief commentary.

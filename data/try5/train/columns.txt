@@ -35,8 +35,7 @@ PROMPT
 
 Provide info on column usage when writing BAL Assembly code.
 
-Your answer should be brief and in markdown format.  If you use preformated text blocks they
-should be in this form:
+Your answer should be in markdown format.  Code should be preformated text blocks as shown:
 
 ```
 put preformated text here

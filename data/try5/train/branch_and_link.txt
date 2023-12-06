@@ -6,7 +6,6 @@ RESULT
    
 SUBR     DS   0H
  
-
          BR   R14         
 ```
 

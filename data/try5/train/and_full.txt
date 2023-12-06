@@ -6,7 +6,6 @@ RESULT
          ST   R1,ANS 
 
 
-
 ANS      DC   F'0'
 ```
 
