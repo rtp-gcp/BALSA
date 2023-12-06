@@ -47,9 +47,9 @@ to value register R1. Doesn't change anything. CC: comparision.
 
 As an example, consider the following code:
 
-R4 = X'FFFFFFD5' -43 IN 2's COMPLEMENT
-R5 = X'00000028' +40 IN 2'S COMPLEMENT
-R6 = X'00000004' +4  IN 2'S COMPLEMENT
+* R4 = X'FFFFFFD5' -43 IN 2's COMPLEMENT
+* R5 = X'00000028' +40 IN 2'S COMPLEMENT
+* R6 = X'00000004' +4  IN 2'S COMPLEMENT
 
 ```
 DOG      DC   F'35'       

@@ -28,7 +28,8 @@ Machine Format
 
 Assembler Format
 Op Code R1,D2(X2,B2)
------------------—————————————
+
+
 ```
          AH   5,X'6B0'(13,12)
 ```
