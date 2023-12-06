@@ -23,7 +23,6 @@ this format:
 
 
 The encoded instruction looks like this:
-?????????
 
 | Byte 1  | Byte 2     | Byte 3       | Byte 4 |
 |:--------|:-----------|:-------------|:-------|
@@ -39,7 +38,6 @@ The Compare `CDS` instruction is similar to the CS instruction, but with doucble
 The r1 and R3 both denote an even-odd register pair, and address D2(B2) is a double-word 
 in memory.
 
-  ??????
 | Condition Code   | Meaning           | Test With       | 
 |:-----------------|:------------------|:----------------|
 | 0                | Operands are equal | BE,JE,BNE,JNE  |
@@ -48,8 +46,13 @@ in memory.
 | 3                | -
 
 As an example, consider the following code:
+```
+         CDS  R4,R6,64(R12)
+```
+COMPARE VALUE IN R4-R5 TO THE 8-BYTE VALUE AT R12 ADDRESS+64;  
+IF EQUAL, STORE VALUE IN R6-R7 AT R12 ADDRESS+64; 
+IF NOT EQUAL, LOAD 8-BYTE VALUE AT R12 ADDRESS+64 INTO R4-R5 REGISTER PAIR                  
 
-???????????
 
 PROMPT
 
