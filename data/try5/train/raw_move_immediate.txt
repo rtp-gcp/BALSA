@@ -1,0 +1,63 @@
+
+RESULT
+
+This is an example of the Move immediate Instruction `MVI`:
+
+```
+         MVI  FIELDA,X'C1'
+```
+
+The instruction looks like this:
+
+```
+         MVI  D1(B1),I2
+```
+
+Movie Immediate `MVI` is of instruction format type `SI`.  It
+uses this format:
+
+
+| op code   | operands     |
+|:---------:| :-----------:|
+| MVI       | D1(B1),I2.   |
+
+OPCODE  I2I2   B1D1  D1D1
+
+
+The encoded instruction looks like this:
+
+
+| Byte 1  | Byte 2     | Byte 3         | Byte 4         |
+|:--------|:-----------|:---------------|:---------------|
+| 92      | I2I2       | B1D1           | D1D1           |
+| Op Code | Source     | Destination    | Destination    |
+|         | Operand 2  | Operand 1      | Operand 1      |
+|         | Memory     | Base           |                |
+|         |            | Displacement 1 | Displacement 1 |
+
+
+
+Move immediate `MVI` is used to move (copy) a one-byte immediate
+constant to a field in storage .  Operand 1 denotes the filed in main 
+storage, while the second operand is coded as self-defining term that
+gets assembled by the move.
+
+As an example, consider the following code:
+
+```
+         MVI  FIELDA,X'C1'
+
+FIELDA   DC   X'123456'
+```
+
+
+| memory:FIELDA Before |             | memory:FIELDA After  |
+| :------------------- | :----------:| :------------------- |
+| 00123456             | unchanged   | 000000C1             |
+
+
+
+
+PROMPT
+
+Provide an explanation of the MVI instruction in BAL Assembly.

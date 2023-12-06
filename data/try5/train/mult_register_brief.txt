@@ -1,0 +1,12 @@
+RESULT
+
+```
+         MR   R8,R1
+```
+
+PROMPT
+
+Write some code in BAL Assembly to multiply a fullword integer multiplicand in a register pair by a fullword integer in another register. The result is left in the register pair.  
+
+Assume the values to add are already in registers R1 and R2.
+

@@ -1,16 +1,17 @@
 
 RESULT
 
-```
 BRANCH AND LINK REGISTER (BALR) is provided primarily for compatibility.
 For programs written for System/370; BRANCH AND SAVE REGISTER(BASR) is 
 recommended instead of BRANCH AND LINK REGISTER (BALR)
 
+
+```
          LA   R15,SUBR
          BASR R14,R15
-...
+
 SUBR     DS   0H
-...
+
          BR   R14         
 ```
 

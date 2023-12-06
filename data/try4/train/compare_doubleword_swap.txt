@@ -38,12 +38,14 @@ The Compare `CDS` instruction is similar to the CS instruction, but with doucble
 The r1 and R3 both denote an even-odd register pair, and address D2(B2) is a double-word 
 in memory.
 
-| Condition Code   | Meaning           | Test With       | 
-|:-----------------|:------------------|:----------------|
-| 0                | Operands are equal | BE,JE,BNE,JNE  |
-| 1                | First operand is low | BL,JL,BNL,JNL|
-| 2                | First operand is high| BH,JH,BNH,JNH|
-| 3                | -
+
+| Condition Code   | Meaning               | Test With        | 
+| :--------------- | :-------------------  | :--------------- |
+| 0                | Operands are equal    | BE,JE,BNE,JNE    |
+| 1                | First operand is low  | BL,JL,BNL,JNL    |
+| 2                | First operand is high | BH,JH,BNH,JNH    |
+| 3                | -                     |                  |
+
 
 As an example, consider the following code:
 ```

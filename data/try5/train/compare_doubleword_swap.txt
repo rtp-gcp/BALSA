@@ -38,12 +38,14 @@ The Compare `CDS` instruction is similar to the CS instruction, but with doucble
 The r1 and R3 both denote an even-odd register pair, and address D2(B2) is a double-word 
 in memory.
 
-| Condition Code   | Meaning           | Test With       | 
-|:-----------------|:------------------|:----------------|
-| 0                | Operands are equal | BE,JE,BNE,JNE  |
-| 1                | First operand is low | BL,JL,BNL,JNL|
-| 2                | First operand is high| BH,JH,BNH,JNH|
-| 3                | -
+
+| Condition Code   | Meaning               | Test With        | 
+| :--------------- | :-------------------  | :--------------- |
+| 0                | Operands are equal    | BE,JE,BNE,JNE    |
+| 1                | First operand is low  | BL,JL,BNL,JNL    |
+| 2                | First operand is high | BH,JH,BNH,JNH    |
+| 3                | -                     |                  |
+
 
 As an example, consider the following code:
 ```
@@ -51,8 +53,7 @@ As an example, consider the following code:
 ```
 COMPARE VALUE IN R4-R5 TO THE 8-BYTE VALUE AT R12 ADDRESS+64;  
 IF EQUAL, STORE VALUE IN R6-R7 AT R12 ADDRESS+64; 
-IF NOT EQUAL, LOAD 8-BYTE VALUE AT R12 ADDRESS+64 INTO R4-R5 REGISTER PAIR                  
-
+IF NOT EQUAL, LOAD 8-BYTE VALUE AT R12 ADDRESS+64 INTO R4-R5 REGISTER PAIR  
 
 PROMPT
 

@@ -1,0 +1,69 @@
+RESULT
+
+This is an example of a Compare instruction - `CLI`:
+
+```
+         CLI    FIELDA,C'A'
+```
+
+
+The instruction looks like this:
+
+```
+         CLI    D1(B1),I2
+```
+
+
+Compare `CLI` is of instruction format type `RX`.  It uses
+this format:
+
+| op code   | operands     |
+|:---------:| :----------: |
+| CLI       | D1(B1),I2    |
+
+
+The encoded instruction looks like this:
+
+
+| Byte 1  | Byte 2     | Byte 3       | Byte 4 |
+|:--------|:-----------|:-------------|:-------|
+| 95      | I2I2       | B1D1         |  D1D1  |
+| Op Code | Result     |              |        |
+|         | Operand 1  | Operand 2    | Operand 2 |
+|         | Register   |              |        |
+|         | Index 2    | Base 2       |        |
+|         |            | Displacement 1 | Displacement 1 | 
+
+
+The Compare `CLI` instruction compares unsigned byte at address
+D1(B1) with unsigned byte I2. CC: comparision.
+
+| Condition Code   | Meaning                | Test With       | 
+|:-----------------|:-----------------------|:----------------|
+| 0                | Operands 1 = Operand 2 | BE,BNE,JE,JNE   |
+| 1                | Operands 1 < Operand 2 | BL,JL,BL,JNL    |
+| 2                | Operands 1 > Operand 2 | BH,JH,BNH,JNH   |
+
+As an example, consider the following code:
+
+```
+J        DC   C'ABC'       
+K        DC   C'DEF'  
+L        DC   C'GH' 
+M        DC   C'12345' 
+
+         CLI  J,C'A'     Condition Code = Equal, One byte compared
+         CLI  J,C'B'     Condition Code = LOW
+         CLI  J,C'5'     Condition Code = Equal, Letters < numbers
+         CLI  K,X'C4'    Condition Code = Equal
+         CLI  L,C'A'     Condition Code = HIGH
+         CLI  L,=C'G'    Assembly error, Literals not allowed for SI
+         CLI  C'A',M     Assembly error, Operands out of order
+         CLI  A(20),B    Assembly error, No length can be specified 
+         CLC  A,B(20)    Assembly error, No length can be specified 
+    
+```
+
+PROMPT
+
+Provide an explanation of the CLI instruction in BAL Assembly.

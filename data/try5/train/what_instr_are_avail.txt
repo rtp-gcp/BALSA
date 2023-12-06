@@ -1,0 +1,145 @@
+RESULT
+
+# BAL Assembly Instruction Set
+
+When returning assembly code, please limit allowable instructions to those in 
+the following two tables:
+
+## Basic BAL Assembly Instructions
+
+* A
+* AH
+* AL
+* ALR
+* AP
+* AR
+* BAL
+* BALR
+* BAS
+* BASR
+* BASSM
+* BC
+* BCR
+* BCT
+* BCTR
+* BSM
+* BXH
+* BXLE
+* C
+* CDS
+* CH
+* CL
+* CLC
+* CLCL
+* CLI
+* CLM
+* CLR
+* CP
+* CR
+* CS
+* CVB
+* CVD
+* D
+* DP
+* DR
+* ED
+* EDMK
+* EX
+* IC
+* ICM
+* L
+* LA
+* LCR
+* LH
+* LM
+* LNR
+* LPR
+* LR
+* LTR
+* M
+* MH
+* MP
+* MR
+* MVC
+* MVCIN
+* MVCL
+* MVI
+* MVN 
+* MVO
+* MVZ
+* N
+* NC
+* NI
+* NR
+* O
+* OC
+* OI
+* OR
+* PACK
+* S
+* SH
+* SL
+* SLA
+* SLDA
+* SLDL
+* SLL
+* SLR
+* SP
+* SR
+* SRA
+* SRDA
+* SRDL
+* SRL
+* SRP
+* ST
+* STC
+* STCM
+* STH
+* STM
+* SVC
+* TM
+* TR
+* TRT
+* UNPK
+* X
+* XC
+* XI
+* XR
+* ZAP
+* B      
+* BR  
+* NOP 
+* NOPR
+* BH  
+* BHR 
+* BL  
+* BLR 
+* BE  
+* BER 
+* BNH 
+* BNHR
+* BNL 
+* BNLR
+* BNE 
+* BNER
+* BO  
+* BOR 
+* BP  
+* BPR 
+* BM  
+* BMR 
+* BNP 
+* BNPR
+* BNM 
+* BNMR
+* BNZ 
+* BNZR
+* BZ  
+* BZR 
+* BNO 
+* BNOR
+
+
+PROMPT
+
+What instructions are available in BAL assembly?

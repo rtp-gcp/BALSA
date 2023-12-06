@@ -1,0 +1,15 @@
+
+RESULT
+
+```
+         AR   R5,R4
+         ST   R5,SUM 
+
+SUM      DC   F'0'
+```
+
+PROMPT
+
+Write some code in BAL Assembly to add two fullword registers and store the result in memory with a field name of SUM.  
+
+
