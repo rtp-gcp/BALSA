@@ -2,7 +2,7 @@
 RESULT
 
 ```
-         S    R1,FIELD
+         S    R1,AFIELD
          ST   R1,DIFF
 ```
 

@@ -28,7 +28,7 @@ Generate `DCB`` (data control block) for a sequential dataset (QSAM). The ddname
 
 * `EODAD`
 
-TODO: (DAVIS) is this correct? This specifies what routine to call when EOF is reached.
+This specifies what routine to call when EOF is reached.
 
 ## OPEN
 

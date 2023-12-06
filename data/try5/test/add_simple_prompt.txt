@@ -12,9 +12,4 @@ PROMPT
 
 Write some code in BAL Assembly to add two fullword registers and store the result in memory with a field name of SUM.  
 
-Your answer should be brief and in markdown format using a code section using this format:
-
-```
-put code here
-```
 

@@ -12,5 +12,6 @@ DIFF     DC   F'0'
 
 PROMPT
 
-Write some code in BAL Assembly to subtract a fullword integer in storage from a register and store the result in memory with a field name of DIFF.
+Write some code in BAL Assembly to subtract a fullword integer in storage with field name AFIELD from a register and store the result in memory 
+with a field name of DIFF.
 

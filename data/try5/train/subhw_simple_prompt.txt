@@ -8,5 +8,6 @@ RESULT
 
 PROMPT
 
-Write some code in BAL Assembly to subtract a halfword integer in storage with a field name AFIELD from a register and store the result in memory with a field name of DIFF.
+Write some code in BAL Assembly to subtract a halfword integer in storage with a field name AFIELD 
+from a register and store the result in memory with a field name of DIFF.
 

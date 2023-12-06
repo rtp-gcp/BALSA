@@ -29,4 +29,6 @@ PROMPT
 
 Provide info on column usage when writing BAL Assembly code.
 
-Your answer should be brief and in markdown format.  
+Your answer should be brief and in markdown format. 
+
+Include a ruler in ascii text in a code block to demo the column specifications.

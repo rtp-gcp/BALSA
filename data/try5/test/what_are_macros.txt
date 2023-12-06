@@ -27,9 +27,12 @@ TODO: add examples
 
 Generate `DCB`` (data control block) for a sequential dataset (QSAM). The ddname is a string used as DD name. The MACRF denotes macros being used - either GET or PUT in move or locate mode. Parameters recfm, lrecl and blksize are same as in JCL. The eodad parameter is address where the branch is made if the EOF is encountered during GET.
 
+* TODO DDNAME
+     - yadd ayada
+* TODO
+     - ayad
 * `EODAD`
-
-TODO: (DAVIS) is this correct? This specifies what routine to call when EOF is reached.
+     - This specifies what routine to branch to when EOF is reached.
 
 ## OPEN
 
