@@ -1,0 +1,13 @@
+RESULT
+
+```
+         MVCIN TARGET(8),SOURCE
+
+TARGET   DS    CL8
+SOURCE   DS    CL20'ABCDEFGH XXXXXXXXXX'
+```
+
+PROMPT
+
+Write some code in BAL Assembly to copy 8 characters in reverse order from a SOURCE value in memory to a TARGET field in memory.
+The maximum length of the copied value is 256.
