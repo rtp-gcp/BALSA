@@ -1,0 +1,64 @@
+RESULT
+
+This is an example of a Compare instruction - `CR`:
+
+```
+         CR    R1,R2
+```
+
+
+The instruction looks like this:
+
+```
+         CR    R1,R2
+```
+
+
+Compare `CR` is of instruction format type `RX`.  It uses
+this format:
+
+| op code   | operands     |
+|:---------:| :----------: |
+| CR        | R1,R2        |
+
+
+The encoded instruction looks like this:
+
+
+| Byte 1  | Byte 2     |
+|:--------|:-----------|
+| 19      | R1R2       | 
+| Op Code | Result     |
+|         | Operand 1  | 
+|         | Register   |  
+|         | Index 2    | 
+|         |            | 
+
+
+The Compare `CR` instruction compares signed value in register R2
+to value in register R1. Doesn't change anything. CC: comparision.
+
+| Condition Code   | Meaning                | Test With       | 
+|:-----------------|:-----------------------|:----------------|
+| 0                | Operands 1 = Operand 2 | BE,JE,BZ,JZ     |
+| 1                | Operands 1 < Operand 2 | BL,JL,BM,JM     |
+| 2                | Operands 1 > Operand 2 | BH,JH,BP,JP     |
+
+As an example, consider the following code:
+
+* R4 = X'FFFFFFD5' -43 IN 2's COMPLEMENT
+* R5 = X'00000028' +40 IN 2'S COMPLEMENT
+* R6 = X'00000004' +4  IN 2'S COMPLEMENT
+
+```
+         CR   R4,R5          CONDITION CODE = LOW
+         CR   R5,R4          CONDITION CODE = HIGH
+         CR   R4,R4          CONDITION CODE = EQUAL
+         CR   R6,R5          CONDITION CODE = LOW
+         CR   R5,R5          CONDITION CODE = EQUAL
+    
+```
+
+PROMPT
+
+Provide an explanation of the CR instruction in BAL Assembly.
