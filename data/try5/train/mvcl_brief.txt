@@ -1,0 +1,20 @@
+RESULT
+
+```
+         LA   R4,TARGET
+         L    R5,LTARGET
+         LA   R6,SOURCE
+         L    R7,LSOURCE
+         ICM  R7,B’1000’,BLANK
+         MVCL R4,R6
+
+TARGET   DS  CL1000
+SOURCE   DC  CL3'ABC'
+LTARGET  DC  A(L’FIELDA)
+LSOURCE  DC  A(L’FIELDB)
+BLANK    D   C’ ’
+```
+
+PROMPT
+
+Write some code in BAL Assembly to copy data from a SOURCE field in memory to a TARGET field in memory. If TARGET is longer than SOURCE then pad TARGET with blanks.
