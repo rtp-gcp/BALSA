@@ -23,7 +23,6 @@ this format:
 
 
 The encoded instruction looks like this:
-?????????
 
 | Byte 1  | Byte 2     | Byte 3       | Byte 4 |
 |:--------|:-----------|:-------------|:-------|
@@ -39,8 +38,6 @@ The Compare `CDS` instruction is similar to the CS instruction, but with doucble
 The r1 and R3 both denote an even-odd register pair, and address D2(B2) is a double-word 
 in memory.
 
-  ??????
-
 | Condition Code   | Meaning               | Test With        | 
 | :--------------- | :-------------------  | :--------------- |
 | 0                | Operands are equal    | BE,JE,BNE,JNE    |
@@ -50,8 +47,7 @@ in memory.
 
 As an example, consider the following code:
 
-???????????
 
 PROMPT
 
-Provide an explanation of the C instruction in BAL Assembly.
+Provide an explanation of the CDS instruction in BAL Assembly.
