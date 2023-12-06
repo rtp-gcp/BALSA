@@ -35,4 +35,4 @@ the offset is known as displacement.
 
 PROMPT
 
-Can you explain the Register and Indexed Storage type instruction format also known as RX in BAL Assembly?
+Provide a detailed explanation of the Register and Indexed Storage type instruction format also known as RX in BAL Assembly.

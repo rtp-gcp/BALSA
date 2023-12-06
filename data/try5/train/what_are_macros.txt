@@ -102,4 +102,4 @@ Write a record into the open DCB at address dcb. In move mode, write an output r
 
 PROMPT
 
-What macros are available in BAL?
+Provide a detailed explanation of macros available in BAL?

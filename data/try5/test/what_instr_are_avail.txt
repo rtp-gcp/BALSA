@@ -2,11 +2,6 @@ RESULT
 
 # BAL Assembly Instruction Set
 
-When returning assembly code, please limit allowable instructions to those in 
-the following two tables:
-
-## Basic BAL Assembly Instructions
-
 * A
 * AH
 * AL

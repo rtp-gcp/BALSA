@@ -76,4 +76,4 @@ time address in register 12.
 
 PROMPT
 
-Can you explain the concept of explicit addressing when using BAL Assembly?
+Can you explain in detail the concept of explicit addressing when using BAL Assembly?

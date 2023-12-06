@@ -45,4 +45,4 @@ This does the following:
 
 PROMPT
 
-Provide an explanation of the AR instruction in BAL Assembly.
+Provide a detailed explanation of the AR instruction in BAL Assembly.

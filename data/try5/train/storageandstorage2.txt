@@ -27,4 +27,4 @@ The format is as follows:
 
 PROMPT
 
-Can you explain the Storage and Storage type two instruction format also known as SS2 in BAL Assembly?
+Provide a detailed explanation of the Storage and Storage type two instruction format also known as SS2 in BAL Assembly.

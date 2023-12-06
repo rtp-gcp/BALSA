@@ -97,4 +97,4 @@ B        DC   F'5'        MULTIPLIER
 
 PROMPT
 
-Provide an explanation of the M instruction in BAS.
+Provide a detailed explanation of the M instruction in BAS.

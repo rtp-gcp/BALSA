@@ -45,10 +45,8 @@ to unsigned value in register R1. Doesn't change anything. CC: comparision.
 | 2                | First operand is high| BH,JH,BNH,JNH|
 | 3                | -
 
-As an example, consider the following code:
-
-??????           
+    
 
 PROMPT
 
-Provide an explanation of the CL instruction in BAL Assembly.
+Provide a detailed explanation of the CL instruction in BAL Assembly.

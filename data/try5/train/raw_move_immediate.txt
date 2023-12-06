@@ -60,4 +60,4 @@ FIELDA   DC   X'123456'
 
 PROMPT
 
-Provide an explanation of the MVI instruction in BAL Assembly.
+Provide a detailed explanation of the MVI instruction in BAL Assembly.

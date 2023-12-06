@@ -29,4 +29,4 @@ The format is as follows:
 
 PROMPT
 
-Can you explain the Storage and Storage type one instruction format also known as SS1 in BAL Assembly?
+Provide a detailed explanation of the Storage and Storage type one instruction format also known as SS1 in BAL Assembly.

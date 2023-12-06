@@ -72,4 +72,4 @@ address loaded this way is 4095 or X'FFF' or 0xFFF.
 
 PROMPT
 
-What tips are good to know regarding explicit addressing when using BAL Assembly?
+Provide some detailed tips regarding explicit addressing when using BAL Assembly?

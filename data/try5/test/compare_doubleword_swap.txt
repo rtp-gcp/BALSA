@@ -50,4 +50,4 @@ As an example, consider the following code:
 
 PROMPT
 
-Provide an explanation of the CDS instruction in BAL Assembly.
+Provide a detailed explanation of the `CDS` instruction in BAL Assembly.

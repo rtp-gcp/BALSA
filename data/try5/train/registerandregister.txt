@@ -29,4 +29,4 @@ register 12 to be copied into register 3.
 
 PROMPT
 
-Can you explain the Register and Register type instruction format also known as RR in BAL Assembly?
+Provide a detailed explanation of the Register and Register type instruction format also known as RR in BAL Assembly.

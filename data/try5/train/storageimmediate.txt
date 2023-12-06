@@ -33,5 +33,5 @@ immediate instruction.
 
 PROMPT
 
-Can you explain the Storage Immediate type instruction format also 
-known as SI in BAL Assembly?
+Provide a detailed explanation of the Storage Immediate type instruction format also 
+known as SI in BAL Assembly.

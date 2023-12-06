@@ -51,4 +51,4 @@ The instruction would generate the following object code:
 
 PROMPT
 
-Can you explain the Register and Storage type instruction format also known as RS in BAL?
+Provide a detailed explanation of the Register and Storage type instruction format also known as RS in BAL Assembly.

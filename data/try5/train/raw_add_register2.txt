@@ -48,4 +48,4 @@ This does the following:
 
 PROMPT
 
-Provide an explanation of the Add Register instruction in BAL Assembly.
+Provide a detailed explanation of the Add Register instruction in BAL Assembly.

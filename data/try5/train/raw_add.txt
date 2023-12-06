@@ -79,4 +79,4 @@ This does the following:
 
 PROMPT
 
-Provide an explanation of the A instruction in BAS Assembly.
+Provide a detailed explanation of the A instruction in BAS Assembly.
