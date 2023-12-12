@@ -1,0 +1,20 @@
+
+RESULT
+
+```
+         SH   R1,AFIELD
+         STH  R1,DIFF
+
+
+AFIELD   DC   H'0'
+DIFF     DC   H'0'
+```
+
+PROMPT
+
+Write some code in BAL Assembly to subtract a halfword integer in storage with field name AFIELD from a register and store the result in memory with a field 
+name of DIFF.
+
+Assume the register R1 already contains the subtrahend, and the halfword AFIELD contains the minuend.
+
+Show how the field names should be declared.

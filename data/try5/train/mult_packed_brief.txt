@@ -1,0 +1,13 @@
+RESULT
+
+```
+         MP   X,Y
+
+X        DC   PL6'4'
+Y        DC   PL3'5'
+```
+
+PROMPT
+
+Write some code in BAL Assembly to multiply a packed decimal multiplicand in memory field X by a packed decimal multiiplier in memory field Y. 
+The multiplicand field X is set to the product.

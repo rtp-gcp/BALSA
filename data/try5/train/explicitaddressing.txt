@@ -1,0 +1,79 @@
+RESULT
+
+
+The term explicit addressing refers to a programming practice of coding
+base registers, index registers and displacement to specify an address
+instead of using symbolic names.  It can also involve coding an 
+explicit length.  If possible we would prefer to represent a byte in
+memory by a symbolic name rathr by using an explicit address.
+We also want to avoid using explict lengths.  Usually this is possible.
+For instance, consider the following declaration:
+
+
+```
+XFIELD   DS   CL5
+```
+
+While this field does specify a length attribute of five, the symbol
+`XFIELD` represents the address of the **first** byte of that field.
+This is important because the assembler will convert this symbolic
+address to a base/displacement format representing the address
+of the **first** byte of the field.  This base/displacement address 
+(BDDD in hexadecimal) occupies two bytes in assembled code, as seen
+in the SS instruction format.
+
+The explicit format for the MVC Move Copy instruction is shown as:
+
+```
+         MVC  D1(L1,B1),D2(B2)
+```
+
+* D1 - Operand 1 displacement
+* L1 - Operand 1 length
+* B1 - Operand 1 base register
+* D2 - Operand 2 displacement
+* B2 - Operand 2 base register
+
+Consider the following example which uses explicit addressing:
+
+```
+         MVC  4(8,12),32(8)
+```
+
+* 4 is D1 or displacement/offset1
+* 8 is L1 or length
+* 12 is B1 or Base register1
+* 32 is D2 or displacement/offset2
+* 8 is B2 or base register2
+
+Using the explicit format above, we can decipher what the instruction will
+do.  First we note it is an MVC instruction which copies 8 bytes since the 
+number of bytes is determined by the length of operand 1.  Why didn't we
+subtract one and code 4(7,12)?  The **answer** is that the assembler will 
+subtract one when the assembled code is assembled into object code.
+
+Where is the source of that data being moved?
+
+The answer is given explcitly as 32(8).  This represents a
+32-byte displacement from register 8.  During execution, the effective
+address i s computed by adding the contents of base register 8 plus the
+32-byte displacement.
+
+EA Effective Address = Contents(base register 8) + 32
+
+During execution, it is imperitive that register 8 contains a "known" 
+address (the base address) and the second field is 32 bytes from this
+base address.
+
+What is the target address where the data will be copied?
+
+The answer is given explictly as 4(12).  This represents a 4-byte
+displacement from register 12.  The effective address is computed to
+be the contents of base register 12 plus 4.  The field to receive
+the data must be an address which is 4 bytes larger than the execution
+time address in register 12.
+
+
+PROMPT
+
+Can you explain in detail the concept of explicit addressing when using BAL Assembly?

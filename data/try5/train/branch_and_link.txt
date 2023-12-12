@@ -1,0 +1,17 @@
+
+RESULT
+
+```
+         BAL  R14,SUBR
+   
+SUBR     DS   0H
+         nop
+         nop
+         nop
+
+         BR   R14                       * this returns from the subroutine      
+```
+
+PROMPT
+
+Write some code in BAL Assembly to call a subroutine  

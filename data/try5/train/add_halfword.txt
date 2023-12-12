@@ -1,0 +1,42 @@
+
+RESULT
+
+
+```
+         AH   5,X'6B0'(13,12)
+```
+
+The ADD HALFWORD instruction algebraically adds the contents of a two-byte field 
+in storage to the contents of a register. 
+
+The storage operand is expanded to 32 bits after it is fetched and before it is 
+used in the add operation. The expansion consists in propagating the leftmost (sign) bit 16 positions to 
+the left. For example, assume that the contents of storage locations 2000-2001 are to be 
+added to register 5.
+
+Initially:
+
+* Register 5 contains 00 00 00 19 = 25 (decimal).
+* Storage locations 2000-2001 contain FF FE = -2 (decimal).
+* Register 12 contains 00 00 18 00. 
+* Register 13 contains 00 00 01 50.
+
+The format of the required instruction is:
+
+Machine Format
+
+| OpCode | R1 | X2 | B2 | D2  | 
+|:-------|:---|:---|:---|:----|
+| 4A     | 5  | D  | C  | 6B0 |
+
+Assembler Format
+Op Code R1,D2(X2,B2)
+
+
+
+After the instruction is executed, register 5 contains 00 00 00 17 = 2310. 
+Condition code 2 is set to indicate a result greater than zero.
+
+PROMPT
+
+Write some code in BAL Assembly to add a halfword variable to a register.  

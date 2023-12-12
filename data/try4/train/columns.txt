@@ -33,7 +33,7 @@ Here is a concise list of the same rules:
 
 PROMPT
 
-Provide info on column usage when writing IBM BAL Assembly code.
+Provide info on column usage when writing BAL Assembly code.
 
 Your answer should be brief and in markdown format.  If you use preformated text blocks they
 should be in this form:

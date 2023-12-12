@@ -1,0 +1,12 @@
+
+RESULT
+
+```
+         SL   R1,FIELD
+         ST   R1,DIFF
+```
+
+PROMPT
+
+Write some code in BAL Assembly to subtract an unsigned fullword integer in storage from a register and store the result in memory with a field name of DIFF.
+

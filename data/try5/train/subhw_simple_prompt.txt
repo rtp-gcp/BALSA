@@ -1,0 +1,13 @@
+
+RESULT
+
+```
+         SH   R1,VALUE
+         STH  R1,DIFF
+```
+
+PROMPT
+
+Write some code in BAL Assembly to subtract a halfword integer in storage with a field name VALUE
+from a register and store the result in memory with a field name of DIFF.
+

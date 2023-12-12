@@ -1,0 +1,32 @@
+RESULT
+
+# RR Register and Register Format
+The RR format is used for register and register instructions.
+
+
+The format is as follows:
+
+| Byte 1  | Byte 2    |
+|:------- |:----------|
+| xx      | R1R2      |
+| Op Code | Registers |
+
+* Byte 1 - the op code
+* Byte 2 
+    - R1 - the register which is operand 1
+    - R2 - the register which is operand 2
+
+An example of this format is the LR Load Register instruction.
+The effect of the instruction is to copy the contents of the 
+register specified by operand 2 into the register specified by
+operand 1.  The following example would cause the contents of
+register 12 to be copied into register 3.
+
+```
+         LR   R3,R12
+```
+
+
+PROMPT
+
+Provide a detailed explanation of the Register and Register type instruction format also known as RR in BAL Assembly.

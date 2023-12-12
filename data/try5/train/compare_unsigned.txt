@@ -1,0 +1,52 @@
+RESULT
+
+This is an example of a Compare instruction - `CL`:
+
+```
+         CL    R8,B
+```
+
+
+The instruction looks like this:
+
+```
+         CL    R1,D2(X2,B2)
+```
+
+
+Compare `CL` is of instruction format type `RX`.  It uses
+this format:
+
+| op code   | operands     |
+|:---------:| :----------: |
+| CL        | R1,D2(X2,B2) |
+
+
+The encoded instruction looks like this:
+
+
+| Byte 1  | Byte 2     | Byte 3       | Byte 4 |
+|:--------|:-----------|:-------------|:-------|
+| 55      | R1X2       | B2D2         |  D2D2  |
+| Op Code | Result     |              |        |
+|         | Operand 1  | Operand 2    | Operand 2 |
+|         | Register   |              |        |
+|         | Index 2    | Base 2       |        |
+|         |            | Displacement 2 | Displacement 2 |
+
+
+The Compare `CL` instruction compares unsigned full-word at address`D2(X2,B2)`
+to unsigned value in register R1. Doesn't change anything. CC: comparision.
+
+| Condition Code   | Meaning           | Test With       | 
+|:-----------------|:------------------|:----------------|
+| 0                | Operands are equal | BE,JE,BNE,JNE  |
+| 1                | First operand is low | BL,JL,BNL,JNL|
+| 2                | First operand is high| BH,JH,BNH,JNH|
+| 3                | -
+
+    
+
+PROMPT
+
+Provide a detailed explanation of the CL instruction in BAL Assembly.

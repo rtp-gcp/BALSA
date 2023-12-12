@@ -1,0 +1,12 @@
+
+RESULT
+
+```
+         NR   R5,R6
+         ST   R5,RESULT 
+```
+
+PROMPT
+
+Write some code in BAL Assembly to logical and two fullword registers and store the result in memory with a field name of RESULT.  
+

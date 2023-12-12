@@ -1,0 +1,18 @@
+
+RESULT
+
+
+* `label` name starts in column 1
+* `op code` starts in 10
+* `operands` start in column 15
+* comments which do not start in column 1, must start in column 32
+* The asterisk `*` in column 1 denotes an entire comment line
+* line continuation characters are placed in column 72
+* line continuation characters are typically `x`.  They are used when an instruction spans more than one line.
+
+
+PROMPT
+
+Provide info on column usage when writing BAL Assembly code.
+
+Your answer should be brief and in markdown format.  

@@ -1,0 +1,24 @@
+
+RESULT
+
+
+```
+         LA   R15,EXIT
+         BR   R15
+
+EXIT     DS   0H
+         nop
+         nop
+         nop
+
+         BR   R14                       * this returns from the subroutine      
+```
+
+
+BRANCH ALWAYS REGISTER causes the program counter to unconditionally move to the specified address or label
+
+
+PROMPT
+
+Write some code in BAL Assembly to go to a particular label called EXIT using a register.  Provide
+brief commentary.

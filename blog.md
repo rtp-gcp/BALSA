@@ -1,5 +1,10 @@
 # blog
 
+# 20231205
+
+Did our first retune of a previously tuned model.
+
+
 # 20231119
 
 Power is off this morning.  Doing the workshop from Sheetz.

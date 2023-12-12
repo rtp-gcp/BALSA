@@ -31,17 +31,23 @@ As an example, consider the following code:
          AR   R5,R9
 ```
 
+
+
 This does the following:
 
-```
-R5 Before               R5 After
-00000025 -------------> 00000028
 
-R9 Before               R9 After
-00000003 -------------> 00000028
-```
+| R5 Before |             | R5 After  |
+| :-------- | :----------:| :-------- |
+| 00000025  | ----------> | 00000028  |
+
+
+| R9 Before |             | R9 After  |
+| :-------- | :----------:| :-------- |
+| 00000003  | ----------> | 00000028  |
+
+
 
 
 PROMPT
 
-Provide an explanation of the Add Register instruction in BAL.
+Provide an explanation of the Add Register instruction in BAL Assembly.

@@ -1,0 +1,20 @@
+
+RESULT
+
+```
+         NR   R1,R2
+         ST   R1,ANS 
+
+
+ANS      DC   F'0'
+```
+
+PROMPT
+
+Write some code in BAL Assembly to logical and two fullword registers and store the result in memory with a field name of ANS.  
+
+Assume the values to logical and are already in registers R1 and R2.
+
+Do not show any subroutine standard entry and exit code.
+
+Show how the field name should be declared.

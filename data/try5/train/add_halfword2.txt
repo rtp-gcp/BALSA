@@ -1,0 +1,10 @@
+
+RESULT
+
+```
+         AH   R1,=H'4095'
+```
+
+PROMPT
+
+Write some code in BAL Assembly to add a halfword value of 4095 to a register.  

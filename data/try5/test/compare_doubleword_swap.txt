@@ -1,0 +1,52 @@
+RESULT
+
+This is an example of a Compare instruction - `CDS`:
+
+```
+         CDS    R1,R2
+```
+
+
+The instruction looks like this:
+
+```
+         CDS    R1,R3,D2(B2)
+```
+
+
+Compare `CDS` is of instruction format type `RX`.  It uses
+this format:
+
+| op code   | operands     |
+|:---------:| :----------: |
+| CDS       | R1,R3,D2(B2) |
+
+
+The encoded instruction looks like this:
+
+| Byte 1  | Byte 2     | Byte 3       | Byte 4 |
+|:--------|:-----------|:-------------|:-------|
+| BB      | R1X2       | B2D2         |  D2D2  |
+| Op Code | Result     |              |        |
+|         | Operand 1  | Operand 2    | Operand 2 |
+|         | Register   |              |        |
+|         | Index 2    | Base 2       |        |
+|         |            | Displacement 2 | Displacement 2 |
+
+
+The Compare `CDS` instruction is similar to the CS instruction, but with doucble-words.
+The r1 and R3 both denote an even-odd register pair, and address D2(B2) is a double-word 
+in memory.
+
+| Condition Code   | Meaning               | Test With        | 
+| :--------------- | :-------------------  | :--------------- |
+| 0                | Operands are equal    | BE,JE,BNE,JNE    |
+| 1                | First operand is low  | BL,JL,BNL,JNL    |
+| 2                | First operand is high | BH,JH,BNH,JNH    |
+| 3                | -                     |                  |
+
+
+
+PROMPT
+
+Provide a detailed explanation of the `CDS` instruction in BAL Assembly.

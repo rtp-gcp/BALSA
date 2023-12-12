@@ -1,0 +1,72 @@
+RESULT
+
+This is an example of a Compare instruction - `CH`:
+
+```
+         CH    R8,B
+```
+
+
+The instruction looks like this:
+
+```
+         CH    R1,D2(X2,B2)
+```
+
+
+Compare `C` is of instruction format type `RX`.  It uses
+this format:
+
+| op code   | operands     |
+|:---------:| :----------: |
+| CH        | R1,D2(X2,B2) |
+
+
+The encoded instruction looks like this:
+
+
+| Byte 1  | Byte 2     | Byte 3       | Byte 4 |
+|:--------|:-----------|:-------------|:-------|
+| 49      | R1X2       | B2D2         |  D2D2  |
+| Op Code | Result     |              |        |
+|         | Operand 1  | Operand 2    | Operand 2 |
+|         | Register   |              |        |
+|         | Index 2    | Base 2       |        |
+|         |            | Displacement 2 | Displacement 2 |
+
+
+The Compare `CH` instruction compares signed half-word at address`D2(X2,B2)`
+to value in register R1. Doesn't change anything. CC: comparision.
+
+| Condition Code   | Meaning           | Test With       | 
+|:-----------------|:------------------|:----------------|
+| 0                | Operands are equal | BE,JE,BNE,JNE  |
+| 1                | First operand is low | BL,JL,BNL,JNL|
+| 2                | First operand is high| BH,JH,BNH,JNH|
+| 3                | -
+
+As an example, consider the following code:
+
+* R4 = X'FFFFFFD5' -43 IN 2's COMPLEMENT
+* R5 = X'00000028' +40 IN 2'S COMPLEMENT
+* R6 = X'00000004' +4  IN 2'S COMPLEMENT
+
+```
+DOG      DC   H'40'       
+CAT      DC   H'-30' 
+PIG      DC   H'14'
+GOAT     DC   H'3'
+
+         CH   R4,=H'20'      CONDITION CODE = LOW
+         CH   R4,=H'-50'     CONDITION CODE = HIGH
+         CH   R5,=H'20'      CONDITION CODE = HIGH
+         CH R6,=H'4'         CONDITION CODE = EQUAL
+         CH R5,=H'40'        CONDITION CODE = EQUAL
+         CH R5,DOG           CONDITION CODE = EQUAL
+         CH R6,CAT(R6)       CONDITION CODE = HIGH 4 > 3
+                             CAT(R6) IS EQUIALENT TO GOAT
+```
+
+PROMPT
+
+Provide a detailed explanation of the CH instruction in BAL Assembly.

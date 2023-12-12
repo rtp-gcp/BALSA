@@ -1,0 +1,19 @@
+
+RESULT
+
+
+```
+         LA   R15,SUBR
+         BASR R14,R15
+
+SUBR     DS   0H
+         nop
+         nop
+         nop
+
+         BR   R14                       * this returns from the subroutine      
+```
+
+PROMPT
+
+Write some code in BAL Assembly to call a subroutine via registers using the BASR instruction.

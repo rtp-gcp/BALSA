@@ -1,0 +1,15 @@
+
+RESULT
+
+```
+         AR   R1,R2
+         ST   R1,TOT 
+
+TOT      DC   F'255'
+```
+
+PROMPT
+
+Write code in BAL Assembly to add two fullword registers and store the result in memory with a field name of TOT.  
+
+

@@ -1,0 +1,19 @@
+
+RESULT
+
+```
+         S    R1,AFIELD
+         ST   R1,DIFF
+
+
+AFIELD   DC   F'3'
+DIFF     DC   F'0'
+```
+
+PROMPT
+
+Write some code in BAL Assembly to subtract a fullword integer in storage from a register and store the result in memory with a field name of DIFF.
+
+Assume the register R1 already contains the subtrahend, and the fullword FIELD contains the minuend.
+
+Show how the field names should be declared.

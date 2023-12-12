@@ -1,0 +1,25 @@
+
+RESULT
+
+
+```
+         LA   R15,SUBR
+         BALR R14,R15
+
+SUBR     DS   0H
+         nop                           * some code for this dummy routine
+         nop                           * some code for this dummy routine
+         nop                           * some code for this dummy routine
+
+         BR   R14                       * this returns from the subroutine      
+```
+
+The code loads the address of this subroutine into register R15, then saves the subsquent address
+for returning in register R14.  Then it branches to the routine in register R15.  When the routine
+completes it branches to the address in register 14.
+
+
+PROMPT
+
+Write code in BAL Assembly to call a subroutine via registers and provide 
+some commentary explaining how the code works.
