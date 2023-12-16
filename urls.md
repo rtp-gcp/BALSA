@@ -72,4 +72,6 @@
 * [RAG to riches](https://about.sourcegraph.com/blog/rag-to-riches)
 
 
-  
+## OpenSource Code LLM
+* [hugging facde](https://huggingface.co/TheBloke/deepseek-coder-33B-instruct-GGUF)
+* [src](https://github.com/deepseek-ai/deepseek-coder)  
