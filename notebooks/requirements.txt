@@ -35,3 +35,17 @@ langchain
 python-dotenv
 # ?
 shapely<2.0.0
+
+
+# for sergei RAG work
+langchain 
+# openai 
+chromadb 
+langchainhub 
+# python-dotenv  
+# for sqlite database
+pysqlite3-binary 
+# its to load documents into memory?
+unstructured[all-docs] 
+# a tokennizer
+tiktoken
