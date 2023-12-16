@@ -1,3 +1,4 @@
 .env
 nbenv/nbenv/
 nbenv/venv-metal/
+chroma_db/
