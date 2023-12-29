@@ -68,10 +68,12 @@
 
 
 ## Other things to consider
+
 * [6 prompt techniques](https://www.linkedin.com/posts/reuvencohen_openai-just-released-a-guide-to-prompting-activity-7141543697908723712-sncP?utm_source=share&utm_medium=member_desktop)
 * [RAG to riches](https://about.sourcegraph.com/blog/rag-to-riches)
 
 
 ## OpenSource Code LLM
+
 * [hugging facde](https://huggingface.co/TheBloke/deepseek-coder-33B-instruct-GGUF)
 * [src](https://github.com/deepseek-ai/deepseek-coder)  

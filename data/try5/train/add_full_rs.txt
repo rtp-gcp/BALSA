@@ -1,0 +1,22 @@
+
+RESULT
+
+```
+         L    R1,VAL1              * load value from memory into register
+         A    R1,VAL2              * add values
+         ST   R1,RESULT            * store result to memory
+
+
+RESULT   DC   F'0'
+VAL1     DC   F'1'
+VAL2     DC   F'2'
+```
+
+PROMPT
+
+Write code in BAL Assembly to add two signed fullword values, where one value is in memory and the other value is in a register.   
+Store the result in memory with a field name of RESULT.  
+
+Assume the values to add are originally in memory at field name VAL1 and VAL2.
+
+Show how the field names should be declared.
