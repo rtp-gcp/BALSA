@@ -77,3 +77,8 @@
 
 * [hugging facde](https://huggingface.co/TheBloke/deepseek-coder-33B-instruct-GGUF)
 * [src](https://github.com/deepseek-ai/deepseek-coder)  
+
+## OS360
+
+* [ref](https://z390.org)
+
